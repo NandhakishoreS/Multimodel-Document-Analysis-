@@ -1,0 +1,54 @@
+{
+  "dataset_name": "CORD-v2",
+  "splits": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "total_samples": 1000,
+  "label_statistics": {
+    "O": 0,
+    "B-MENU": 9208,
+    "I-MENU": 4900,
+    "B-TOTAL": 2844,
+    "I-TOTAL": 3356,
+    "B-SUBTOTAL": 1461,
+    "I-SUBTOTAL": 2136,
+    "B-VOID": 2,
+    "I-VOID": 2,
+    "B-PAYMENT": 0,
+    "I-PAYMENT": 0,
+    "B-ETC": 0,
+    "I-ETC": 0
+  },
+  "image_resolution_statistics": {
+    "width_min": 204,
+    "width_max": 3024,
+    "width_mean": 999.152,
+    "width_median": 864.0,
+    "height_min": 336,
+    "height_max": 4224,
+    "height_mean": 1575.406,
+    "height_median": 1296.0
+  },
+  "word_statistics": {
+    "words_min": 5,
+    "words_max": 135,
+    "words_mean": 23.909,
+    "words_median": 20.0,
+    "total_words": 23909
+  },
+  "bbox_statistics": {
+    "bboxes_min": 5,
+    "bboxes_max": 135,
+    "bboxes_mean": 23.909,
+    "bboxes_median": 20.0,
+    "total_bboxes": 23909
+  },
+  "data_quality": {
+    "empty_words_samples": 0,
+    "bbox_mismatch_samples": 0,
+    "malformed_bboxes": 0,
+    "duplicate_sample_ids": 0
+  }
+}

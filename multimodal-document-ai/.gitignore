@@ -1,0 +1,29 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Data & Heavy Artifacts (do not commit raw heavy datasets or weights)
+raw_data/
+processed_data/
+models/checkpoints/
+*.parquet
+*.tar.gz
+*.zip
+*.pt
+*.bin
+*.onnx
+
+# System & IDE
+.vscode/
+.idea/
+.DS_Store
+*.log

@@ -1,0 +1,46 @@
+# FUNSD label schema for LayoutLMv3 token classification
+# Task: Form Understanding / Semantic Entity Labeling
+# Source: nielsr/funsd on HuggingFace (FUNSD dataset, ICDAR 2019)
+
+dataset: funsd
+task: form_understanding
+num_labels: 7
+
+labels:
+  - "O"
+  - "B-HEADER"
+  - "I-HEADER"
+  - "B-QUESTION"
+  - "I-QUESTION"
+  - "B-ANSWER"
+  - "I-ANSWER"
+
+label2id:
+  "O": 0
+  "B-HEADER": 1
+  "I-HEADER": 2
+  "B-QUESTION": 3
+  "I-QUESTION": 4
+  "B-ANSWER": 5
+  "I-ANSWER": 6
+
+id2label:
+  0: "O"
+  1: "B-HEADER"
+  2: "I-HEADER"
+  3: "B-QUESTION"
+  4: "I-QUESTION"
+  5: "B-ANSWER"
+  6: "I-ANSWER"
+
+# Entity-level grouping for post-processing
+entity_groups:
+  header: ["B-HEADER", "I-HEADER"]
+  question: ["B-QUESTION", "I-QUESTION"]
+  answer: ["B-ANSWER", "I-ANSWER"]
+
+notes: >
+  FUNSD is a NER task on scanned noisy forms. Documents have complex 2D layouts
+  with multi-column blocks, checkboxes, and non-linear reading order.
+  Layout information is particularly important here (Phase 3 showed +14.9pp from layout).
+  Val split is small (22 docs) — high F1 variance is expected.

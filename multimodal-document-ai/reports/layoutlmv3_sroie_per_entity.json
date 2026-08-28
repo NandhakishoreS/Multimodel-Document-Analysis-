@@ -1,0 +1,116 @@
+{
+  "dataset": "sroie",
+  "stage": "small",
+  "seqeval": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "micro_f1": 0.0,
+    "macro_f1": 0.0,
+    "per_entity": {
+      "DATE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 360
+      },
+      "TOTAL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 785
+      }
+    },
+    "classification_report": "              precision    recall  f1-score   support\n\n        DATE       0.00      0.00      0.00       360\n       TOTAL       0.00      0.00      0.00       785\n\n   micro avg       0.00      0.00      0.00      1145\n   macro avg       0.00      0.00      0.00      1145\nweighted avg       0.00      0.00      0.00      1145\n",
+    "num_sequences": 361,
+    "num_tokens_true": 19378
+  },
+  "token_level": {
+    "micro_precision": 0.0,
+    "micro_recall": 0.0,
+    "micro_f1": 0.0,
+    "macro_precision": 0.0,
+    "macro_recall": 0.0,
+    "macro_f1": 0.0,
+    "weighted_f1": 0.0,
+    "per_class": {
+      "B-COMPANY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "I-COMPANY": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "B-DATE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 360
+      },
+      "I-DATE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "B-ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "I-ADDRESS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "B-TOTAL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 785
+      },
+      "I-TOTAL": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    }
+  },
+  "sroie_entity_accuracy": {
+    "overall_exact_match": 0.0,
+    "per_entity": {
+      "company": {
+        "exact_match": 0.0,
+        "partial_match": 0.0,
+        "coverage": 1.0,
+        "total_gt": 50
+      },
+      "date": {
+        "exact_match": 0.0,
+        "partial_match": 0.0,
+        "coverage": 1.0,
+        "total_gt": 50
+      },
+      "address": {
+        "exact_match": 0.0,
+        "partial_match": 0.0,
+        "coverage": 1.0,
+        "total_gt": 50
+      },
+      "total": {
+        "exact_match": 0.0,
+        "partial_match": 0.0,
+        "coverage": 1.0,
+        "total_gt": 50
+      }
+    }
+  }
+}

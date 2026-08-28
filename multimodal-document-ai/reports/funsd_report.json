@@ -1,0 +1,47 @@
+{
+  "dataset_name": "FUNSD",
+  "splits": {
+    "train": 149,
+    "test": 50
+  },
+  "total_samples": 199,
+  "label_statistics": {
+    "O": 6017,
+    "B-HEADER": 560,
+    "I-HEADER": 1290,
+    "B-QUESTION": 4323,
+    "I-QUESTION": 5592,
+    "B-ANSWER": 3541,
+    "I-ANSWER": 9272
+  },
+  "image_resolution_statistics": {
+    "width_min": 754,
+    "width_max": 863,
+    "width_mean": 767.0552763819095,
+    "width_median": 762.0,
+    "height_min": 1000,
+    "height_max": 1000,
+    "height_mean": 1000.0,
+    "height_median": 1000.0
+  },
+  "word_statistics": {
+    "words_min": 25,
+    "words_max": 433,
+    "words_mean": 153.74371859296483,
+    "words_median": 142.0,
+    "total_words": 30595
+  },
+  "bbox_statistics": {
+    "bboxes_min": 25,
+    "bboxes_max": 433,
+    "bboxes_mean": 153.74371859296483,
+    "bboxes_median": 142.0,
+    "total_bboxes": 30595
+  },
+  "data_quality": {
+    "empty_words_samples": 0,
+    "bbox_mismatch_samples": 0,
+    "malformed_bboxes": 0,
+    "duplicate_sample_ids": 50
+  }
+}

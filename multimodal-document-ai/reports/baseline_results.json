@@ -1,0 +1,93 @@
+[
+  {
+    "dataset": "SROIE",
+    "model_type": "OCR Baseline (Entity Coverage)",
+    "split": "test",
+    "macro_f1": 0.75,
+    "micro_f1": 0.75,
+    "weighted_f1": 0.75,
+    "precision": 0.75,
+    "recall": 0.75,
+    "cer": 0.2519322048870343,
+    "wer": 0.2540138136746986,
+    "total_tokens_or_samples": 361
+  },
+  {
+    "dataset": "SROIE",
+    "model_type": "Text-Only Baseline (TF-IDF + LR)",
+    "split": "test",
+    "macro_f1": 0.2615537282676877,
+    "micro_f1": 0.9193748065614361,
+    "weighted_f1": 0.935462411475173,
+    "precision": 0.24193970519743527,
+    "recall": 0.3097313014489515,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 19386
+  },
+  {
+    "dataset": "SROIE",
+    "model_type": "Text+Layout Baseline (Spatial + LR)",
+    "split": "test",
+    "macro_f1": 0.26598590348924733,
+    "micro_f1": 0.927525018054266,
+    "weighted_f1": 0.9412505674026185,
+    "precision": 0.24560118852570348,
+    "recall": 0.31337115309800806,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 19386
+  },
+  {
+    "dataset": "FUNSD",
+    "model_type": "Text-Only Baseline (TF-IDF + LR)",
+    "split": "test",
+    "macro_f1": 0.3511620716746725,
+    "micro_f1": 0.40186057195360053,
+    "weighted_f1": 0.4139835324899791,
+    "precision": 0.347399852712727,
+    "recall": 0.41857095443115416,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 8707
+  },
+  {
+    "dataset": "FUNSD",
+    "model_type": "Text+Layout Baseline (Spatial + LR)",
+    "split": "test",
+    "macro_f1": 0.49962275873639184,
+    "micro_f1": 0.5404846675089009,
+    "weighted_f1": 0.5460212720089713,
+    "precision": 0.48402615923600617,
+    "recall": 0.5463682208828731,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 8707
+  },
+  {
+    "dataset": "CORD",
+    "model_type": "Text-Only Baseline (TF-IDF + LR)",
+    "split": "test",
+    "macro_f1": 0.3266920664592489,
+    "micro_f1": 0.6842105263157895,
+    "weighted_f1": 0.6832071043874425,
+    "precision": 0.322157854246934,
+    "recall": 0.3398941320926696,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 2356
+  },
+  {
+    "dataset": "CORD",
+    "model_type": "Text+Layout Baseline (Spatial + LR)",
+    "split": "test",
+    "macro_f1": 0.37667876871654654,
+    "micro_f1": 0.8106960950764007,
+    "weighted_f1": 0.8126200768210559,
+    "precision": 0.3694358590562068,
+    "recall": 0.38857634474402586,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 2356
+  }
+]

@@ -1,0 +1,35 @@
+# Preprocessing & Normalization Configuration
+
+spatial:
+  normalized_min: 0
+  normalized_max: 1000
+  clip_out_of_bounds: true
+
+dataset_split:
+  random_seed: 42
+  validation_ratio: 0.15
+
+paths:
+  raw_data_dir: "raw_data"
+  processed_data_dir: "processed_data"
+  reports_dir: "reports"
+  models_dir: "models/saved"
+
+text:
+  strip_whitespace: true
+  unicode_normalization: "NFKC"
+  replace_empty_text: "[EMPTY]"
+
+datasets:
+  sroie:
+    source_hf: "jsdnrs/ICDAR2019-SROIE"
+    has_official_val: false
+    entity_keys: ["company", "date", "address", "total"]
+  funsd:
+    source_hf: "nielsr/funsd"
+    has_official_val: false
+    entity_keys: ["question", "answer", "header", "other"]
+  cord:
+    source_hf: "naver-clova-ix/cord-v2"
+    has_official_val: true
+    entity_keys: ["menu", "total", "sub_total", "void_menu", "table"]

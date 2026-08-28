@@ -1,0 +1,54 @@
+# SROIE label schema for LayoutLMv3 token classification
+# Task: Key Information Extraction from scanned receipts
+# Source: ICDAR 2019 SROIE competition (jsdnrs/ICDAR2019-SROIE on HuggingFace)
+
+dataset: sroie
+task: key_information_extraction
+num_labels: 9
+
+labels:
+  - "O"
+  - "B-COMPANY"
+  - "I-COMPANY"
+  - "B-DATE"
+  - "I-DATE"
+  - "B-ADDRESS"
+  - "I-ADDRESS"
+  - "B-TOTAL"
+  - "I-TOTAL"
+
+# Label IDs (0-indexed, must match order above)
+label2id:
+  "O": 0
+  "B-COMPANY": 1
+  "I-COMPANY": 2
+  "B-DATE": 3
+  "I-DATE": 4
+  "B-ADDRESS": 5
+  "I-ADDRESS": 6
+  "B-TOTAL": 7
+  "I-TOTAL": 8
+
+id2label:
+  0: "O"
+  1: "B-COMPANY"
+  2: "I-COMPANY"
+  3: "B-DATE"
+  4: "I-DATE"
+  5: "B-ADDRESS"
+  6: "I-ADDRESS"
+  7: "B-TOTAL"
+  8: "I-TOTAL"
+
+# Entity-level grouping for post-processing reconstruction
+entity_groups:
+  company: ["B-COMPANY", "I-COMPANY"]
+  date: ["B-DATE", "I-DATE"]
+  address: ["B-ADDRESS", "I-ADDRESS"]
+  total: ["B-TOTAL", "I-TOTAL"]
+
+# Semantic notes
+notes: >
+  SROIE is a flat KIE task. Each token belongs to exactly one entity type or O.
+  Entity strings in `entities` dict can be used to verify extraction accuracy.
+  Label imbalance: O tokens dominate (~82% of tokens). Use weighted loss.

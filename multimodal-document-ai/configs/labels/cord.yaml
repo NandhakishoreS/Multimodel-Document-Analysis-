@@ -1,0 +1,67 @@
+# CORD label schema for LayoutLMv3 token classification
+# Task: Fine-grained receipt entity labeling
+# Source: naver-clova-ix/cord-v2 on HuggingFace
+
+dataset: cord
+task: receipt_entity_labeling
+num_labels: 13
+
+labels:
+  - "O"
+  - "B-MENU"
+  - "I-MENU"
+  - "B-TOTAL"
+  - "I-TOTAL"
+  - "B-SUBTOTAL"
+  - "I-SUBTOTAL"
+  - "B-VOID"
+  - "I-VOID"
+  - "B-PAYMENT"
+  - "I-PAYMENT"
+  - "B-ETC"
+  - "I-ETC"
+
+label2id:
+  "O": 0
+  "B-MENU": 1
+  "I-MENU": 2
+  "B-TOTAL": 3
+  "I-TOTAL": 4
+  "B-SUBTOTAL": 5
+  "I-SUBTOTAL": 6
+  "B-VOID": 7
+  "I-VOID": 8
+  "B-PAYMENT": 9
+  "I-PAYMENT": 10
+  "B-ETC": 11
+  "I-ETC": 12
+
+id2label:
+  0: "O"
+  1: "B-MENU"
+  2: "I-MENU"
+  3: "B-TOTAL"
+  4: "I-TOTAL"
+  5: "B-SUBTOTAL"
+  6: "I-SUBTOTAL"
+  7: "B-VOID"
+  8: "I-VOID"
+  9: "B-PAYMENT"
+  10: "I-PAYMENT"
+  11: "B-ETC"
+  12: "I-ETC"
+
+# Entity-level grouping for reconstruction
+entity_groups:
+  menu: ["B-MENU", "I-MENU"]
+  total: ["B-TOTAL", "I-TOTAL"]
+  subtotal: ["B-SUBTOTAL", "I-SUBTOTAL"]
+  void: ["B-VOID", "I-VOID"]
+  payment: ["B-PAYMENT", "I-PAYMENT"]
+  etc: ["B-ETC", "I-ETC"]
+
+notes: >
+  CORD has official train/val/test splits (800/100/100). Fine-grained receipt
+  understanding with multilingual content. VOID class has only 4 tokens in the
+  entire dataset — per-class F1 will be 0.0 for VOID in all realistic models.
+  MENU tokens dominate (~58% of entity tokens).

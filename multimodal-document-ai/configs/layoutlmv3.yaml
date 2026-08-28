@@ -1,0 +1,78 @@
+# LayoutLMv3 Training Configuration
+# Model: microsoft/layoutlmv3-base
+# Phase 4 — Multimodal Transformer Document Understanding
+
+model:
+  checkpoint: "microsoft/layoutlmv3-base"
+  # Number of labels is set per-dataset at runtime from configs/labels/{dataset}.yaml
+  # Do not hard-code num_labels here.
+
+processor:
+  # LayoutLMv3Processor combines tokenizer + image processor
+  # apply_ocr: false — we supply our own OCR words and bboxes from Phase 2
+  apply_ocr: false
+  # Max sequence length for the tokenizer (LayoutLMv3 supports up to 512)
+  max_seq_length: 512
+
+image:
+  # LayoutLMv3 expects images resized to 224x224 (handled by processor)
+  size: 224
+
+training:
+  epochs: 10
+  learning_rate: 5.0e-5
+  batch_size: 2           # Small batch — CPU-safe; increase to 4-8 with a GPU
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_accumulation_steps: 4   # Effective batch = 2 * 4 = 8
+  fp16: false             # Set true on CUDA GPU; must be false on CPU
+  seed: 42
+  early_stopping_patience: 3      # Stop if val F1 doesn't improve for N epochs
+  eval_every_n_epochs: 1
+
+checkpointing:
+  # Best checkpoint selected by validation macro F1 (not training loss)
+  save_dir: "models/checkpoints/layoutlmv3"
+  save_best_only: true
+  metric: "macro_f1"
+  mode: "max"
+
+# Stage-based training (run in order: smoke → small → full)
+stages:
+  smoke:
+    num_samples: 15         # Tiny sanity check
+    epochs: 2
+    description: "Verify forward pass, loss, backward, checkpoint. Must pass before full training."
+  small:
+    num_samples: 30         # ~5-6% of SROIE train
+    epochs: 3
+    description: "Detect memory problems, label issues, convergence issues."
+  full:
+    num_samples: null       # null = use entire split
+    epochs: 10
+    description: "Full fine-tuning on official train split."
+
+paths:
+  processed_data_dir: "processed_data"
+  labels_dir: "configs/labels"
+  checkpoints_dir: "models/checkpoints/layoutlmv3"
+  experiments_dir: "experiments"
+  reports_dir: "reports"
+
+# Per-dataset overrides (override top-level training values if needed)
+datasets:
+  sroie:
+    labels_config: "configs/labels/sroie.yaml"
+    num_labels: 9
+    epochs: 10
+    learning_rate: 5.0e-5
+  funsd:
+    labels_config: "configs/labels/funsd.yaml"
+    num_labels: 7
+    epochs: 12              # FUNSD is small, needs more epochs
+    learning_rate: 5.0e-5
+  cord:
+    labels_config: "configs/labels/cord.yaml"
+    num_labels: 13
+    epochs: 10
+    learning_rate: 3.0e-5  # Slightly lower LR for larger label space

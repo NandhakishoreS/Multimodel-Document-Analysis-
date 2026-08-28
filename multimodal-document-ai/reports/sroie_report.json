@@ -1,0 +1,45 @@
+{
+  "dataset_name": "ICDAR2019-SROIE",
+  "splits": {
+    "train": 626,
+    "test": 361
+  },
+  "total_samples": 987,
+  "entity_statistics": {
+    "company": 987,
+    "date": 987,
+    "address": 986,
+    "total": 986
+  },
+  "image_resolution_statistics": {
+    "width_min": 435,
+    "width_max": 4961,
+    "width_mean": 1363.9635258358662,
+    "width_median": 818.0,
+    "height_min": 605,
+    "height_max": 7016,
+    "height_mean": 2407.565349544073,
+    "height_median": 1698.0
+  },
+  "word_statistics": {
+    "words_min": 18,
+    "words_max": 153,
+    "words_mean": 53.71023302938197,
+    "words_median": 50.0,
+    "total_words": 53012
+  },
+  "bbox_statistics": {
+    "bboxes_min": 18,
+    "bboxes_max": 153,
+    "bboxes_mean": 53.71023302938197,
+    "bboxes_median": 50.0,
+    "total_bboxes": 53012
+  },
+  "data_quality": {
+    "missing_entities": 2,
+    "empty_words_samples": 0,
+    "bbox_mismatch_samples": 0,
+    "malformed_bboxes": 0,
+    "duplicate_sample_ids": 0
+  }
+}
