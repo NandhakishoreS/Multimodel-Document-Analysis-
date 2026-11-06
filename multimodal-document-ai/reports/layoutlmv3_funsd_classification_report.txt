@@ -1,0 +1,12 @@
+LayoutLMv3 -- FUNSD -- Test Set
+============================================================
+
+              precision    recall  f1-score   support
+
+      ANSWER       0.76      0.83      0.79       805
+      HEADER       0.51      0.54      0.52       119
+    QUESTION       0.83      0.84      0.84      1049
+
+   micro avg       0.78      0.82      0.80      1973
+   macro avg       0.70      0.74      0.72      1973
+weighted avg       0.78      0.82      0.80      1973

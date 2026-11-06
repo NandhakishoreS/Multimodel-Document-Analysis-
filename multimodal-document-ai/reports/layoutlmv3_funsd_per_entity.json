@@ -1,0 +1,80 @@
+{
+  "dataset": "funsd",
+  "stage": "full",
+  "seqeval": {
+    "precision": 0.7804,
+    "recall": 0.8196,
+    "f1": 0.7995,
+    "micro_f1": 0.7995,
+    "macro_f1": 0.7179,
+    "per_entity": {
+      "ANSWER": {
+        "precision": 0.7571,
+        "recall": 0.8286,
+        "f1": 0.7912,
+        "support": 805
+      },
+      "HEADER": {
+        "precision": 0.512,
+        "recall": 0.5378,
+        "f1": 0.5246,
+        "support": 119
+      },
+      "QUESTION": {
+        "precision": 0.8311,
+        "recall": 0.8446,
+        "f1": 0.8378,
+        "support": 1049
+      }
+    },
+    "num_sequences": 50,
+    "num_tokens_true": 8356
+  },
+  "token_level": {
+    "micro_precision": 0.8446,
+    "micro_recall": 0.8175,
+    "micro_f1": 0.8308,
+    "macro_precision": 0.7981,
+    "macro_recall": 0.7704,
+    "macro_f1": 0.7833,
+    "weighted_f1": 0.8298,
+    "per_class": {
+      "B-HEADER": {
+        "precision": 0.6696,
+        "recall": 0.6303,
+        "f1": 0.6494,
+        "support": 119
+      },
+      "I-HEADER": {
+        "precision": 0.6818,
+        "recall": 0.5882,
+        "f1": 0.6316,
+        "support": 255
+      },
+      "B-QUESTION": {
+        "precision": 0.8995,
+        "recall": 0.8875,
+        "f1": 0.8935,
+        "support": 1049
+      },
+      "I-QUESTION": {
+        "precision": 0.843,
+        "recall": 0.8377,
+        "f1": 0.8403,
+        "support": 1423
+      },
+      "B-ANSWER": {
+        "precision": 0.8522,
+        "recall": 0.8957,
+        "f1": 0.8734,
+        "support": 805
+      },
+      "I-ANSWER": {
+        "precision": 0.8422,
+        "recall": 0.7833,
+        "f1": 0.8117,
+        "support": 2474
+      }
+    }
+  }
+}

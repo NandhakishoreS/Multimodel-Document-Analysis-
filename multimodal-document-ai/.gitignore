@@ -1,5 +1,7 @@
+
 # Environments
 .venv/
+.venv*/
 env/
 venv/
 ENV/
@@ -21,6 +23,11 @@ models/checkpoints/
 *.pt
 *.bin
 *.onnx
+*.safetensors
+*.pth
+*.db
+*.sqlite
+*.sqlite3
 
 # System & IDE
 .vscode/

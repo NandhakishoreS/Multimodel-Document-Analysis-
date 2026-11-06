@@ -10,6 +10,8 @@ Design:
 - Subset mode: pass num_samples to cap the dataset size (used by smoke and small stages).
 - Images are loaded from processed_data/{dataset}/images/ using the relative
   image_path stored in the JSONL, resolved against the project root.
+- word_ids are stored as a padded int64 tensor (None → -1) so that the training
+  loop can correctly reconstruct word-level label sequences without heuristics.
 """
 
 from __future__ import annotations
@@ -28,6 +30,9 @@ from models.layoutlmv3.tokenizer import LayoutLMv3TokenizerWrapper
 
 logger = logging.getLogger(__name__)
 
+# Sentinel used in the word_ids tensor to represent None (special/padding tokens).
+WORD_ID_PAD: int = -1
+
 
 class LayoutLMv3DocumentDataset(Dataset):
     """
@@ -36,31 +41,23 @@ class LayoutLMv3DocumentDataset(Dataset):
     Parameters
     ----------
     jsonl_path : str or Path
-        Path to the processed split file, e.g. processed_data/sroie/train.jsonl.
     dataset_config : LayoutLMv3DatasetConfig
-        Label schema for this dataset (loaded from configs/labels/*.yaml).
     tokenizer_wrapper : LayoutLMv3TokenizerWrapper
-        Wraps the HuggingFace processor; handles tokenization and label alignment.
     split : str
-        "train", "val", or "test" — used for logging only.
     num_samples : int or None
-        If set, randomly subsample this many records (for smoke/small stages).
-        Sampling uses a fixed seed for reproducibility.
     seed : int
-        Random seed for subsampling (default 42).
     project_root : Path or None
-        Used to resolve relative image_path values in JSONL records.
-        Defaults to the package-level _PROJECT_ROOT.
 
     Returns per __getitem__
     -----------------------
     dict with keys:
-        input_ids      : Tensor (seq_len,)
-        attention_mask : Tensor (seq_len,)
-        bbox           : Tensor (seq_len, 4)
-        pixel_values   : Tensor (3, 224, 224)
-        labels         : Tensor (seq_len,)
-        sample_id      : str  — original document id, for error analysis
+        input_ids      : Tensor (seq_len,)         int64
+        attention_mask : Tensor (seq_len,)         int64
+        bbox           : Tensor (seq_len, 4)       int64
+        pixel_values   : Tensor (3, 224, 224)      float32
+        labels         : Tensor (seq_len,)         int64
+        word_ids       : Tensor (seq_len,)         int64  — -1 for special/padding tokens
+        sample_id      : str
     """
 
     def __init__(
@@ -82,17 +79,14 @@ class LayoutLMv3DocumentDataset(Dataset):
         if not self.jsonl_path.exists():
             raise FileNotFoundError(f"JSONL file not found: {self.jsonl_path}")
 
-        # Load all raw JSONL records into memory (dicts, not tensors yet).
         self.samples: List[Dict[str, Any]] = self._load_jsonl(self.jsonl_path)
 
-        # Optionally subsample for smoke/small stage experiments.
         if num_samples is not None and num_samples < len(self.samples):
             rng = random.Random(seed)
             self.samples = rng.sample(self.samples, num_samples)
             logger.info(
-                "[%s/%s] Subsampled to %d / %d samples (seed=%d)",
-                dataset_config.dataset, split, len(self.samples),
-                len(self._load_jsonl(self.jsonl_path)), seed,
+                "[%s/%s] Subsampled to %d samples (seed=%d)",
+                dataset_config.dataset, split, len(self.samples), seed,
             )
         else:
             logger.info(
@@ -124,13 +118,21 @@ class LayoutLMv3DocumentDataset(Dataset):
             )
             encoding = self._empty_encoding()
 
-        # Squeeze batch dimension added by the processor (we handle batching in DataLoader).
+        # word_ids list from tokenizer: List[Optional[int]]
+        # Convert to int64 tensor replacing None with WORD_ID_PAD (-1).
+        raw_word_ids: List[Optional[int]] = encoding.get("word_ids", [])
+        word_ids_tensor = torch.tensor(
+            [wid if wid is not None else WORD_ID_PAD for wid in raw_word_ids],
+            dtype=torch.long,
+        )
+
         item: Dict[str, Any] = {
             "input_ids":      encoding["input_ids"].squeeze(0),
             "attention_mask": encoding["attention_mask"].squeeze(0),
             "bbox":           encoding["bbox"].squeeze(0),
             "pixel_values":   encoding["pixel_values"].squeeze(0),
             "labels":         encoding["labels"].squeeze(0),
+            "word_ids":       word_ids_tensor,   # (seq_len,) with -1 for specials
             "sample_id":      sample.get("id", str(idx)),
         }
         return item
@@ -158,6 +160,7 @@ class LayoutLMv3DocumentDataset(Dataset):
             "bbox":           torch.zeros(1, seq_len, 4, dtype=torch.long),
             "pixel_values":   torch.zeros(1, 3, 224, 224, dtype=torch.float),
             "labels":         torch.full((1, seq_len), -100, dtype=torch.long),
+            "word_ids":       torch.full((1, seq_len), WORD_ID_PAD, dtype=torch.long),
         }
 
     def get_raw_sample(self, idx: int) -> Dict[str, Any]:
@@ -178,27 +181,6 @@ def build_dataloaders(
 ) -> Dict[str, torch.utils.data.DataLoader]:
     """
     Build train / val / test DataLoaders for a given dataset.
-
-    Parameters
-    ----------
-    dataset_name : str
-        "sroie" | "funsd" | "cord"
-    dataset_config : LayoutLMv3DatasetConfig
-    tokenizer_wrapper : LayoutLMv3TokenizerWrapper
-    processed_data_dir : str or Path
-        Root of processed_data/, e.g. "processed_data".
-    batch_size : int
-        Per-device batch size.
-    num_workers : int
-        DataLoader worker processes.  0 = main process (safe on Windows).
-    num_train_samples : int or None
-        Subsample train split (smoke/small experiments).
-    seed : int
-    project_root : Path or None
-
-    Returns
-    -------
-    dict with keys "train", "val", "test" mapping to DataLoader instances.
     """
     from torch.utils.data import DataLoader
 
@@ -206,7 +188,7 @@ def build_dataloaders(
     loaders: Dict[str, DataLoader] = {}
 
     split_configs = [
-        ("train", num_train_samples, True),   # (split, num_samples, shuffle)
+        ("train", num_train_samples, True),
         ("val",   None,              False),
         ("test",  None,              False),
     ]
@@ -232,8 +214,7 @@ def build_dataloaders(
             batch_size=batch_size,
             shuffle=shuffle,
             num_workers=num_workers,
-            # collate_fn not needed — __getitem__ already returns fixed-length tensors.
-            pin_memory=False,  # CPU-only machine; pin_memory has no benefit.
+            pin_memory=torch.cuda.is_available(),
         )
         logger.info(
             "Built %s DataLoader: %d samples, %d batches (batch_size=%d)",

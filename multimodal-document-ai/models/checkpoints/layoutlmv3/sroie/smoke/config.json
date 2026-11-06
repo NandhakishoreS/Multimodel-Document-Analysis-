@@ -54,7 +54,7 @@
   "second_input_size": 112,
   "shape_size": 128,
   "text_embed": true,
-  "transformers_version": "5.16.1",
+  "transformers_version": "4.57.6",
   "type_vocab_size": 1,
   "visual_embed": true,
   "vocab_size": 50265

@@ -1,0 +1,57 @@
+Entity,Condition_Name,Degradation_Type,Severity,Precision,Recall,F1,Delta_F1,Relative_Deg_Pct
+ADDRESS,Clean Baseline,Clean,None,0.8689,0.8889,0.8434,0.0,0.0
+COMPANY,Clean Baseline,Clean,None,0.8689,0.8889,0.9049,0.0,0.0
+DATE,Clean Baseline,Clean,None,0.8689,0.8889,0.993,0.0,0.0
+TOTAL,Clean Baseline,Clean,None,0.8689,0.8889,0.7725,0.0,0.0
+ADDRESS,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8682,0.8882,0.8297,-0.0137,1.62
+COMPANY,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8682,0.8882,0.9088,0.0039,0.43
+DATE,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8682,0.8882,0.9902,-0.0028,0.28
+TOTAL,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8682,0.8882,0.7832,0.0107,1.39
+ADDRESS,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8551,0.8742,0.8235,-0.0199,2.36
+COMPANY,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8551,0.8742,0.9074,0.0025,0.28
+DATE,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8551,0.8742,0.9832,-0.0098,0.99
+TOTAL,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8551,0.8742,0.7441,-0.0284,3.68
+ADDRESS,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8502,0.8644,0.7956,-0.0478,5.67
+COMPANY,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8502,0.8644,0.9059,0.001,0.11
+DATE,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8502,0.8644,0.9818,-0.0112,1.13
+TOTAL,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8502,0.8644,0.7454,-0.0271,3.51
+ADDRESS,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8374,0.8491,0.8127,-0.0307,3.64
+COMPANY,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8374,0.8491,0.8618,-0.0431,4.76
+DATE,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8374,0.8491,0.9659,-0.0271,2.73
+TOTAL,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8374,0.8491,0.7339,-0.0386,5.0
+ADDRESS,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7972,0.7939,0.7639,-0.0795,9.43
+COMPANY,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7972,0.7939,0.807,-0.0979,10.82
+DATE,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7972,0.7939,0.936,-0.057,5.74
+TOTAL,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7972,0.7939,0.6789,-0.0936,12.12
+ADDRESS,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7144,0.6974,0.6087,-0.2347,27.83
+COMPANY,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7144,0.6974,0.7463,-0.1586,17.53
+DATE,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7144,0.6974,0.8744,-0.1186,11.94
+TOTAL,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7144,0.6974,0.6052,-0.1673,21.66
+ADDRESS,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8116,0.8281,0.749,-0.0944,11.19
+COMPANY,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8116,0.8281,0.8365,-0.0684,7.56
+DATE,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8116,0.8281,0.9847,-0.0083,0.84
+TOTAL,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8116,0.8281,0.7084,-0.0641,8.3
+ADDRESS,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7354,0.7652,0.7015,-0.1419,16.82
+COMPANY,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7354,0.7652,0.6247,-0.2802,30.96
+DATE,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7354,0.7652,0.986,-0.007,0.7
+TOTAL,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7354,0.7652,0.6948,-0.0777,10.06
+ADDRESS,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.651,0.6883,0.6235,-0.2199,26.07
+COMPANY,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.651,0.6883,0.5,-0.4049,44.75
+DATE,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.651,0.6883,0.9667,-0.0263,2.65
+TOTAL,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.651,0.6883,0.5962,-0.1763,22.82
+ADDRESS,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8689,0.8889,0.8434,0.0,0.0
+COMPANY,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8689,0.8889,0.9049,0.0,0.0
+DATE,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8689,0.8889,0.993,0.0,0.0
+TOTAL,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8689,0.8889,0.7725,0.0,0.0
+ADDRESS,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8689,0.8889,0.8434,0.0,0.0
+COMPANY,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8689,0.8889,0.9049,0.0,0.0
+DATE,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8689,0.8889,0.993,0.0,0.0
+TOTAL,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8689,0.8889,0.7725,0.0,0.0
+ADDRESS,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8672,0.8896,0.8372,-0.0062,0.74
+COMPANY,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8672,0.8896,0.9076,0.0027,0.3
+DATE,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8672,0.8896,0.993,0.0,0.0
+TOTAL,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8672,0.8896,0.7742,0.0017,0.22
+ADDRESS,Composite Multi-Modal Stress,Composite,Medium,0.6993,0.7282,0.6437,-0.1997,23.68
+COMPANY,Composite Multi-Modal Stress,Composite,Medium,0.6993,0.7282,0.6096,-0.2953,32.63
+DATE,Composite Multi-Modal Stress,Composite,Medium,0.6993,0.7282,0.9622,-0.0308,3.1
+TOTAL,Composite Multi-Modal Stress,Composite,Medium,0.6993,0.7282,0.6458,-0.1267,16.4

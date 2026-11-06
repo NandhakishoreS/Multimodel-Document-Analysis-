@@ -1,0 +1,12 @@
+LayoutLMv3 -- CORD -- Test Set
+============================================================
+
+              precision    recall  f1-score   support
+
+        MENU       0.98      0.98      0.98       887
+    SUBTOTAL       0.95      0.99      0.97       143
+       TOTAL       0.98      0.96      0.97       279
+
+   micro avg       0.97      0.98      0.98      1309
+   macro avg       0.97      0.98      0.97      1309
+weighted avg       0.97      0.98      0.98      1309

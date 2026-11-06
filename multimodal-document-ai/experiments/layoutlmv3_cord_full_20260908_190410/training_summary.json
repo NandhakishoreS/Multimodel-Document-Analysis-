@@ -1,0 +1,346 @@
+{
+  "experiment_id": "layoutlmv3_cord_full_20260908_190410",
+  "dataset": "cord",
+  "stage": "full",
+  "model_checkpoint": "microsoft/layoutlmv3-base",
+  "best_val_macro_f1": 0.9726,
+  "epochs_trained": 9,
+  "training_time_s": 1625.4,
+  "hardware": {
+    "cuda_available": true,
+    "device": "cuda",
+    "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "vram_gb": 6.4,
+    "torch_version": "2.5.1+cu121"
+  },
+  "config": {
+    "learning_rate": 3e-05,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 8,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "fp16": true,
+    "seed": 42,
+    "max_seq_length": 512
+  },
+  "epoch_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.340281,
+      "val_metrics": {
+        "precision": 0.7766,
+        "recall": 0.8614,
+        "f1": 0.8168,
+        "micro_f1": 0.8168,
+        "macro_f1": 0.719,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.8691,
+            "recall": 0.9392,
+            "f1": 0.9028,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.4474,
+            "recall": 0.6296,
+            "f1": 0.5231,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.7148,
+            "recall": 0.7482,
+            "f1": 0.7311,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.373727,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.254849,
+      "val_metrics": {
+        "precision": 0.9337,
+        "recall": 0.936,
+        "f1": 0.9349,
+        "micro_f1": 0.9349,
+        "macro_f1": 0.9228,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9437,
+            "recall": 0.9367,
+            "f1": 0.9402,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.8881,
+            "recall": 0.8815,
+            "f1": 0.8848,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9271,
+            "recall": 0.9604,
+            "f1": 0.9435,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.135313,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.142619,
+      "val_metrics": {
+        "precision": 0.9482,
+        "recall": 0.9606,
+        "f1": 0.9544,
+        "micro_f1": 0.9544,
+        "macro_f1": 0.9463,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9546,
+            "recall": 0.9653,
+            "f1": 0.9599,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9078,
+            "recall": 0.9481,
+            "f1": 0.9275,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9498,
+            "recall": 0.9532,
+            "f1": 0.9515,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.111643,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.097524,
+      "val_metrics": {
+        "precision": 0.9584,
+        "recall": 0.9631,
+        "f1": 0.9607,
+        "micro_f1": 0.9607,
+        "macro_f1": 0.9602,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9593,
+            "recall": 0.9653,
+            "f1": 0.9623,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9562,
+            "recall": 0.9704,
+            "f1": 0.9632,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9567,
+            "recall": 0.9532,
+            "f1": 0.955,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.090488,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.066341,
+      "val_metrics": {
+        "precision": 0.9654,
+        "recall": 0.9614,
+        "f1": 0.9634,
+        "micro_f1": 0.9634,
+        "macro_f1": 0.9611,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9711,
+            "recall": 0.9591,
+            "f1": 0.965,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9489,
+            "recall": 0.963,
+            "f1": 0.9559,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9573,
+            "recall": 0.9676,
+            "f1": 0.9624,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.089224,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.046167,
+      "val_metrics": {
+        "precision": 0.9753,
+        "recall": 0.9721,
+        "f1": 0.9737,
+        "micro_f1": 0.9737,
+        "macro_f1": 0.9726,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9775,
+            "recall": 0.9715,
+            "f1": 0.9745,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9704,
+            "recall": 0.9704,
+            "f1": 0.9704,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9713,
+            "recall": 0.9748,
+            "f1": 0.9731,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.087549,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.034091,
+      "val_metrics": {
+        "precision": 0.9744,
+        "recall": 0.9688,
+        "f1": 0.9716,
+        "micro_f1": 0.9716,
+        "macro_f1": 0.9681,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9812,
+            "recall": 0.9727,
+            "f1": 0.9769,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9635,
+            "recall": 0.9778,
+            "f1": 0.9706,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9601,
+            "recall": 0.9532,
+            "f1": 0.9567,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.093945,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.023873,
+      "val_metrics": {
+        "precision": 0.9753,
+        "recall": 0.9721,
+        "f1": 0.9737,
+        "micro_f1": 0.9737,
+        "macro_f1": 0.9717,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9788,
+            "recall": 0.9715,
+            "f1": 0.9751,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9632,
+            "recall": 0.9704,
+            "f1": 0.9668,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9713,
+            "recall": 0.9748,
+            "f1": 0.9731,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.090944,
+        "split": "val"
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.019227844956913032,
+      "val_metrics": {
+        "precision": 0.9729,
+        "recall": 0.9729,
+        "f1": 0.9729,
+        "micro_f1": 0.9729,
+        "macro_f1": 0.9679,
+        "per_entity": {
+          "MENU": {
+            "precision": 0.9788,
+            "recall": 0.9739,
+            "f1": 0.9764,
+            "support": 806
+          },
+          "SUBTOTAL": {
+            "precision": 0.9489,
+            "recall": 0.963,
+            "f1": 0.9559,
+            "support": 135
+          },
+          "TOTAL": {
+            "precision": 0.9679,
+            "recall": 0.9748,
+            "f1": 0.9713,
+            "support": 278
+          }
+        },
+        "num_sequences": 100,
+        "num_tokens_true": 2186,
+        "avg_loss": 0.08401,
+        "split": "val"
+      },
+      "early_stop": true
+    }
+  ],
+  "checkpoint_dir": "C:\\MDA\\multimodal-document-ai\\models\\checkpoints\\layoutlmv3\\cord\\full"
+}

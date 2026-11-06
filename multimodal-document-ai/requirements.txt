@@ -18,3 +18,14 @@ accelerate>=0.27.0
 sentencepiece>=0.2.0
 timm>=0.9.0
 safetensors>=0.4.0
+# Phase 11 — Financial Document Intelligence
+fpdf2>=2.7.0
+openpyxl>=3.1.0
+plotly>=5.18.0
+# Phase 12 — Ingestion & PDF Processing
+pypdfium2>=4.30.0
+pypdf>=4.0.0
+rapidocr-onnxruntime>=1.3.0
+# Phase 13-17 — Web UI Application
+streamlit>=1.30.0
+

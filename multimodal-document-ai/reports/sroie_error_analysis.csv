@@ -1,0 +1,975 @@
+sample_id,field,ground_truth,predicted,error_type,reason
+X00016469670,DATE,15/01/2019,: 15/01/2019 11:05:16 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X00016469670,ADDRESS,"NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, B1750 MASAI, JOHOR",NO 2 & 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X00016469671,DATE,02/01/2019,02/01/2019 2:47:14 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X00016469671,ADDRESS,"NO 2 & 4, JALAN BAYU 4, BANDAR SERI ALAM, 81750 MASAI, JOHOR",NO 2 & 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X00016469671,TOTAL,170.00,1 170.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005200931,DATE,09/02/2018,DATE:09/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005200931,ADDRESS,NO.59 JALAN PERMAS 9/5 BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU,NO.59 JALAN PERMAS 9/5,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230605,ADDRESS,"KM 458.4 BKT LANJAN UTARA, L/RAYA UTARA SELATAN,SG BULOH 47000 SUNGAI BUL",KM 458.4 BKT LANJAN UTARA,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230616,DATE,18/01/2018,ORD #90 -REG #19- 18/01/2018 17:09:21,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230616,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230621,DATE,05/02/2018,:05/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230621,ADDRESS,"LOT 13, JALAN IPOH, KG BATU 30, ULU YAM LAMA 44300 BTG KALI, SELANGOR.",LOT 13 LOT 13,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005230648,DATE,29/01/2018,29/01/2018 4:40:40 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230648,ADDRESS,"47, JALAN MERANTI 1, SEK. 3, BANDAR UTAMA BATANG KALI, 44300 BATANG KALI, SELANGOR.",47,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230657,DATE,31/12/2017,(none),missed entity,Model failed to detect any tokens for DATE
+X51005230657,ADDRESS,"47, JALAN MERANTI 1, SEK. 3, BANDAR UTAMA BATANG KALI, 44300 BATANG KALI, SELANGOR.",47,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005230659,ADDRESS,"NO. 5-7, JALAN MAHAGONI 7/1, SEKYSEN 4, BANDAR UTAMA, 44300 BATANG KALI, SELANGOR.",NO. 5-7,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005268275,DATE,20/11/2017,BILL DATE : 20/11/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005268275,ADDRESS,"NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",NO: 28,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005268275,TOTAL,278.80,2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005268408,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (S19537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005268408,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1413-SETIA ALAM 2",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005288570,COMPANY,SECURE PARKING CORPORATION S/B,SECURE PARKING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005288570,ADDRESS,"RIVERWALK VILLAGE BATU 3, JALAN IPOH 51200 KL.",(none),missed entity,Model failed to detect any tokens for ADDRESS
+X51005288570,TOTAL,1.00,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005301666,DATE,20/11/2017,BILL DATE : 20/11/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005301666,ADDRESS,"NO: 28, JALAN ASTANA 1C, BANDAR BUKIT RAJA, 41050 KLANG SELANGOR D.E, MALAYSIA",NO: 28,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005301666,TOTAL,278.80,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005337867,COMPANY,OLD TOWN KOPITAM SND BHD,OLDTOWN WHITE COFFEE OLD TOWN KOPITIAM SDN BHD (716269-X),incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005337867,DATE,22 MAR 18,22 MAR 18 12:44:00 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005337867,TOTAL,30.25,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005337877,DATE,20/03/2018,20/03/2018 6:41:02 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005337877,ADDRESS,"22A-1, JALAN 17/54, SECTION 17, 46400 PETALING JAYA, SELANGOR.",22A-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361906,COMPANY,TED HENG STATIONERY & BOOKS,TEO HENG STATIONERY & BOOKS,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361906,DATE,27/01/2018,DATE : 27/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361906,ADDRESS,"NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",NO. 53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361906,TOTAL,27.35,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005361908,DATE,15/03/2018,DATE : 15/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361908,ADDRESS,"NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",NO. 53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361908,TOTAL,127.20,7.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361912,DATE,29/01/2018,DATE : 29/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361912,ADDRESS,"NO. 53, JALAN BESAR, 45600 BATANG BERJUNTAI SELANGOR DARUL EHSAN",NO. 53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005361923,ADDRESS,"8 & 10, JALAN IJOK PERMAI 1, PUSAT NIAGA IJOK PERMAI, 48000 IJOK, SELANGOR.",8 & 10,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005365187,ADDRESS,"NO.20. GROUND FLOOR, JALAN BS 10/6 TAMAN BUKIT SERDANG, SEKSYEN 10, 43300 SERI KEMBANGAN. SELANGOR DARUL EHSAN",NO.20. GROUND FLOOR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005365187,TOTAL,31.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005433518,DATE,07 MAR 2018,07 MAR 2018 18:22,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433518,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433518,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433543,DATE,13 MAR 2018,13 MAR 2018 18:35,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433543,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433543,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433548,ADDRESS,"379, JALAN PERMAS SATU, BANDAR BARU PERMAS JAYA 81750 PLENTONG, JOHOR.",379,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433548,TOTAL,33.80,1 5,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005433556,DATE,11/03/2018,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005433556,ADDRESS,"S117, SECOND FLOOR, AEON TEBRAU CITY, 1, JALAN DESA TEBRAU, TAMAN DESA TEBRAU, 81100 JOHOR BAHRU, JOHOR.",S117,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442322,COMPANY,GRAND COMPANIONS SDN BHD,TONY ROMA'S AEON TEBRAU CITY,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005442322,DATE,03 MAR 19,03 MAR 18 05:16:55 PM,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005442322,ADDRESS,"LOT G112, AEON MALL TEBRAU CITY NO 1 JALAN DESA TEBRAU 81100 JOHOR BAHRU",LOT G112,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442334,DATE,26 MAR 2018,26 MAR 2018 18:14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442334,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PARINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442334,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442343,DATE,13/03/2018,DATE: 13/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442343,ADDRESS,"NO 4,JALAN PERJIRANAN 10, TAMAN AIR BIRU, 81700 PASIR GUDANG, JOHOR.",NO 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442366,DATE,22-03-2018,DATE: 22-03-2018 04:01:20 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442366,ADDRESS,NO 14& 16 JALAN PERMAS 4/3 BANDAR BARU PERMAS JAY,(none),missed entity,Model failed to detect any tokens for ADDRESS
+X51005442375,DATE,25 MAR 2018,25 MAR 2018 18:26,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442375,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442375,TOTAL,$8.50,TOTAL AMOUNT: $8.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442382,DATE,20 MAR 2018,20 MAR 2018 17:55,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442382,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442388,COMPANY,CONTENTO,CONTENTO (JM0761170-K),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442388,DATE,20/03/18,20/03/18 17:19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005442388,ADDRESS,"15, JALAN PERMAS 10/7,PERMAS 81750 MASAI JOHOR",15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444040,ADDRESS,"LOT 6, JALAN BATAI, PLAZA BATAI, DAMANSARA HEIGHTS 50490, KUALA LUMPUR",LOT 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444041,ADDRESS,"LOT 6, JALAN BATAI, PLAZA BATAI, DAMANSARA HEIGHTS 50490, KUALA LUMPUR",LOT 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444044,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444044,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1572-TMN BKT PANDAN",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444044,TOTAL,5.35,RM5.35 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444046,COMPANY,STAR GROCER SDN BHD,STAR GROCER SDN BHD (1171881-W),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444046,ADDRESS,"NO 4, DESA PANDAN, OFF KAMPONG PANDAN, 55100 KUALA LUMPUR",NO 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005444046,TOTAL,66.15,7.50*1,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005447841,COMPANY,PASARAYA BORONG PINTAR SDN BHD,PASARAYA BORONG PINTAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447841,DATE,09/03/2018,09/03/2018 4:21:23PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447841,ADDRESS,"NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",NO 19-G& 19-1 & 19-2 JALAN TASIK UTAMA 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447842,COMPANY,PASARAYA BORONG PINTAR SDN BHD,PASARAYA BORONG PINTAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447842,DATE,14/03/2018,14/03/2018 4:06:34PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447842,ADDRESS,"NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447842,TOTAL,0.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005447844,COMPANY,RESTAURANT JIAWEI JIAWEI HOUSE,RESTAURANT JIAWEI,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447844,DATE,23/2/2018,DATE : 23/2/2018 20:04:08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447844,ADDRESS,"13, JLN TASIK UTAMA 8 MEDAN NIAGA DAMAI SG BESI",13,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447844,TOTAL,110.00,RM 110.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447851,COMPANY,PASARAYA BORONG PINTAR SDN BHD,PASARAYA BORONG PINTAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447851,DATE,30/01/2018,30/01/2018 14:48:23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447851,ADDRESS,"NO 19-G&19-1&19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005447851,TOTAL,1.70,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447859,COMPANY,PASARAYA BORONG PINTAR SDN BHD,PASARAYA BORONG PINTAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447859,DATE,14/02/2018,14/02/2018 5:37:44PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447859,ADDRESS,"NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005447859,TOTAL,1.45,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568855,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568855,DATE,23/12/17,23/12/17 15:53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568855,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568866,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568866,DATE,20/08/17,25 AUG - 3 SEPT 2017 20/08/17 12:48,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568866,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568885,ADDRESS,"NO.7-1, JALAN PUTERI 7/11, BANDAR PUTERI, 47100 PUCHONG, BELANGOR",NO.7-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568887,DATE,26/04/2017,06/04/2017 11:01:36 AM,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005568887,ADDRESS,"NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR.",NO 37,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568887,TOTAL,7.20,7.20 SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568889,DATE,11/02/2017,11/02/2017 9:35:48 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568889,ADDRESS,"NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR.",NO 37,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568889,TOTAL,19.60,19.60 SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568890,DATE,05/01/2017,05/01/2017 4:47:51 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568890,ADDRESS,"NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR.",NO 37,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568890,TOTAL,5.00,5.00 SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568892,ADDRESS,"NO.7-1, JALAN PUTERI 7/11, BANDAR PUTERI, 47100 PUCHONG, BELANGOR",NO.7-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568892,TOTAL,26.00,2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568894,COMPANY,VIVOPAC MARKETING SDN BHD,VIVOPAC MARKETING SDN BHD (1070687-M),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568894,DATE,17/01/2017,17/01/2017 01:31:27 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568895,COMPANY,VIVOPAC MARKETING SDN BHD,VIVOPAC MARKETING SDN BHD (1070687-M),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005568895,DATE,13/09/2017,13/09/2017 01:13:09 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005577191,DATE,07/12/2017,RECEIPT #: CS00031383 DATE: 07/12/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005577191,ADDRESS,"NO. 42, JALAN PBS 14/11, TAMAN PERINDUSTRIAN BUKIT SERDANG, 43300 SERI KEMBANGAN, SELANGOR",NO. 42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005577191,TOTAL,10.00,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005582745,DATE,04/12/2016,RECEIPT #: CS00090733 DARE: 04/12/2016,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005582745,ADDRESS,"NO.19, PT18685, JALAN JAMBU MELAKA 2, JINJANG SELATAN, KEPONG.",NO.19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005582745,TOTAL,150.00,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005587261,DATE,23/03/17,23/03/2017,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005587261,ADDRESS,"LOT PT 5121, PER. KLANG, SEK. 27 40000 SHAH ALAM, SELANGOR",LOT PT 5121,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005587261,TOTAL,30.00,30.00 A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005605287,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005605287,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005605295,COMPANY,ECONSAVE CASH & CARRY (FC) S/B,ECONSAVE CASH & CARRY (FC) S/B(930311-W),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005605295,ADDRESS,"LOT GO1, KL FESTIVAL CITY, NO. 67 JIN IBU KOTA TMN DANAU KOTA, KL",LOT G01,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005605332,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005605332,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8. JALAN 7/118B,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005605332,TOTAL,7.95,7.95 T,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005621482,COMPANY,PREMIO STATIONERY SDN BHD,PREMIO PREMIO STATIONERY SDN BHD,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005621482,DATE,20/03/2018,: 20/03/2018 3:20:16 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005621482,ADDRESS,"NO 57, JALAN SS 3/29, 47300 PETALING JAYA, SELANGOR",NO 57,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005621482,TOTAL,13.40,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663274,DATE,08/02/2018,08/02/2018 12:42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663274,ADDRESS,"NO 7, SIMPANG OFF BATU VILLAGE, JALAN IPOH BATU 5, 51200 KUALA LUMPUR. MALAYSIA",JALAN IPOH BATU 5,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663300,DATE,02/02/2018,02/02/2018 10:06,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663300,ADDRESS,"NO 7, SIMPANG OFF BATU VILLAGE, JALAN IPOH BATU 5, 51200 KUALA LUMPUR MALAYSIA",JALAN IPOH BATU 5,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663307,COMPANY,LA STATIONERY SDN BHD,LA STATIONERY SDN BHD (640899-P),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663307,DATE,09/02/2018,09/02/2018 09:21:19AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663307,ADDRESS,"NO.8, JALAN 46/26, TAMAN SRI RAMPAI, 53300 KUALA LUMPUR.",NO.8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663307,TOTAL,56.80,56.80 56.80,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663309,DATE,01/02/2018,DATE: 01/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663309,ADDRESS,"NO. 939, BATU LIMA, JALAN IPOH, 51200 KUALA LUMPUR.",NO. 939,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663309,TOTAL,5.30,5.30 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663310,DATE,09/02/2018,09/02/2018 10:05,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663310,ADDRESS,"NO 7, SIMPANG OFF BATU VILLAGE, JALAN IPOH BATU 5, 51200 KUALA LUMPUR MALAYSIA",NO 7,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663323,DATE,04/12/2017,RECEIPT #: CS00042153 DATE: 04/12/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663323,ADDRESS,"NO. 939, BATU LIMA, JALAN IPOH, 51200 KUALA LUMPUR.",NO. 939,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005663323,TOTAL,848.00,848.00 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675099,ADDRESS,"NO. 18 & 19, TAMAN CITY, JALAN KUCHING, 52100 KUALA LUMPUR",NO. 18 & 19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675103,DATE,04/01/2018,DATE: 04/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675103,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675104,DATE,25/01/2018,DATE: 25/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675104,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675104,TOTAL,190.80,10.80,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005675914,DATE,10/11/2017,DATE: 10/11/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005675914,ADDRESS,"LOT 1-0-2, JLN 1/50, DIAMOND SQUARE, OFF JLN GOMBAK 53000 KUALA LUMPUR",LOT 1-0-2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676534,DATE,03/01/2018,DATE: 03/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676534,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676534,TOTAL,72.08,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005676535,DATE,30/12/2017,DATE: 30/12/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676535,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676535,TOTAL,89.04,2,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005676537,DATE,03/01/2018,DATE: 03/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676537,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676537,TOTAL,94.34,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005676542,DATE,29/12/2017,DATE: 29/12/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676542,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676542,TOTAL,10.60,0.60 10.60,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676548,DATE,15/01/2018,DATE: 15/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676548,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",53200,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005676548,TOTAL,11.13,3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677327,DATE,01/02/2018,DATE: 01/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677327,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",53200,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677327,TOTAL,36.04,2,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005677333,DATE,31/01/2018,DATE: 31/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677333,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677333,TOTAL,101.76,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677336,DATE,27/01/2018,DATE: 27/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677336,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677337,DATE,02/02/2018,DATE: 02/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005677337,ADDRESS,"NO 290, JALAN AIR PANAS, SETAPAK, 53200, KUALA LUMPUR.",NO 290,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X510056849111,COMPANY,WESTERN EASTERN STATIONERY SDN. BHD,WESTERN EASTERN,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X510056849111,ADDRESS,"42-46, JLN SULTAN AZLAN SHAH 51200 KUALA LUMPUR",42-46,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005684949,COMPANY,WESTERN EASTERN STATIONERY SDN. BHD,WESTERN EASTERN,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005684949,DATE,26-02-2018,REG 26-02-2018 14:27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005684949,ADDRESS,"42-46, JLN SULTAN AZLAN SHAH 51200 KUALA LUMPUR",42-46,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005684949,TOTAL,7.42,RM7.42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705727,DATE,28/12/2017,DATE: 28/12/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705727,ADDRESS,"NO. 12 & 14, JALAN JINJANG 27/54 TAMAN ALAM MEGAH, SEKSYEN 27 40400 SHAH ALAM, SELANGOR D. E.",NO. 12 & 14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705727,TOTAL,38.15,1 38.15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705729,DATE,13/10/2017,DATE: 13/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705729,ADDRESS,"NO 31G, JALAN SEPADU C 25/C, SECTION 25, TAMAN INDUSTRIES, AXIS 40400 SHAH ALAM, SELANGOR.",NO 31G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705759,COMPANY,MYDIN MART SRI MUDA,TRI SHAAS SDN BHD (728515-N),incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005705759,DATE,1/08/2017,:1/08/2017 03:56:06PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705759,ADDRESS,"4-20, JALAN RIA 25/62 TAMAN SRI MUDA SEKSYEN 25, 40400 SHAH ALAM SELANGOR",4-20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705784,DATE,15/09/2017,DATE: 15/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705784,ADDRESS,"NO. 12 & 14, JALAN JINJANG 27/54 TAMAN ALAM MEGAH, SEKSYEN 27 40400 SHAH ALAM, SELANGOR D. E.",NO. 12 & 14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005705784,TOTAL,48.00,3 48.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005710963,DATE,21/03/2018,RECEIPT #: CS00032256 DATE: 21/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005710963,ADDRESS,"59, JALAN BANDAR SATU, PUSAT BANDAR PUCHONG 47160, PUCHONG, SELANGOR",59,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005710963,TOTAL,7.40,7.00,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005711402,DATE,17-03-2018,: 17-03-2018 15:22:52,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711402,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711443,DATE,23-03-2018,: 23-03-2018 13:28:55,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711443,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711444,DATE,21-03-2018,: 21-03-2018 11:42:20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711444,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711446,DATE,10-03-2018,: 10-03-2018 16:01:27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711446,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711449,DATE,07-03-2018,: 07-03-2018 15:34:15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005711449,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715006,DATE,20/03/2018,: 20/03/2018 5:10:20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715006,ADDRESS,"LOT 7F-7.02/7.03, KWCJALAN GELUGOR. JALAN KENANGA ,55200 KUALA LUMPUR.",LOT 7F-7.02/7.03,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715006,TOTAL,160.00,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005715007,DATE,25-03-18,25-03-18 18:34,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715007,ADDRESS,"LOT NO. L3-012, LEVEL 3, MYTOWN SHOPPING CENTRE, NO. 6, JALAN COCHRANE, SEKSYEN 90 55100 KUALA LUMPUR.",LOT NO. L3-012 NO. 6,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005715455,COMPANY,99 SPEED MART S/B,99 SPEED MAPT S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715455,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1330 JLN KENANGA",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005715455,TOTAL,RM 10.60,RM10.60 S,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005719823,COMPANY,AA PHARMACY,(none),missed entity,Model failed to detect any tokens for COMPANY
+X51005719823,DATE,29/01/2018,DATE: 29/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719823,ADDRESS,"NO.47, JALAN 3/36, BUKIT SRI BINTANG, KEPONG 52100, KUALA LUMPUR",NO.47,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719855,COMPANY,CPI ROCKU SDN. BHD.,ROCKU YAKINIKU,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005719855,DATE,19/02/2018,19/02/2018 17:43,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719855,ADDRESS,"LOT F355/356/357, FIRST FLOOR, RAINFOREST, 1 UTAMA SHOPPING CENTRE, LEBUH BANDAR UTAMA, 47800 PETALING JAYA",LOT F355/356/357,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719857,COMPANY,ALI BABA INTERNATIONAL SDN BHD,SALON DU CHOCOLAT ALI BABA INTERNATIONAL SDN BHD (955950-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719857,DATE,19-02-2018,DATE  : 19-02-2018 14:19:38,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719857,ADDRESS,"PUBLIKA SHOPPING GALLERY LOT 26-27 ,LEVEL G2,JLN DUTAMAS 1, SOLARIS DUTAMAS,50480 KL.",LOT 26-27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719863,DATE,12-01-2018,(none),missed entity,Model failed to detect any tokens for DATE
+X51005719863,ADDRESS,"G-0-1 ,M.AVENUE NO.1 ,JLN 1/38A, SEGAMBUT BAHAGIA,51200, K.LUMPUL",G-0-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719888,DATE,04/01/2018,INV DT: 04/01/2018 12:29:18 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719888,ADDRESS,"BATU 11 . SG BULOH , 47000 SELANGOR .",BATU 11,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719888,TOTAL,39.80,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005719889,DATE,04/01/2018,DATE : 04/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719889,ADDRESS,"NO31 , JALAN 3/62A , BANDAR MENJALARA KEPONG. 52100 KUALA LUMPUR",NO31,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719889,TOTAL,42.00,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005719895,DATE,1/8/2018,: 1/8/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719895,ADDRESS,"33 JLN BANGAU 1,KEPONG BARU, 52100 KEPONG,KL",33 JLN BANGAU 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719898,COMPANY,MR. D. I. Y. (KUCHAI) SDN BHD,MR. D.I.Y. (KUCHAI) SDN BHD,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719898,DATE,19-03-18,19-03-18 13 : 09 SH01 B026,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719898,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719898,TOTAL,11.90,1 X 11.90,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719903,DATE,11/03/2018,ORD #41 -REG #19- 11/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719903,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005719905,ADDRESS,"29,JLN SJ 17, TMN SELAYANG JAYA, 68100 BATU CAVES, SELANGOR",29,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724552,DATE,21/03/2018,DATE:21/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724552,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724552,TOTAL,68.90,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005724609,ADDRESS,102 JLN BANTING-DENGKIL 43800 DENGKIL SELANGOR,102 JLN BANTING-DENGKIL,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724609,TOTAL,100.00,100.00 A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724611,DATE,21/03/2018,DATE: 21/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724611,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724611,TOTAL,144.16,8,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005724622,DATE,07/03/2018,DATE: 07/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724622,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724622,TOTAL,91.16,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51005724623,COMPANY,KEDA PAPAN YEW CHJAN,KEDA PAPAN YEW CHUAN,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724623,DATE,08/03/2018,DATE: 08/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724623,ADDRESS,LOT 276 JALAN BANTING 800 DEN SELANGOR.,R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724624,DATE,16/03/2018,DATE: 16/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724624,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724624,TOTAL,135.68,8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724625,DATE,12/03/2018,DATE: 12/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724625,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724626,DATE,02/04/2018,DATE: 02/04/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724626,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724628,DATE,10/03/2018,DATE: 10/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005724628,ADDRESS,"LOT 276 JALAN BANTING 43800 DENGKIL, SELANGOR.",R LOT 276 JALAN BANTING,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005741929,COMPANY,MY MYDIN SDN BHD,MYMYDIN SUBANG BESTARI 2300,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005741929,DATE,15/01/2018,: 15/01/2018 10:59:13,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005741929,ADDRESS,"NO 13, 15, 17 & 19 JALAN NOVA Q U5/Q, SEKSYEN U5, SUBANG BESTARI 40150 SHAH ALA SELANGOR DARUL EHSAN",NO 13,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005741929,TOTAL,5.50,1 * 5.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005742110,DATE,06/01/2018,RECEIPT #: CS00668595 DATE: 06/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005742110,ADDRESS,"9, JALAN SUBANG JASA 3, 40150 SHAH ALAM, SELANGOR.",9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745213,COMPANY,MUN HENG ELECTRICAL & HARDWARE SUPPLY,MUN HENG ELECTRICAL &,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745213,DATE,01/02/2018,DATE : 01/02/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745213,ADDRESS,"NO.52, JALAN BULAN U5/BT, BANDAR PINGGLRAN SUBANG, SUNGAL BULOH, 40150 SHAH ALAM, SEL.",NO.52. JALAN BULAN U5/BT.,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005745244,COMPANY,URBAN IDEA SDN BHD,URBAN IDEA SDN BHD (417940-M),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745244,DATE,14/02/2018,SERVED BY: JOSEPH 14/02/2018 11:13:31,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745244,ADDRESS,"A-G-06, DATARAN GLOMAC, JALAN SS6/5A, PUSAT BANDAR KELANA JAYA, 47301 PETALING JAYA, SELANGOR, MALAYSIA",A-G-06,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745298,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005745298,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1317-TRILLIUM SG BESI",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746203,ADDRESS,"NO. 1 JALAN EURO 1 OFF JALAN BATU TIGA SUNGAI BULOH SEKSYEN U3 SHAH ALAM, 40150",NO. 1 JALAN EURO 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746204,COMPANY,BEMED (SP) SDN BHD.,BEMED (SP) SDN. BHD.,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746204,DATE,27/MAR/2018,27/MAR/2018 06:27:41,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746204,ADDRESS,"NO.49, JALAN DLNARG U3/G, SUBANG PERDANA, 40150 SHAH ALAM, SELANGOR D.E.",NO.49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746204,TOTAL,308.70,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005746206,DATE,21-03-2018,: 21-03-2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746206,ADDRESS,"NO. 10-G, GROUND FLOOR. JALAN DINAR D, U3/D. TAMAN SUBANG PEADANA. SEK U3. 40150 SHAH ALAM, SELANGOR.",JALAN DINAR D. SEK U3. 40150 SHAH ALAM,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005746207,ADDRESS,"NO. 1 JALAN EURO 1 OFF JALAN BATU TIGA SUNGAI BULOH SEKSYEN U3 SHAH ALAM, 40150",NO. 1 JALAN EURO 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746210,COMPANY,SEGI CASH & CARRY SDN. BHD.,SEGI CASH & CARRY SDN. BHD. (317041-W),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746210,DATE,12 MAR 2018,: 12 MAR 2018 08:51AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005746210,ADDRESS,"PT17920 SEK U9, SHAH ALAM",PT17920 SEK U9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005749904,ADDRESS,"28-G, GROUND FLOOR, JALAN DINAR A U3/A, TMN SUBANG PERDANA, 40150 SHAN ALAM, SELANGOR.",28-G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005749904,TOTAL,4.00,2.00 4.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757220,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757220,DATE,05/03/2018,05/03/2018 15:09,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757220,ADDRESS,"3RD FLR, AEON. TAMAN, MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757233,DATE,09/03/18,18:17 09/03/18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757233,ADDRESS,"G31 & G32, GRD FLR, IOI MALL BANDAR PUCHONG JAYA",IOI MALL G31 & G32,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005757282,COMPANY,TSH POWER HARDWARE TRADING,TSH POWER HARDWARE,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757282,DATE,12/09/2017,: 12/09/2017 4:42:33 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757282,ADDRESS,"13-1, JALAN PJU 5/10, DATARAN SUNWAY, KOTA DAMANSARA, 47810, PETALING JAYA, SELANGOR",13-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757292,DATE,18-03-18,18-03-18 12:09 SHO1 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757292,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757308,DATE,21-03-18,21-03-18 12:27 SHO1 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757308,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757308,TOTAL,21.50,RM 21.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757342,DATE,23-03-18,23-03-18 16:43 SHO1 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757342,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005757342,TOTAL,6.20,4.20 RM 6.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763958,ADDRESS,"NO. 1 JALAN EURO 1 OFF JALAN BATU TIGA SUNGAI BULOH SEKSYEN U3 SHAH ALAM, 40150",NO. 1 JALAN EURO 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763958,TOTAL,RM59.00,59.00 SR RM59.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763964,DATE,06/01/2018,RECEIPT #: CS00668594 DATE: 06/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763964,ADDRESS,"9, JALAN SUBANG JASA 3, 40150 SHAH ALAM, SELANGOR",9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763999,COMPANY,SEGI CASH & CARRY SDN. BHD.,SEGI CASH & CARRY SDN. BHD.(317041-W),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763999,DATE,06 JAN 2018,: 06 JAN 2018 05:21PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005763999,ADDRESS,"PT17920 SEK U9, SHAH ALAM",PT17920 SEK U9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005764031,ADDRESS,"NO. 1 JALAN EURO 1 OFF JALAN BATU TIGA SUNGAI BULOH SEKSYEN U3 SHAH ALAM, 40150",NO. 1 JALAN EURO 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005764154,DATE,25-01-2018,: 25-01-2018 18:10:28,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005764154,ADDRESS,NO . 10-G. GROUND FLOOR. JALAN DINAR D. U3/D TAMAN SUBANG PERDANA. SEK U3. 40150 SHAH ALAM. SELANGOR,NO. 10-G,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005764154,TOTAL,205.5,205.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005764161,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005764161,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1313-SUBANG BESTARI",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806692,DATE,18/02/2018,18/02/2018 06:08:59 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806692,ADDRESS,"60 & 62. JALAN CIKU, 86000,KLUANG",60 & 62. JALAN CIKU,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806692,TOTAL,367.30,8.60 367.30,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806695,COMPANY,SAYANG YOU STATION SDN BHD,JUWITA WEDDINGS (366310-U),incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51005806695,DATE,28-FEB-2018,RECEIPT DATE : 28-FEB-2018 16:37:04,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806695,ADDRESS,"LOT G18 & G19, JLN 8/27A WANGSA MAJU (AEON BIG SHOPPING CENTER) 53300 KUALA LUMPUR",LOT G18 & G19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806695,TOTAL,4.10,4.10 SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806696,DATE,23/02/2018,23/02/2018 7:44:16,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806696,ADDRESS,"NO. 12A-G, JALAN WANGSA DELIMA 11, D'WANGSA WANGSA MAJU, 53300 KUALA LUMPUR.",NO. 12A-G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806696,TOTAL,7.20,7.65,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005806718,DATE,13/01/2018,13/01/2018 11:44:30PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806718,ADDRESS,"LOT 8&9, KOMPLEKS PASAR BORONG SELANGOR, 43300 SERI KEMBANGAN, SEL",LOT 8&9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806719,DATE,13/01/2018,DATE: 13/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806719,ADDRESS,"NO. 42, PASAR BORONG SELANGOR JALAN PUTRA PERMAI, 43300 SERI KEMBANGAN. SELANGOR.",NO.42,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51005806719,TOTAL,63.00,3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806720,DATE,13/01/2018,DATE: 13/01/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806720,ADDRESS,"NO.42, PASAR BORONG SELANGOR. JALAN PUTRA PERMAI, 43300 SERI KEMBANGAN. SELANGOR.",NO.42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51005806720,TOTAL,20.00,1 20.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008081,DATE,19/03/2018,DATE 19/03/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008081,ADDRESS,"NO 18, 20, 22, JALAN BUNGA TANJONG 2/16, 40000 SHAH ALAM, SELANGOR",NO 18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008081,TOTAL,226.60,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006008082,ADDRESS,"NO 18, 20, 22, JALAN BUNGA TANJONG 2/16, 40000 SHAH ALAM, SELANGOR",NO 18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008083,ADDRESS,"NO 18, 20, 22, JALAN BUNGA TANJONG 2/16, 40000 SHAH ALAM, SELANGOR",NO 18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008090,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008090,DATE,05/03/18,05/03/18 13:56,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008090,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008092,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008092,DATE,06/03/18,06/03/18 18:01,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008092,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008093,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008093,DATE,06/03/18,06/03/18 18:04,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008093,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008093,TOTAL,12.15,13.50 T,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006008105,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008105,DATE,21/03/2018,21/03/2018 14:49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008105,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008166,COMPANY,FLORISM DE ART,FLORISM DE ART (940075-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008166,DATE,14/01/2018,14/01/2018 05:03:35 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008166,ADDRESS,"LOT 2.70.00,LEVEL 2, PAVILION KUALA LUMPUR, 168, JALAN BUKIT BINTANG, 55100 KUALA LUMPUR, MALAYSIA.",LOT 2.70.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008206,COMPANY,DEWINA HOST SDN BHD,BURGER KING,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006008206,DATE,2018/03/27,DATE: 2018/03/27 23:38:45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008206,ADDRESS,"LOT SATMZ 23, MEZZANINE LEVEL SATELLITE BUILDING KUALA LUMPUR INTERNATIONAL AIRPORT",LOT SATMZ 23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006008206,TOTAL,RM63.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006248253,DATE,29/03/2018,29/03/2018 07:35:38 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006248253,ADDRESS,"L 2-047, LEVEL 2, VIVACITY MEGAMALL, JALAN WAN ALWI, 93350 KUCHING",L 2-047,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006311714,ADDRESS,"SOLARIS MOUNT KIARA NO.8 & 10, GF SOLARIS MOUNT KUARA JLN SOLARIS 5",SOLARIS MOUNT KIARA NO.8 & 10,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327953,DATE,03/02/2017,BILL DT: 03/02/2017 09:26:48 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327953,ADDRESS,"NO 2, JALAN BULAN BM U5/BM, SEKSYEN U5, 40150 SHAH ALAM, SELANGOR",NO 2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327953,TOTAL,68.90,6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327960,COMPANY,KING'S CONFECTIONERY S/B,KING'S CONFECTIONERY S/B 273500-U (GKJ),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327960,DATE,07/02/17,DATE:07/02/17 16:18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006327960,ADDRESS,"LOT NO. G23, GIANT KELANA JAYA LOT PT244, JLN PERBANDARAN SS6/4 PUSAT BANDAR KELANA JAYA, PETALING",LOT NO. G23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328345,COMPANY,KING'S CONFECTIONERY S/B,KING'S CONFECTIONERY S/B 273500-U (KJ1),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328345,DATE,23/02/17,DATE:23/02/17 10:53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328345,ADDRESS,"NO. 20-A1, JALAN SS6/3, KELANA JAYA, 473 PETALING JAYA SELANGOR D.E.",NO. 20-A1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328345,TOTAL,7.20,0 7.20 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328937,DATE,31/03/2017,RECEIPT #: CS00168420 DATE: 31/03/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328937,ADDRESS,"69 JALAN NOVA U5/N, SEKSYEN U5 SUBANG BE",69 JALAN NOVA U5/N,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328937,TOTAL,12.15,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006328967,DATE,17/03/2017,17/03/2017 21:35,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328967,ADDRESS,"LOT F15, GIANT BANDAR PUTERI JALAN PUTERI 1/1, BDR PUTERI 47100 PUCHONG, SELANGOR",LOT F15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006328967,TOTAL,62.00,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006329183,DATE,06-03-2018,: 06-03-2018 07:24:06,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006329183,ADDRESS,"NO.5 & 7 , JALAN TSJ 2. TAMAN SUBANG JASA KG. BARU SUBANG. 40150 SHAH ALAM SELANGOR DARUL EHSAN",NO.5 & 7,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006329388,DATE,02/JAN/2017,02/JAN/2017 10:49:25,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006329388,ADDRESS,"NO.49, JALAN DINAR G U3/G, SUBANG PERDANA, 40150 SHAH ALAM, SELANGOR D.E.",NO.49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006329388,TOTAL,165.00,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006332641,DATE,11/02/2017,RECEIPT #: CS00027489 DATE: 11/02/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006332641,ADDRESS,"9, JALAN SUBANG JASA 3, 40150 SHAH ALAM. SELANGOR.",9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334139,DATE,05/01/17,05/01/17 10:55,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334139,ADDRESS,"G.23 & G.22, PLAZA SERI SETIA, NO.1 JALAN SS 9/1, 47300 PJ, SELANGOR.",G.23 & G.22,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334139,TOTAL,90.00,90.00 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334742,DATE,01-01-2017,: 01-01-2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334742,ADDRESS,"LOT L1-4 STAR AVENUE MALL JALAN ZUHAL U5/179 SEKSYEN U5 PUSAT KOMERSIAL ARENA BINTANG 40150 SHAH ALAM, SELANGOR",LOT L1-4 STAR AVENUE MALL,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334766,DATE,12/01/2017,12/01/2017 08:44:46 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334766,ADDRESS,"NO 2, JALAN BULAN BM U5/BM, SEKSYEN U5, 40150 SHAH ALAM, SELANGOR",NO 2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334770,DATE,09-JAN-2017,09-JAN-2017 01:48:43 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334770,ADDRESS,"NO.36G JALAN BULAN BM U5/BM, BANDAR PINGGIRAN SUBANG, SEKSYEN U5, 40150 SHAH ALAM, SELANGOR.",BANDAR PINGGIRAN SUBANG,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334770,TOTAL,1.40,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006334819,DATE,20/JAN/2017,20/JAN/2017 08:06:50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334819,ADDRESS,"NO.49, JALAN DINAR G U3/G, SUBANG PERDANA, 40150 SHAH ALAM, SELANGOR D.E.",NO.49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334819,TOTAL,203.00,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006334927,DATE,11/11/16,11/11/16 09:58 64051 01 0004,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006334927,ADDRESS,KELANA JAYA. 47301 PETALING SELANGOR DARUL EHSAN.,(none),missed entity,Model failed to detect any tokens for ADDRESS
+X51006335818,DATE,06 FEB 2017,: 06 FEB 2017 12:57PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006335818,ADDRESS,"PT17920, SEKSYEN U9, 40150 SHAH ALAM, SELANGOR DARUL EHSAN.",PT17920,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349081,DATE,26/04/2018,: 26/04/2018 12:16:15 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349081,ADDRESS,"NO.50 ,JALAN PBS 14/11 , KAWASAN PERINDUSTRIAN BUKIT SERDANG,",NO.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349081,TOTAL,84.80,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006349083,COMPANY,CHA FOR TEA,(none),missed entity,Model failed to detect any tokens for COMPANY
+X51006349083,DATE,19/04/2018,: 19/04/2018 14:19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349083,ADDRESS,"1-1, CENTRAL PARK , JALAN PJU5/13, DATARAN SUNWAY, 47810 KOTA DAMANSARA, SELANGOR",1-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349085,ADDRESS,"8B, JALAN LUMPUR,OFF JALAN PUTRA,05100 ALOR SETAR,KEDAH,",8B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006349085,TOTAL,23.00,2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006350737,DATE,31/03/2018,: 31/03/2018 10:35:17 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006350737,ADDRESS,"NO.50 , JALAN PBS 14/11 , KAWASAN PERINDUSTRIAN BUKIT SERDANG,",NO.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387660,DATE,02/04/2017,02/04/2017 21:20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387660,ADDRESS,"LOT F15, GIANT BANDAR PUTERI JALAN PUTERI 1/1, BDR PUTERI 47100 PUCHONG, SELANGOR",LOT F15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387660,TOTAL,4.30,1,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006387737,DATE,01/APR/2017,01/APR/2017 01:25:02,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387737,ADDRESS,"NO.49, JALAN DINAR G U3/G, SUBANG PERDANA, 40150 SHAH ALAM, SELANGOR D.E.",NO.49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387737,TOTAL,165.00,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387931,COMPANY,AMANO MALAYSIA SDN BHD,AMANO MALAYSIA SDN BHD (682288-V),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387931,DATE,30/04/2017,30/04/2017 (SUN) 20:35,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387931,ADDRESS,12 JALAN PENGACARA U1/48 TEMASYA INDUSTRIAL PARK 40150 SHAH ALAM SELANGOR,12 JALAN PENGACARA U1/48,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387950,COMPANY,AMANO MALAYSIA SDN BHD,AMANO MALAYSIA SDN BHD (682288-V),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387950,DATE,30/04/2017,30/04/2017 (SUN) 21:45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387950,ADDRESS,12 JALAN PENGACARA U1/48 TEMASYA INDUSTRIAL PARK 40150 SHAH ALAM SELANGOR,12 JALAN PENGACARA U1/48,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387973,DATE,30/04/2017,30/04/2017 13:29:56,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006387973,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388068,DATE,11/05/17,11/05/17 10:13AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388068,ADDRESS,"PT17920 SEK U9, SHAH ALAM",PT17920 SEK U9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388081,COMPANY,KING'S CONFECTIONERY S/B,KING'S CONFECTIONERY S/B 273500-U (KJ1),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388081,DATE,21/05/17,DATE:21/05/17 13:14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388081,ADDRESS,"NO. 20-A1, JALAN SS6/3, KELANA JAYA, 47301 PETALING JAYA SELANGOR D.E.",NO. 20-A1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388089,DATE,21/05/2017,RECEIPT #: CS00636502 DATE: 21/05/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006388089,ADDRESS,"9, JALAN SUBANG JASA 3, 40150 SHAH ALAM, SELANGOR.",9,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006389894,COMPANY,KING'S CONFECTIONERY S/B,KING'S CONFECTIONERY S/B 273500-U (JJ),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006389894,DATE,10/10/17,DATE:10/10/17 20:58,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006389894,ADDRESS,"3425, GR. FLOOR JLN THEATER, JINJANG UTARA 52100 K.L.",3425,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006389898,DATE,29-09-2017,: 29-09-2017 22:19:53,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006389898,ADDRESS,"NO. 2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO. 2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006392167,COMPANY,ANEKA INTERTRADE MARKETING SDN BHD,ANEKA INTERTRADE MARKETING SDN BHD (524463-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006392167,DATE,19/06/17,19/06/17 07:52:15 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006392167,ADDRESS,"150B, JALAN TUDM,KG BARU SUBANG 40150 SHAH ALAM, SELANGOR DARUL EHSAN, MALAYSIA.",150B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006392167,TOTAL,23.80,23.80 S 1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401845,DATE,04/02/2017,CS NO.: 0007/0112423 04/02/2017 07:14PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401845,ADDRESS,"2 & 2A, JALAN KASUARINA 1/KS 7, BANDAR BOTANIK, 41200 KLANG, SELANGOR",2 & 2A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401853,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401853,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1299-SUBANG PERMAI",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401940,DATE,10/04/2017,DATE: 10/04/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401940,ADDRESS,44 JALAN SS21/58 DAMANSARA UTAMA 47400 PETALING JAYA,44 JALAN SS21/58 DAMANSARA UTAMA,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401940,TOTAL,15.40,2,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006401977,DATE,19/04/2017,BIZDATE: 19/04/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006401977,ADDRESS,"NO.12,JALAN SS4C/5,PETALING JAYA SELANGOR DARUL EHSAN",NO.12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414425,DATE,05 APR 2018,05 APR 2018 18:25,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414425,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414425,TOTAL,$6.90,TOTAL AMOUNT:$6.90,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414427,DATE,04 APR 2018,04 APR 2018 18:18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414427,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414427,TOTAL,$7.60,TOTAL AMOUNT: $7.60,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414433,DATE,06 APR 2018,06 APR 2018 18:03,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414433,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414433,TOTAL,$7.60,TOTAL AMOUNT: $7.60,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414512,DATE,03-04-2018,03-04-2018 08:15:14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414512,ADDRESS,"LOT PTD 101051 JALAN PERMAS 10/10 81750 MASAI, JOHOR",LOT PTD 101051,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414512,TOTAL,50.00,50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414532,COMPANY,FREEDOM OPTIMUM SDN BHD,THE GEOVENTURE,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006414532,DATE,6/4/2018,DATE : 6/4/2018 21:44:42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414532,ADDRESS,"C1 SEAFRONT, BER JAYA WATERFRONT COMPLEX, 88 JALAN IBRAHIM SULTAN, STULANG LAUT 80300, JOHOR BAHRU, JOHOR.",C1 SEAFRONT,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414532,TOTAL,98.00,RM 98.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414592,DATE,13 APR 2018,13 APR 2018 18:12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414592,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414592,TOTAL,7.60,TOTAL AMOUNT: $7.60,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414593,DATE,14 APR 2018,14 APR 2018 18:11,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414593,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414593,TOTAL,$8.90,TOTAL AMOUNT: $8.90,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414600,COMPANY,AEON CO. (M) SDN BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414600,DATE,14/04/2018,14/04/2018 18:30,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414600,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414600,TOTAL,50.90,50.92 50.90,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414632,DATE,17 APR 2018,17 APR 2018 18:44,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414632,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414632,TOTAL,10.60,TOTAL AMOUNT: $10.60,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414702,DATE,23-04-2018,DATE: 23-04-2018 06:29:01 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414702,ADDRESS,NO 14& 16 JALAN PERMAS 4/3 BANDAR BARU PERMAS JAY,(none),missed entity,Model failed to detect any tokens for ADDRESS
+X51006414708,DATE,29/04/2018,29/04/2018 - 1:55:30 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414708,ADDRESS,"50,JALAN SUTERA TANJUNG 5/4 TAMAN SUTERA UTAMA, 81300 SKUDAI ,JOHOR",50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414715,DATE,4/22/2018,4/22/2018 08:10PM SV-WANI,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414715,ADDRESS,"LOT G16, PERMAS JAYA JUSCO",LOT G16,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414715,TOTAL,RM41.81,1 0.20,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006414717,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414717,DATE,12/04/2018,12/04/2018 18:38,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414717,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414728,COMPANY,FOODELICO SDN. BHD.,FOODELICO SDN. BHD. (1268140-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414728,DATE,29-APR-2018,DATE: 29-APR-2018 04:19 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006414728,ADDRESS,"LOT LG10, AEON TAMAN UNIVERSITI SHOPPING CENTER, NO. 4, JALAN PENDIDIKAN, TAMAN UNIVERSITI 81300 SKUDAI, JOHOR",LOT LG10,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006438346,ADDRESS,"JALAN BIDARA, TAMAN BIDARA, SELAYANG 68100, BATU CAVES, SELANGOR",JALAN BIDARA,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006438346,TOTAL,95.48,95.48 C,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006466070,COMPANY,WESTERN EASTERN STATIONERY SDN. BHD,WESTERN EASTERN,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006466070,ADDRESS,"42-46, JLN SULTAN AZLAN SHAH 51200 KUALA LUMPUR",42-46,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006466070,TOTAL,RM42.88,RM42.90,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006502534,COMPANY,MAXINCOME RESOURCES SDN BHD,(none),missed entity,Model failed to detect any tokens for COMPANY
+X51006502534,ADDRESS,"NO 16A, JALAN ASTAKA U8/83, BUKIT JELUTONG, 40150 SHAH ALAM, SELANGOR, D.E.",NO 16A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006502534,TOTAL,5.80,5.80SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006502535,COMPANY,MAXINCOME RESOURCES SDN BHD,FAMILYMART,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006502535,ADDRESS,"NO 16A, JALAN ASTAKA U8/83 BUKIT JELUTONG, 40150 SHAH ALAM, SELANGOR, D.E.",NO 16A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006502535,TOTAL,2.40,2.40SR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006502540,DATE,27/04/2018,ORD #17 -REG #13- 27/04/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006502540,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39, 47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006554841,COMPANY,NSK TRADE CITY-SELAYANG,NSK TRADE CITY-SELAYANG (626470-P),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006554841,ADDRESS,LOT 4674 & 4675 SELAYANG BATU 8 JALAN IPOH 68100 BATU CAVES,LOT 4674 & 4675 SELAYANG BATU 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006554841,TOTAL,RM9.00,9.00 RM9.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555819,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555819,DATE,23/07/2017,DATE: 23/07/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555819,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555819,TOTAL,26.58,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006555833,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555833,DATE,31/08/2017,DATE: 31/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555833,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555833,TOTAL,1.52,9,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006555835,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555835,DATE,29/08/2017,DATE: 29/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555835,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006555835,TOTAL,37.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556603,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556603,DATE,27/08/2017,DATE: 27/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556603,ADDRESS,"LOT 3, JALAN PELABUI 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556603,TOTAL,35.03,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556610,ADDRESS,"NO.2, JALAN METRO PERDANA TIMUR 11. KEPONG ENTERPRENUERS PARK, OFF JALAN KEPONG. 52100 KUALA LUMPUR.",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556648,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556648,DATE,20/08/2017,DATE: 20/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556648,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556648,TOTAL,55.14,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556654,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556654,DATE,18/08/2017,DATE: 18/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556654,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556654,TOTAL,-6.42,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556657,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556657,DATE,16/08/2017,DATE: 16/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556657,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556658,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556658,DATE,15/08/2017,DATE: 15/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556658,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556658,TOTAL,32.13,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556723,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556723,DATE,03/08/2017,DATE: 03/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556723,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556728,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556728,DATE,07/08/2017,DATE: 07/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556728,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556728,TOTAL,60.26,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556734,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556734,DATE,04/08/2017,DATE: 04/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556734,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556734,TOTAL,32.46,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556740,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556740,DATE,01/08/2017,DATE: 01/08/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556740,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556740,TOTAL,23.35,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556806,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556806,DATE,23/09/2017,DATE: 23/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556806,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556806,TOTAL,14.47,5,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006556808,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556808,DATE,22/09/2017,DATE: 22/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556808,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556808,TOTAL,79.26,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556809,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556809,DATE,21/09/2017,DATE: 21/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556809,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556809,TOTAL,43.36,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556810,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556810,DATE,20/09/2017,DATE: 20/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556810,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556810,TOTAL,23.02,5,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006556812,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556812,DATE,14/09/2017,DATE: 14/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556812,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556812,TOTAL,25.84,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556821,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556821,DATE,02/09/2017,DATE: 02/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556821,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556821,TOTAL,48.57,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556826,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556826,DATE,27/09/2017,DATE: 27/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556826,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556827,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556827,DATE,26/09/2017,DATE: 26/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556827,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556827,TOTAL,53.96,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556829,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556829,DATE,24/09/2017,DATE: 24/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556829,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556829,TOTAL,38.55,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006556851,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556851,DATE,12/09/2017,DATE: 12/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556851,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556851,TOTAL,84.78,0,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006556865,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556865,DATE,06/09/2017,DATE: 06/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556865,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006556865,TOTAL,62.82,5,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006557115,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557115,DATE,02/10/2017,DATE: 02/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557115,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557115,TOTAL,35.58,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006557169,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557169,DATE,01/09/2017,DATE: 01/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557169,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557169,TOTAL,5.00,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006557173,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557173,DATE,28/10/2017,DATE: 28/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557173,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557173,TOTAL,32.26,3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557187,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557187,DATE,16/10/2017,DATE: 16/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557187,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557187,TOTAL,42.25,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006557194,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557194,DATE,13/10/2017,DATE: 13/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557194,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557194,TOTAL,39.77,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006557196,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557196,DATE,11/10/2017,DATE: 11/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557196,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557208,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557208,DATE,07/10/2017,DATE: 07/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557208,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557209,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557209,DATE,06/10/2017,DATE: 06/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557209,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557507,COMPANY,GARDENIA BAKERIES (KL) SDN BHD,GARDENIA BAKERIES (KL) SDN BHD (139386 X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557507,DATE,27/10/2017,DATE: 27/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006557507,ADDRESS,"LOT 3, JALAN PELABUR 23/1, 40300 SHAH ALAM, SELANGOR.",LOT 3,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619328,COMPANY,YIN MA (M) SDN.BHD.,YIN MA (M) SDN.BHD.(974306-T),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619328,DATE,31 JAN 2016,: 31 JAN 2016 12:28PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619328,ADDRESS,"NO.2, JALAN UDANG SIAR 2, TAMAN SRI SEGAMBUT, 52000 KUALA LUMPUR.",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619338,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619338,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR 1320-TMN BATU",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619345,COMPANY,THE STORE (MALAYSIA) SDN. BHD.,THE STORE (MALAYSIA) SDN. BHD. (8199-K),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619345,DATE,06-02-2016,06-02-2016 (SAT) 12:34,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619345,ADDRESS,"LOT 34817 JALAN BATU AMBAR TAMAN KOK LIAN 51200 KUALA LUMPUR,",LOT 34817 JALAN BATU AMBAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619345,TOTAL,9.80,9.80 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619346,DATE,18-04-16,18-04-16 15:02 SH01 ZJ08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619346,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619503,COMPANY,KEDAI UBAT & RUNCIT HONG NING SDN. BHD.,(none),missed entity,Model failed to detect any tokens for COMPANY
+X51006619503,DATE,21/12/16,: 21/12/16 9:29:44 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619503,ADDRESS,"NO.8,JALAN LANG KUNING, KEPONG BARU, 52100 KUALA LUMPUR.",KEDAI UBAT & RUNCIT HONG NO.8,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006619506,COMPANY,KEDAI UBAT & RUNCIT HONG NING SDN. BHD.,KEDAI UBAT & RUNCIT HONG,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619506,DATE,24/12/16,: 24/12/16 2:28:22 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619506,ADDRESS,"NO.8,JALAN LANG KUNING, KEPONG BARU, 52100 KUALA LUMPUR",NO.8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619507,DATE,03/12/2016,ORD #54 -REG #11- 03/12/2016 11:06:11,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619507,ADDRESS,"NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006619509,DATE,02-12-2016,REG KER YUN 02-12-2016 12:33 PM 000093,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619509,ADDRESS,"NO. 33, LRG HANG JEBAT, MELAKA",NO.33,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006619564,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619564,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1605-TMN SRI BINTANG",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619564,TOTAL,85.45,85.44,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006619567,COMPANY,KEDAI UBAT & RUNCIT HONG NING SDN. BHD.,KEDAI UBAT & RUNCIT HONG,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619567,DATE,02/02/16,: 02/02/16 10:23:36 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619567,ADDRESS,"NO.8,JALAN LANG KUNING, KEPONG BARU, 52100 KUALA LUMPUR",NO.8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619569,DATE,01-02-16,01-02-16 13:10 SH01 B003,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619569,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619570,DATE,21-02-16,21-02-16 12:43 SH01 ZJ08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619570,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619700,DATE,10-01-16,10-01-16 14:46 SH02 B003,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619700,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619703,DATE,11-01-16,11-01-16 14:00 SH01 B003,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619703,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619704,DATE,11-01-16,11-01-16 13:02 SH01 ZJ08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619704,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619757,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619757,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR 1605-TMN SRI BINTANG",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619760,DATE,02/01/16,1 : 02/01/16 11:41:47 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619760,ADDRESS,"NO.8,JALAN LANG KUNING, KEPONG BARU, 52100 KUALA LUMPUR.",NO.8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619764,DATE,05-01-16,05-01-16 14:41 SH01 B003,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619764,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619766,DATE,10-01-16,10-01-16 14:01 SH01 ZJ19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619766,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619779,DATE,2016-07-31,DATE: 2016-07-31 13:49:10,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619779,ADDRESS,"NO.145G, JALAN RIMBUNAN RAYA 1, LAMAN RIMBUNAN KEPONG, 52100 KUALA LUMPUR",NO.145G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619782,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619782,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619784,COMPANY,SECURITY & OA TRADING,SECURITY & OA TRADING (002382060-M),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619784,DATE,7/6/2016,DATE : 7/6/2016 TIME : 2:47:04 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619784,ADDRESS,"LOT TC007 & 008, 3RD FLOOR, SG. WANG PLAZA",LOT TC007 & 008,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619784,TOTAL,399.00,1.00,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006619790,COMPANY,YIN MA (M) SDN.BHD.,YIN MA (M) SDN.BHD.(974306-T),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619790,DATE,19 JUL 2016,: 19 JUL 2016 01:25PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619790,ADDRESS,"NO.2, JALAN UDANG SIAR 2, TAMAN SRI SEGAMBUT, 52000 KUALA LUMPUR.",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619842,COMPANY,YIN MA (M) SDN.BHD.,YIN MA (M) SDN.BHD.(974306-T),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619842,DATE,03 JUN 2016,: 3 JUN 2016 12:26PM,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006619842,ADDRESS,"NO.2, JALAN UDANG SIAR 2, TAMAN SRI SEGAMBUT, 52000 KUALA LUMPUR.",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619842,TOTAL,32.70,10.90 S,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006619863,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619863,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR 1181-TMN SRI SINAR",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619869,COMPANY,MONSIEUR ( M ) SDN. BHD.,HOME'S HARMONY @ 1 UTAMA SHOPPING CENTRE,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006619869,DATE,12/06/2016,12/06/2016-13:30:10-28-NORBAIZURA BT-101,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619869,ADDRESS,"LOT S319A, 2ND FLOOR, 1 UTAMA SHOPPING CENTRE - PHASE 2 PERSIARAN BANDAR UTAMA, 47800 PETALING JAYA. MALAYSIA",LOT S319A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006619869,TOTAL,23.20,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006620175,DATE,06-05-16,06-05-16 17:11 SH01 ZJ08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620175,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620182,COMPANY,PACIFIC ASIAN FOOD DELIGHTS S/B,WIN SOON CAFE PACIFIC ASIAN FOOD DELIGHTS S/B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620182,DATE,08/05/2016,INV DT: 08/05/2016 12:08:00 PM RM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620182,ADDRESS,"NO.35,GROUND FLOOR JLN METRO PERDANA BARAT 1 TAMAN USAHAWAN KEPONG 52100 KL",NO.35,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620182,TOTAL,78.50,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51006620192,COMPANY,MONSIEUR ( M ) SDN. BHD.,HOME'S HARMONY @ 1 UTAMA SHOPPING CENTRE MONSIEUR ( M ) SDN. BHD. ( 121889-W ),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620192,DATE,01/05/2016,01/05/2016-13:19:16-29-NORBAIZURA BT-101,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620192,ADDRESS,"LOT S319A, 2ND FLOOR, 1 UTAMA SHOPPING CENTRE - PHASE 2 PERSIARAN BANDAR UTAMA, 47800 PETALING JAYA. MALAYSIA",LOT S319A,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620437,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620437,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR 1558-TMN PUSAT KEPONG",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006620437,TOTAL,14.20,RM14.20 S,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006647933,DATE,28/05/2018,28/05/2018 MON,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006647933,ADDRESS,"1-G,JALAN OS 1/3,ONE SELAYANG OFF JALAN RAWANG 68100 B.CAVES",1-G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006647933,TOTAL,RM83.00,RM78.30,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006647984,DATE,15/05/18,15/05/18 13:06,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006647984,ADDRESS,"NO. 72A, JALAN UNIVERSITI, 46200, PETALING JAYA, SELANGOR.",63&67-P1,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006714066,DATE,30-09-2017,DATE : 30-09-2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006714066,ADDRESS,"NO. 135, JALAN BANGI, 43500 SEMENYIH, SELANGOR",NO. 135,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006733495,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006733495,ADDRESS,"LOT P.T. 33198, BATU 4 JALAN KAPAR, MUKIM KAPAR 42100 KLANG, SELANGOR 1558-TMN PUSAT KEPONG",LOT P.T. 33198,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006733495,TOTAL,14.20,.80,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006828199,DATE,12/10/2017,DATE: 12/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828199,ADDRESS,"LOT 2-25, SUNWAY VELOCITY MALL LINGKARAN SV, SUNWAY VELOCITY, 55100 KUALA LUMPUR",LOT 2-25,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828200,DATE,15/12/2017,15/12/2017 08:00 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828200,ADDRESS,"LOT T-015B, LEVEL 3, MID VALLEY CITY, LINGKARAN SYED PUTRA, 59200 KUALA LUMPUR MALAYSIA.",LOT T-015B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828201,COMPANY,THE COFFEE BEAN & TEA LEAF (M) SDN. BHD.,THE COFFEE BEAN,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828201,DATE,15/12/2017,15/12/2017 18:01,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006828201,ADDRESS,"UNIT G047, GROUND FLOOR MID VALLEY MEGAMALL MID VALLEY CITY, LINGKARAN SYED PUT 59200 KUALA LUMPUR",UNIT G047,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006856982,ADDRESS,"LOT B-005-006, BASEMENT LEVEL 1 THE STARLING MALL JALAN SS21/60, DAMANSARA UTAMA.",LOT B-005-006,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857126,DATE,28/07/17,: 28/07/17 9:48:42 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857126,ADDRESS,"69G, JALAN SS21/60, DAMANSARA UTAMA, 47400 PETALING JAYA, SELANGOR.",69G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857126,TOTAL,28.80,3,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006857132,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857132,DATE,09/07/2017,09/07/2017 17:01,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857132,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857137,COMPANY,99 SPEED MART S/B,99 SPEED MART S/B (519537-X),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857137,ADDRESS,"LOT P.T. 2811, JALAN ANGSA, TAMAN BERKELEY 41150 KLANG, SELANGOR 1056-UPTOWN",LOT P.T. 2811,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857137,TOTAL,3.30,46.70,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51006857540,COMPANY,BECON ENTERPRISE SDN BHD,BECON STATIONER,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51006857540,DATE,13-11-2017,: 13-11-2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006857540,ADDRESS,"NO.41G, JLN SS21/60, DAMANSARA UTAMA, 47400 PJ, SELANGOR.",NO.41G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912959,COMPANY,ROYALTEA,(none),missed entity,Model failed to detect any tokens for COMPANY
+X51006912959,DATE,09/05/2018,: 09/05/2018 #1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912959,ADDRESS,"NO. 23, JALAN SUTERA TANJUNG 8/3, TAMAN SUTERA UTAMA 81300 SKUDAI JOHOR,MALAYSIA.",NO. 23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912959,TOTAL,10.90,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912976,COMPANY,THE TOAST F&B SDN BHD,THE TOAST F&B SDN BHD (965752-T),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912976,ADDRESS,"LOT 2110&2111 JALAN PERMAS UTARA BANDAR BARU PERMAS 81750,JOHOR BAHRU JOHOR",LOT 2110&2111 JALAN PERMAS UTARA,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912976,TOTAL,71.10,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912998,DATE,08-05-2018,08-05-2018 08:17:16,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912998,ADDRESS,"LOT PTD 101051 JALAN PERMAS 10/10 81750 MASAI, JOHOR",LOT PTD 101051,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006912998,TOTAL,RM 50.00,50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913018,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913018,DATE,11/05/2018,11/05/2018 17:20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913018,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913032,DATE,10 MAY 2018,10 MAY 2018 18:19,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913032,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913032,TOTAL,$12.20,TOTAL AMOUNT: $12.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913060,DATE,21 MAY 2018,21 MAY 2018 18:26,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913060,ADDRESS,"2, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913060,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913061,DATE,23 MAY 2018,23 MAY 2018 18:33,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913061,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913061,TOTAL,$9.20,TOTAL AMOUNT: $9.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913067,DATE,28 MAY 2018,28 MAY 2018 18:30,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913067,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51006913067,TOTAL,7.10,TOTAL AMOUNT: $7.10,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103597,DATE,11-APR-2018,11-APR-2018 03:12:06 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103597,ADDRESS,"NO 5, JALAN KENARI 2, BANDAR PUCHONG JAYA, 47100 PUCHONG, SELANGOR",NO 5,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103610,DATE,14-04-18,14-04-18 17:49 SH01 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103610,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103610,TOTAL,RM 5.00,5.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103649,DATE,21-04-18,21-04-18 20:29 SH01 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103649,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103668,DATE,22-04-18,22-04-18 18:37 SH01 ZJ86,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103668,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103687,DATE,27-04-18,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103687,ADDRESS,"LOT 1851-A & 1851-B, JALAN KPB 6, KAWASAN PERINDUSTRIAN BALAKONG, 43300 SERI KEMBANGAN, SELANGOR",LOT 1851-A & 1851-B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007103687,TOTAL,1.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51007225406,DATE,05/APR/2018,05/APR/2018 12:49 11 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007225406,ADDRESS,"B12, JALAN SS 15/4D, 47500 SUBANG JAYA,",B12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231274,DATE,06 MAY 2018,06 MAY 2018 18:23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231274,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231274,TOTAL,$7.30,TOTAL AMOUNT: $7.30,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231275,DATE,12 MAY 2018,12 MAY 2018 19:14,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231275,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231276,DATE,02 MAY 2018,02 MAY 2018 18:16,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231276,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231276,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231331,DATE,11 MAY 2018,11 MAY 2018 18:54,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231331,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231331,TOTAL,$7.80,TOTAL AMOUNT: $7.80,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231341,DATE,03 MAY 2018,03 MAY 2018 18:27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231341,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231341,TOTAL,$8.20,TOTAL AMOUNT: $8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231343,DATE,04 MAY 2018,04 MAY 2018 18:31,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231343,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231346,DATE,02/05/18,02/05/18 08:55 47232 01 6410 292,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231346,ADDRESS,"JLN PERMAS 9/5, BDR PERMAS JAYA 81750, JOHOR BAHRU",JLN PERMAS 9/5,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231346,TOTAL,60.00,60.00 C,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231364,DATE,26/05/2018,ORD #32 -REG #21- 26/05/2018 02:16:13,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231364,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231372,DATE,2018-05-01,DATE: 2018-05-01 19:34:09,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007231372,ADDRESS,"NO. 27, JALAN AUSTIN HEIGHT 8/4, TAMAN MOUNT AUSTIN, 81100 JOHOR BAHRU.",NO. 27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339105,DATE,05/04/2017,DATE : 05/04/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339105,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339105,TOTAL,3.30,1 X 3.3000,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339109,DATE,27/03/2017,DATE : 27/03/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339109,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339116,DATE,28/10/2017,DATE : 28/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339116,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339116,TOTAL,21.90,1 X 21.9000,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339119,DATE,17/11/2017,DATE : 17/11/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339119,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339121,DATE,12/09/2017,DATE : 12/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339121,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339122,DATE,14/10/2017,DATE : 14/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339122,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339125,DATE,24/09/2017,DATE : 24/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339125,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339127,DATE,24/10/2017,DATE : 24/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339127,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339127,TOTAL,3.00,1 X 3.0000,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339134,DATE,06/10/2017,DATE : 06/10/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339134,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339159,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339160,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339160,TOTAL,3.90,1 X 3.9000,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339161,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339161,TOTAL,2.30,1 X 2.3000,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339163,DATE,23/11/2017,DATE : 23/11/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339163,ADDRESS,"NO. 31G&33G, JALAN SETIA INDAH X ,U13/X 40170 SETIA ALAM",NO. 31G&33G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339638,COMPANY,AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN BHD,AIK HUAT HARDWARE,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339638,DATE,22/09/2017,RECEIPT #: CSP0407141 DATE: 22/09/2017,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007339638,ADDRESS,"NO. 17-G, JALAN SETIA INDAH (X) U13/X, SETIA ALAM, SEKSYEN U13, 40170 SHAH ALAM,",NO. 17-G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007391390,DATE,31/05/2018,31/05/2018 12:43:21 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007391390,ADDRESS,"NO.3343, GROUND FLOOR, JALAN 18/32, TAMAN SRI SERDANG, 43300 SERI KEMBANGAN,",NO.3343,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007433809,COMPANY,SYARIKAT KAM LAI SEONG SDN BHD,SYARIKAT KAM LAI SEONG SDN BHD (CO,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007433809,DATE,08-03-2018,DATE: 08-03-2018 05:01:12 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007433809,ADDRESS,"NO. 1442, JALAN SK 11/5, SERI KEMBANGAN 43300 SELANGOR",NO. 1442,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007433809,TOTAL,190.00,2,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51007579714,COMPANY,PELITA SAMUDRA PERTAMA (M) SDN BHD.,NASI KANDAR PELITA PELITA SAMUDRA PERTAMA (M) SDN BHD.,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579714,DATE,03/06/2018,: 03/06/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579714,ADDRESS,"NO.2-1,JALAN KAMARUDDIN ISA 31400 IPOH,PERAK DARUL RIDZUAN",NO.2-1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579714,TOTAL,61.70,3,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51007579719,DATE,05-06-2018,: 05-06-2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579719,ADDRESS,"LOT S10NB & S12NB, RESTORAN JEJANTAS SG. BULOH, ARAH UTARA, PLUS BERHAD.",LOT S10NB & S12NB,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579725,ADDRESS,"16G BLOCK B ,ZENITH CORPORATE PARK JALAN SS7/26, 47301 PETALING JAYA SELANGOR",16G BLOCK B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007579725,TOTAL,58.70,1 58.70,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846266,DATE,01 JUN 2018,01 JUN 2018 18:41,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846266,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846266,TOTAL,RM8.75,TOTAL AMOUNT: RM8.76 NETT TOTAL: RM8.75,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846268,DATE,02 JUN 2018,02 JUN 2018 18:23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846268,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846268,TOTAL,RM10.35,TOTAL AMOUNT: RM10.36 NETT TOTAL: RM10.35,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846282,DATE,02/06/2018,: 02/06/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846282,ADDRESS,"NO.1, JALAN PERMAS 10/5, BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU, JOHOR.",NO.1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846283,DATE,03/06/2018,03/06/2018 12:42,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846283,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846283,TOTAL,147.45,15.00SR 147.45 147.45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846288,DATE,06 JUN 2018,06 JUN 2018 18:24,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846288,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846288,TOTAL,RM7.25,TOTAL AMOUNT: RM7.25,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846289,COMPANY,MOONLIGHT CAKE HOUSE SDN BHD,MOONLIGHT CAKE HOUSE SDN BHD 862725-U,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846289,DATE,07/06/2018,: 07/06/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846289,ADDRESS,"NO.1, JALAN PERMAS 10/5, BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU, JOHOR.",NO.1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846290,DATE,07 JUN 2018,07 JUN 2018 18:23,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846290,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846290,TOTAL,RM8.20,NETT TOTAL: RM8.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846303,DATE,08 JUN 2018,08 JUN 2018 18:41,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846303,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846303,TOTAL,RM6.70,NETT TOTAL: RM6.70,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846304,DATE,05 JUN 2018,05 JUN 2018 18:22,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846304,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846304,TOTAL,RM7.50,TOTAL AMOUNT: RM7.52 NETT TOTAL: RM7.50,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846310,COMPANY,MOONLIGHT CAKE HOUSE SDN BHD,MOONLIGHT CAKE HOUSE SDN BHD 862725-U,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846310,DATE,11/06/2018,: 11/06/2018,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846310,ADDRESS,"NO.1, JALAN PERMAS 10/5, BANDAR BARU PERMAS JAYA 81750 JOHOR BAHRU, JOHOR.",NO.1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846310,TOTAL,RM28.20,1 RM28.20,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846321,DATE,05/06/2018,(none),missed entity,Model failed to detect any tokens for DATE
+X51007846321,ADDRESS,"4, JALAN KEBUDAYAAN 1 TAMAN UNIVERSITI 81300, SKUDAI",4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846355,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846355,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846358,COMPANY,EXQUISITE GARDEN SDN BHD,OLD TOWN WHITE COFFE EXQUISITE GARDEN SDN BHD,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846358,DATE,03 JUN 18,03 JUN 18 03:07:32 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846358,ADDRESS,"LOT NO R134,GIANT HYPERMARKET PLENTONG NO3, JALAN MASAI LAMA 81750 MASAI. JAHOR BAHRU",LOT NO R134,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846360,DATE,09/06/18,DATE: 09/06/18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846360,ADDRESS,"NO. 33, JALAN HARMONIUM TAMAN DESA TEBRAU 81100 JOHOR BAHRU",NO.33,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51007846361,DATE,11-06-2018,DATE: 11-06-2018 07:23:28 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846361,ADDRESS,"NO.7G,JALAN PERMAS 11, BANDAR BARU PERMAS JAYA, 81750 MASAI, JOHOR.",NO.7G,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846371,DATE,13 JUN 2018,13 JUN 2018 18:28,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846371,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU, JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846371,TOTAL,RM8.85,TOTAL AMOUNT: RM8.85,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846372,DATE,14 JUN 2018,14 JUN 2018 18:27,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846372,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU, JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846372,TOTAL,RM10.15,NETT TOTAL: RM10.15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846379,COMPANY,AEON CO. (M) BHD,AEON CO. (M) BHD (126926-H),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846379,DATE,03/06/2018,03/06/2018 16:49,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846379,ADDRESS,"3RD FLR, AEON TAMAN MALURI SC JLN JEJAKA, TAMAN MALURI CHERAS, 55100 KUALA LUMPUR",3RD FLR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846379,TOTAL,79.45,8.96SR 79.45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846387,DATE,21/6/2018,21/6/2018 9:14:08 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846387,ADDRESS,"NO. 53 & 55, JALAN UTAMA 34, MUTIARA RINI, SKUDAI, JOHOR.",NO.53 & 55,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51007846392,DATE,19 JUN 2018,19 JUN 2018 18:28,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846392,ADDRESS,"12, JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU,JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846392,TOTAL,RM8.45,TOTAL AMOUNT: RM8.46 NETT TOTAL: RM8.45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846396,DATE,24/06/2018,ORD #37 -REG #11- 24/06/2018 22:40:45,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846396,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3, JALAN SS21/39, 47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846396,TOTAL,7.35,7.35 20.00,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846397,COMPANY,UNIHAKKA INTERANTIONAL SDN BHD,UNIHAKKA INTERNATIONAL SDN BHD,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846397,DATE,21 JUN 2018,21 JUN 2018 18:30,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846397,ADDRESS,"12,JALAN TAMPOI 7/4,KAWASAN PERINDUSTRIAN TAMPOI,81200 JOHOR BAHRU, JOHOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846397,TOTAL,RM7.70,TOTAL AMOUNT: RM7.72 NETT TOTAL: RM7.70,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846400,COMPANY,KOREAN DINE SDN BHD,NAM SAN SEOUL KOREAN BBQ,incorrect entity type / confusion,Token span assigned incorrect field or confused with another semantic region.
+X51007846400,DATE,19/06/2018,19/06/2018 06:56:10 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846400,ADDRESS,"NO 4, JALAN PERMAS 10/5. BANDAR BARU PERMAS JAYA, 81750 JOHOR BAHRU, JOHOR.",NO 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846400,TOTAL,152.90,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846403,COMPANY,ROYALTEA,**ROYALTEA**,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846403,DATE,02/06/2018,: 02/06/2018 #1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846403,ADDRESS,"NO.33,JALAN SELADANG TAMAN ABAD, 80250 JOHOR BAHRU, JOHOR ,MALAYSIA.",NO.33,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51007846403,TOTAL,13.10,1,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008030561,DATE,09-04-2018,: 09-04-2018 10:28:21,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008030561,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008030563,DATE,02-04-2018,: 02-04-2018 19:30:26,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008030563,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042779,DATE,05-05-2018,: 05-05-2018 13:16:46,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042779,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042780,DATE,10-05-2018,: 10-05-2018 16:01:18,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042780,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042781,DATE,11-05-2018,: 11-05-2018 17:12:34,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042781,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042786,DATE,30/05/2018,ORD #84 -REG #19- 30/05/2018 16:07:06,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042786,ADDRESS,"LEVEL 6, BANGUNAN TH, DAMANSARA UPTOWN3 NO.3 , JALAN SS21/39,47400 PETALING JAYA SELANGOR",LEVEL 6,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042787,COMPANY,VEG FISH FARM THAI RESTAURANT S/B,FISH FARM THAI RESTAURANT VEG FISH FARM THAI RESTAURANT S/B,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042787,DATE,01/05/2018,PRINTED: 01/05/2018 6:33:22,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042787,ADDRESS,"KM 4, JLN AMPANG, HULU LANGAT, 68000 AMAPNG, SELANGOR.",KM 4,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008042787,TOTAL,412.90,1 412.90,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099047,DATE,21-06-2018,: 21-06-2018 18:54:22,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099047,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099086,DATE,29-06-2018,: 29-06-2018 16:13:05,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099086,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099088,DATE,27-06-2018,: 27-06-2018 12:15:15,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099088,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099090,DATE,01-06-2018,: 01-06-2018 14:20:08,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099090,ADDRESS,"NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",NO.2,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099100,DATE,29 JUN 18,29 JUN 18 06:01:34 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51008099100,ADDRESS,"NO.19 & 21 JALAN TEMENGGUNG 23/9 BANDAR MAHKOTA CHERAS 43200 SELANGOR DARUL EHSAN, MALAYSIA",NO.19 & 21,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008091,COMPANY,POPULAR BOOK CO. (M) SDN BHD,POPULAR BOOK,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008091,DATE,05/03/18,05/03/18 15:02,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008091,ADDRESS,"NO 8, JALAN 7/118B, DESA TUN RAZAK 56000 KUALA LUMPUR, MALAYSIA",NO 8,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008095,COMPANY,BOON SENG PAPER SDN BHD,BOON SENG PAPER SDN BHD (1248717-W),partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008095,DATE,19/03/2018,19/03/2018 1:01:43 PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009008095,ADDRESS,"12, JALAN BUNGA TANJUNG, 2/16 SEKSYEN 2, 40000 SHAH ALAM, SELANGOR",12,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009447842,COMPANY,PASARAYA BORONG PINTAR SDN BHD,PASARAYA BORONG PINTAR,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009447842,DATE,14/03/2018,14/03/2018 4:06:34PM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009447842,ADDRESS,"NO 19-G& 19-1& 19-2 JALAN TASIK UTAMA 4, MEDAN NIAGA TASIK DAMAI",NO 19-G& 19-1&19-2 JALAN TASIK UTAMA 4,visual ambiguity / OCR artifact,Punctuation or header prefix captured with entity value.
+X51009447842,TOTAL,0.90,(none),missed entity,Model failed to detect any tokens for TOTAL
+X51009453729,ADDRESS,"NO.32 & 33, JALAN SR 1/9, SEKSYEN 9, TAMAN SERDANG RAYA, 43300 SERI KEMBANGAN, SELANGOR DARUL EHSAN",NO.32 & 33,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009568881,DATE,21/09/2017,21/09/2017 10:20:37 AM,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.
+X51009568881,ADDRESS,"NO 37, JALAN MANIS 7, TAMAN SEGAR, 56100 CHERAS, KUALA LUMPUR.",NO 37,partial extraction / wrong boundary,Predicted span covers partial entity or includes surrounding noise words.

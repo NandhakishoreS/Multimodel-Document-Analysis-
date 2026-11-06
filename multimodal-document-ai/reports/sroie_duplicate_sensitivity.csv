@@ -1,0 +1,3 @@
+Evaluation Set,Test Size,Precision,Recall,Macro F1,Micro F1,Entity F1
+Original (All),361,0.8792,0.8878,0.8828,0.8835,0.8828
+Deduplicated (Excl. 8 Duplicates),353,0.8773,0.8867,0.8813,0.8820,0.8813

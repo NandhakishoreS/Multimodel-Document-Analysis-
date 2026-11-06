@@ -1,0 +1,13 @@
+dataset,condition,modalities_active,precision,recall,macro_f1,micro_f1,delta_vs_full,n_gold_spans
+SROIE,Full (text + layout + image),text+layout+image,0.8689,0.8889,0.8784,0.8788,0.0,1431
+SROIE,No-Image (text + layout only),text+layout,0.852,0.877,0.8646,0.8643,-0.0138,1431
+SROIE,No-Layout (text + image only),text+image,0.6648,0.492,0.5291,0.5655,-0.3493,1431
+SROIE,Text-Approx (text only),text-only-approx,0.6382,0.4969,0.5297,0.5587,-0.3487,1431
+FUNSD,Full (text + layout + image),text+layout+image,0.7804,0.8196,0.7179,0.7995,0.0,1973
+FUNSD,No-Image (text + layout only),text+layout,0.7422,0.813,0.6808,0.776,-0.0371,1973
+FUNSD,No-Layout (text + image only),text+image,0.2155,0.0745,0.0784,0.1107,-0.6395,1973
+FUNSD,Text-Approx (text only),text-only-approx,0.3103,0.1004,0.1015,0.1517,-0.6164,1973
+CORD,Full (text + layout + image),text+layout+image,0.9748,0.9763,0.9733,0.9756,0.0,1309
+CORD,No-Image (text + layout only),text+layout,0.9763,0.9763,0.9737,0.9763,0.0004,1309
+CORD,No-Layout (text + image only),text+image,0.631,0.5134,0.5547,0.5661,-0.4186,1309
+CORD,Text-Approx (text only),text-only-approx,0.5733,0.4423,0.4779,0.4994,-0.4954,1309

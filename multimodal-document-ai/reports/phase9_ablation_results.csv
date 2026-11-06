@@ -1,0 +1,22 @@
+Dataset,Condition_ID,Condition_Name,Short,Modalities,Precision,Recall,Macro_F1,Micro_F1,Description
+SROIE,A,Full Multimodal,Full,Text + Layout + Image,0.8689,0.8889,0.8784,0.8788,All three input channels active (unperturbed baseline).
+SROIE,B,Text Only,Text-Only,Text,0.6382,0.4969,0.5297,0.5587,"Pure textual semantics: bbox set to [0,0,0,0], image zeroed."
+SROIE,C,Text + Layout,No-Image,Text + Layout,0.852,0.877,0.8646,0.8643,Bimodal text and 2D spatial layout; image zeroed.
+SROIE,D,Text + Image,No-Layout,Text + Image,0.6648,0.492,0.5291,0.5655,"Bimodal text and visual patches; bbox set to [0,0,0,0]."
+SROIE,E,Layout + Image,No-Text,Layout + Image,0.1126,0.1377,0.1201,0.1239,Pure spatial and visual features; text tokens replaced with [MASK].
+SROIE,F,No-Image Model,No-Image-Alias,Text + Layout,0.852,0.877,0.8646,0.8643,Explicit verification of vision-free performance.
+SROIE,G,No-Layout Model,No-Layout-Alias,Text + Image,0.6648,0.492,0.5291,0.5655,Explicit verification of spatial-free performance.
+FUNSD,A,Full Multimodal,Full,Text + Layout + Image,0.7804,0.8196,0.7179,0.7995,All three input channels active (unperturbed baseline).
+FUNSD,B,Text Only,Text-Only,Text,0.3103,0.1004,0.1015,0.1517,"Pure textual semantics: bbox set to [0,0,0,0], image zeroed."
+FUNSD,C,Text + Layout,No-Image,Text + Layout,0.7422,0.813,0.6808,0.776,Bimodal text and 2D spatial layout; image zeroed.
+FUNSD,D,Text + Image,No-Layout,Text + Image,0.2155,0.0745,0.0784,0.1107,"Bimodal text and visual patches; bbox set to [0,0,0,0]."
+FUNSD,E,Layout + Image,No-Text,Layout + Image,0.257,0.2276,0.2215,0.2414,Pure spatial and visual features; text tokens replaced with [MASK].
+FUNSD,F,No-Image Model,No-Image-Alias,Text + Layout,0.7422,0.813,0.6808,0.776,Explicit verification of vision-free performance.
+FUNSD,G,No-Layout Model,No-Layout-Alias,Text + Image,0.2155,0.0745,0.0784,0.1107,Explicit verification of spatial-free performance.
+CORD,A,Full Multimodal,Full,Text + Layout + Image,0.9748,0.9763,0.9733,0.9756,All three input channels active (unperturbed baseline).
+CORD,B,Text Only,Text-Only,Text,0.5733,0.4423,0.4779,0.4994,"Pure textual semantics: bbox set to [0,0,0,0], image zeroed."
+CORD,C,Text + Layout,No-Image,Text + Layout,0.9763,0.9763,0.9737,0.9763,Bimodal text and 2D spatial layout; image zeroed.
+CORD,D,Text + Image,No-Layout,Text + Image,0.631,0.5134,0.5547,0.5661,"Bimodal text and visual patches; bbox set to [0,0,0,0]."
+CORD,E,Layout + Image,No-Text,Layout + Image,0.3381,0.1795,0.137,0.2345,Pure spatial and visual features; text tokens replaced with [MASK].
+CORD,F,No-Image Model,No-Image-Alias,Text + Layout,0.9763,0.9763,0.9737,0.9763,Explicit verification of vision-free performance.
+CORD,G,No-Layout Model,No-Layout-Alias,Text + Image,0.631,0.5134,0.5547,0.5661,Explicit verification of spatial-free performance.

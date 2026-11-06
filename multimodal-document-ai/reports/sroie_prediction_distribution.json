@@ -1,0 +1,65 @@
+[
+  {
+    "Label": "O",
+    "True Count": 17943,
+    "Predicted Count": 17929,
+    "Difference": -14,
+    "Diff %": -0.08
+  },
+  {
+    "Label": "B-COMPANY",
+    "True Count": 355,
+    "Predicted Count": 365,
+    "Difference": 10,
+    "Diff %": 2.82
+  },
+  {
+    "Label": "I-COMPANY",
+    "True Count": 0,
+    "Predicted Count": 0,
+    "Difference": 0,
+    "Diff %": 0.0
+  },
+  {
+    "Label": "B-DATE",
+    "True Count": 359,
+    "Predicted Count": 361,
+    "Difference": 2,
+    "Diff %": 0.56
+  },
+  {
+    "Label": "I-DATE",
+    "True Count": 0,
+    "Predicted Count": 0,
+    "Difference": 0,
+    "Diff %": 0.0
+  },
+  {
+    "Label": "B-ADDRESS",
+    "True Count": 360,
+    "Predicted Count": 371,
+    "Difference": 11,
+    "Diff %": 3.06
+  },
+  {
+    "Label": "I-ADDRESS",
+    "True Count": 0,
+    "Predicted Count": 0,
+    "Difference": 0,
+    "Diff %": 0.0
+  },
+  {
+    "Label": "B-TOTAL",
+    "True Count": 361,
+    "Predicted Count": 352,
+    "Difference": -9,
+    "Diff %": -2.49
+  },
+  {
+    "Label": "I-TOTAL",
+    "True Count": 0,
+    "Predicted Count": 0,
+    "Difference": 0,
+    "Diff %": 0.0
+  }
+]

@@ -21,11 +21,11 @@ image:
 training:
   epochs: 10
   learning_rate: 5.0e-5
-  batch_size: 2           # Small batch — CPU-safe; increase to 4-8 with a GPU
+  batch_size: 2           # 2 with fp16 on ~6.44 GB VRAM
   weight_decay: 0.01
   warmup_ratio: 0.1
   gradient_accumulation_steps: 4   # Effective batch = 2 * 4 = 8
-  fp16: false             # Set true on CUDA GPU; must be false on CPU
+  fp16: true              # Enable for CUDA GPU; automatically disabled on CPU
   seed: 42
   early_stopping_patience: 3      # Stop if val F1 doesn't improve for N epochs
   eval_every_n_epochs: 1

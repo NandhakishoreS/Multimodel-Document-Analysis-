@@ -1,0 +1,4 @@
+entity,gold,pred,tp,fp,fn,boundary,partial,type_error,ocr_related,other_errors,precision,recall,f1
+HEADER,119,125,64,61,55,10,10,58,0,38,0.512,0.5378,0.5246
+QUESTION,1049,1066,886,180,163,54,54,118,1,116,0.8311,0.8446,0.8378
+ANSWER,805,881,667,214,138,58,58,68,1,167,0.7571,0.8286,0.7912

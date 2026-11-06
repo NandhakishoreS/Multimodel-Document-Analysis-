@@ -1,0 +1,594 @@
+[
+  {
+    "dataset": "SROIE",
+    "condition": "Full (text + layout + image)",
+    "modalities_active": "text+layout+image",
+    "zero_image": false,
+    "zero_layout": false,
+    "precision": 0.8689,
+    "recall": 0.8889,
+    "macro_f1": 0.8784,
+    "micro_f1": 0.8788,
+    "n_gold_spans": 1431,
+    "n_pred_spans": 1464,
+    "description": "All three input modalities active. pixel_values and bbox as provided by the dataset preprocessor.",
+    "per_entity": {
+      "ADDRESS": {
+        "precision": 0.8253,
+        "recall": 0.8624,
+        "f1": 0.8434,
+        "gold_count": 356,
+        "pred_count": 372,
+        "tp": 307,
+        "fp": 65,
+        "fn": 49
+      },
+      "COMPANY": {
+        "precision": 0.8786,
+        "recall": 0.9328,
+        "f1": 0.9049,
+        "gold_count": 357,
+        "pred_count": 379,
+        "tp": 333,
+        "fp": 46,
+        "fn": 24
+      },
+      "DATE": {
+        "precision": 0.9862,
+        "recall": 1.0,
+        "f1": 0.993,
+        "gold_count": 357,
+        "pred_count": 362,
+        "tp": 357,
+        "fp": 5,
+        "fn": 0
+      },
+      "TOTAL": {
+        "precision": 0.7835,
+        "recall": 0.7618,
+        "f1": 0.7725,
+        "gold_count": 361,
+        "pred_count": 351,
+        "tp": 275,
+        "fp": 76,
+        "fn": 86
+      }
+    }
+  },
+  {
+    "dataset": "SROIE",
+    "condition": "No-Image (text + layout only)",
+    "modalities_active": "text+layout",
+    "zero_image": true,
+    "zero_layout": false,
+    "precision": 0.852,
+    "recall": 0.877,
+    "macro_f1": 0.8646,
+    "micro_f1": 0.8643,
+    "n_gold_spans": 1431,
+    "n_pred_spans": 1473,
+    "description": "pixel_values zeroed (all zeros). bbox unchanged. Removes visual patch signal. The patch embedding will receive all-zero patches. Model was fine-tuned with real images so this is an out-of-distribution input for the image pathway.",
+    "per_entity": {
+      "ADDRESS": {
+        "precision": 0.7941,
+        "recall": 0.8343,
+        "f1": 0.8137,
+        "gold_count": 356,
+        "pred_count": 374,
+        "tp": 297,
+        "fp": 77,
+        "fn": 59
+      },
+      "COMPANY": {
+        "precision": 0.8707,
+        "recall": 0.9244,
+        "f1": 0.8967,
+        "gold_count": 357,
+        "pred_count": 379,
+        "tp": 330,
+        "fp": 49,
+        "fn": 27
+      },
+      "DATE": {
+        "precision": 0.9833,
+        "recall": 0.9888,
+        "f1": 0.986,
+        "gold_count": 357,
+        "pred_count": 359,
+        "tp": 353,
+        "fp": 6,
+        "fn": 4
+      },
+      "TOTAL": {
+        "precision": 0.7618,
+        "recall": 0.7618,
+        "f1": 0.7618,
+        "gold_count": 361,
+        "pred_count": 361,
+        "tp": 275,
+        "fp": 86,
+        "fn": 86
+      }
+    }
+  },
+  {
+    "dataset": "SROIE",
+    "condition": "No-Layout (text + image only)",
+    "modalities_active": "text+image",
+    "zero_image": false,
+    "zero_layout": true,
+    "precision": 0.6648,
+    "recall": 0.492,
+    "macro_f1": 0.5291,
+    "micro_f1": 0.5655,
+    "n_gold_spans": 1431,
+    "n_pred_spans": 1059,
+    "description": "bbox zeroed to (0,0,0,0) for all tokens. pixel_values unchanged. Removes spatial bounding-box signal. All tokens receive the same spatial embedding corresponding to position (0,0,0,0).",
+    "per_entity": {
+      "ADDRESS": {
+        "precision": 0.072,
+        "recall": 0.0253,
+        "f1": 0.0374,
+        "gold_count": 356,
+        "pred_count": 125,
+        "tp": 9,
+        "fp": 116,
+        "fn": 347
+      },
+      "COMPANY": {
+        "precision": 0.6684,
+        "recall": 0.7003,
+        "f1": 0.684,
+        "gold_count": 357,
+        "pred_count": 374,
+        "tp": 250,
+        "fp": 124,
+        "fn": 107
+      },
+      "DATE": {
+        "precision": 0.9458,
+        "recall": 0.7339,
+        "f1": 0.8265,
+        "gold_count": 357,
+        "pred_count": 277,
+        "tp": 262,
+        "fp": 15,
+        "fn": 95
+      },
+      "TOTAL": {
+        "precision": 0.6466,
+        "recall": 0.5069,
+        "f1": 0.5683,
+        "gold_count": 361,
+        "pred_count": 283,
+        "tp": 183,
+        "fp": 100,
+        "fn": 178
+      }
+    }
+  },
+  {
+    "dataset": "SROIE",
+    "condition": "Text-Approx (text only)",
+    "modalities_active": "text-only-approx",
+    "zero_image": true,
+    "zero_layout": true,
+    "precision": 0.6382,
+    "recall": 0.4969,
+    "macro_f1": 0.5297,
+    "micro_f1": 0.5587,
+    "n_gold_spans": 1431,
+    "n_pred_spans": 1114,
+    "description": "Both pixel_values and bbox zeroed. Approximates text-only input within the LayoutLMv3 architecture. The model is still a LayoutLMv3 transformer (not a BERT). This is the most aggressive input-zeroing condition.",
+    "per_entity": {
+      "ADDRESS": {
+        "precision": 0.0455,
+        "recall": 0.0281,
+        "f1": 0.0347,
+        "gold_count": 356,
+        "pred_count": 220,
+        "tp": 10,
+        "fp": 210,
+        "fn": 346
+      },
+      "COMPANY": {
+        "precision": 0.6995,
+        "recall": 0.7367,
+        "f1": 0.7176,
+        "gold_count": 357,
+        "pred_count": 376,
+        "tp": 263,
+        "fp": 113,
+        "fn": 94
+      },
+      "DATE": {
+        "precision": 0.9544,
+        "recall": 0.8796,
+        "f1": 0.9155,
+        "gold_count": 357,
+        "pred_count": 329,
+        "tp": 314,
+        "fp": 15,
+        "fn": 43
+      },
+      "TOTAL": {
+        "precision": 0.6561,
+        "recall": 0.3435,
+        "f1": 0.4509,
+        "gold_count": 361,
+        "pred_count": 189,
+        "tp": 124,
+        "fp": 65,
+        "fn": 237
+      }
+    }
+  },
+  {
+    "dataset": "FUNSD",
+    "condition": "Full (text + layout + image)",
+    "modalities_active": "text+layout+image",
+    "zero_image": false,
+    "zero_layout": false,
+    "precision": 0.7804,
+    "recall": 0.8196,
+    "macro_f1": 0.7179,
+    "micro_f1": 0.7995,
+    "n_gold_spans": 1973,
+    "n_pred_spans": 2072,
+    "description": "All three input modalities active. pixel_values and bbox as provided by the dataset preprocessor.",
+    "per_entity": {
+      "ANSWER": {
+        "precision": 0.7571,
+        "recall": 0.8286,
+        "f1": 0.7912,
+        "gold_count": 805,
+        "pred_count": 881,
+        "tp": 667,
+        "fp": 214,
+        "fn": 138
+      },
+      "HEADER": {
+        "precision": 0.512,
+        "recall": 0.5378,
+        "f1": 0.5246,
+        "gold_count": 119,
+        "pred_count": 125,
+        "tp": 64,
+        "fp": 61,
+        "fn": 55
+      },
+      "QUESTION": {
+        "precision": 0.8311,
+        "recall": 0.8446,
+        "f1": 0.8378,
+        "gold_count": 1049,
+        "pred_count": 1066,
+        "tp": 886,
+        "fp": 180,
+        "fn": 163
+      }
+    }
+  },
+  {
+    "dataset": "FUNSD",
+    "condition": "No-Image (text + layout only)",
+    "modalities_active": "text+layout",
+    "zero_image": true,
+    "zero_layout": false,
+    "precision": 0.7422,
+    "recall": 0.813,
+    "macro_f1": 0.6808,
+    "micro_f1": 0.776,
+    "n_gold_spans": 1973,
+    "n_pred_spans": 2161,
+    "description": "pixel_values zeroed (all zeros). bbox unchanged. Removes visual patch signal. The patch embedding will receive all-zero patches. Model was fine-tuned with real images so this is an out-of-distribution input for the image pathway.",
+    "per_entity": {
+      "ANSWER": {
+        "precision": 0.7128,
+        "recall": 0.8323,
+        "f1": 0.7679,
+        "gold_count": 805,
+        "pred_count": 940,
+        "tp": 670,
+        "fp": 270,
+        "fn": 135
+      },
+      "HEADER": {
+        "precision": 0.4951,
+        "recall": 0.4286,
+        "f1": 0.4595,
+        "gold_count": 119,
+        "pred_count": 103,
+        "tp": 51,
+        "fp": 52,
+        "fn": 68
+      },
+      "QUESTION": {
+        "precision": 0.7898,
+        "recall": 0.8418,
+        "f1": 0.815,
+        "gold_count": 1049,
+        "pred_count": 1118,
+        "tp": 883,
+        "fp": 235,
+        "fn": 166
+      }
+    }
+  },
+  {
+    "dataset": "FUNSD",
+    "condition": "No-Layout (text + image only)",
+    "modalities_active": "text+image",
+    "zero_image": false,
+    "zero_layout": true,
+    "precision": 0.2155,
+    "recall": 0.0745,
+    "macro_f1": 0.0784,
+    "micro_f1": 0.1107,
+    "n_gold_spans": 1973,
+    "n_pred_spans": 682,
+    "description": "bbox zeroed to (0,0,0,0) for all tokens. pixel_values unchanged. Removes spatial bounding-box signal. All tokens receive the same spatial embedding corresponding to position (0,0,0,0).",
+    "per_entity": {
+      "ANSWER": {
+        "precision": 0.1044,
+        "recall": 0.041,
+        "f1": 0.0589,
+        "gold_count": 805,
+        "pred_count": 316,
+        "tp": 33,
+        "fp": 283,
+        "fn": 772
+      },
+      "HEADER": {
+        "precision": 0.5,
+        "recall": 0.0084,
+        "f1": 0.0165,
+        "gold_count": 119,
+        "pred_count": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 118
+      },
+      "QUESTION": {
+        "precision": 0.3104,
+        "recall": 0.1077,
+        "f1": 0.1599,
+        "gold_count": 1049,
+        "pred_count": 364,
+        "tp": 113,
+        "fp": 251,
+        "fn": 936
+      }
+    }
+  },
+  {
+    "dataset": "FUNSD",
+    "condition": "Text-Approx (text only)",
+    "modalities_active": "text-only-approx",
+    "zero_image": true,
+    "zero_layout": true,
+    "precision": 0.3103,
+    "recall": 0.1004,
+    "macro_f1": 0.1015,
+    "micro_f1": 0.1517,
+    "n_gold_spans": 1973,
+    "n_pred_spans": 638,
+    "description": "Both pixel_values and bbox zeroed. Approximates text-only input within the LayoutLMv3 architecture. The model is still a LayoutLMv3 transformer (not a BERT). This is the most aggressive input-zeroing condition.",
+    "per_entity": {
+      "ANSWER": {
+        "precision": 0.1254,
+        "recall": 0.0522,
+        "f1": 0.0737,
+        "gold_count": 805,
+        "pred_count": 335,
+        "tp": 42,
+        "fp": 293,
+        "fn": 763
+      },
+      "HEADER": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "gold_count": 119,
+        "pred_count": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 119
+      },
+      "QUESTION": {
+        "precision": 0.5149,
+        "recall": 0.1487,
+        "f1": 0.2308,
+        "gold_count": 1049,
+        "pred_count": 303,
+        "tp": 156,
+        "fp": 147,
+        "fn": 893
+      }
+    }
+  },
+  {
+    "dataset": "CORD",
+    "condition": "Full (text + layout + image)",
+    "modalities_active": "text+layout+image",
+    "zero_image": false,
+    "zero_layout": false,
+    "precision": 0.9748,
+    "recall": 0.9763,
+    "macro_f1": 0.9733,
+    "micro_f1": 0.9756,
+    "n_gold_spans": 1309,
+    "n_pred_spans": 1311,
+    "description": "All three input modalities active. pixel_values and bbox as provided by the dataset preprocessor.",
+    "per_entity": {
+      "MENU": {
+        "precision": 0.9775,
+        "recall": 0.9786,
+        "f1": 0.978,
+        "gold_count": 887,
+        "pred_count": 888,
+        "tp": 868,
+        "fp": 20,
+        "fn": 19
+      },
+      "SUBTOTAL": {
+        "precision": 0.953,
+        "recall": 0.993,
+        "f1": 0.9726,
+        "gold_count": 143,
+        "pred_count": 149,
+        "tp": 142,
+        "fp": 7,
+        "fn": 1
+      },
+      "TOTAL": {
+        "precision": 0.9781,
+        "recall": 0.9606,
+        "f1": 0.9693,
+        "gold_count": 279,
+        "pred_count": 274,
+        "tp": 268,
+        "fp": 6,
+        "fn": 11
+      }
+    }
+  },
+  {
+    "dataset": "CORD",
+    "condition": "No-Image (text + layout only)",
+    "modalities_active": "text+layout",
+    "zero_image": true,
+    "zero_layout": false,
+    "precision": 0.9763,
+    "recall": 0.9763,
+    "macro_f1": 0.9737,
+    "micro_f1": 0.9763,
+    "n_gold_spans": 1309,
+    "n_pred_spans": 1309,
+    "description": "pixel_values zeroed (all zeros). bbox unchanged. Removes visual patch signal. The patch embedding will receive all-zero patches. Model was fine-tuned with real images so this is an out-of-distribution input for the image pathway.",
+    "per_entity": {
+      "MENU": {
+        "precision": 0.9797,
+        "recall": 0.9786,
+        "f1": 0.9791,
+        "gold_count": 887,
+        "pred_count": 886,
+        "tp": 868,
+        "fp": 18,
+        "fn": 19
+      },
+      "SUBTOTAL": {
+        "precision": 0.953,
+        "recall": 0.993,
+        "f1": 0.9726,
+        "gold_count": 143,
+        "pred_count": 149,
+        "tp": 142,
+        "fp": 7,
+        "fn": 1
+      },
+      "TOTAL": {
+        "precision": 0.9781,
+        "recall": 0.9606,
+        "f1": 0.9693,
+        "gold_count": 279,
+        "pred_count": 274,
+        "tp": 268,
+        "fp": 6,
+        "fn": 11
+      }
+    }
+  },
+  {
+    "dataset": "CORD",
+    "condition": "No-Layout (text + image only)",
+    "modalities_active": "text+image",
+    "zero_image": false,
+    "zero_layout": true,
+    "precision": 0.631,
+    "recall": 0.5134,
+    "macro_f1": 0.5547,
+    "micro_f1": 0.5661,
+    "n_gold_spans": 1309,
+    "n_pred_spans": 1065,
+    "description": "bbox zeroed to (0,0,0,0) for all tokens. pixel_values unchanged. Removes spatial bounding-box signal. All tokens receive the same spatial embedding corresponding to position (0,0,0,0).",
+    "per_entity": {
+      "MENU": {
+        "precision": 0.6746,
+        "recall": 0.4769,
+        "f1": 0.5588,
+        "gold_count": 887,
+        "pred_count": 627,
+        "tp": 423,
+        "fp": 204,
+        "fn": 464
+      },
+      "SUBTOTAL": {
+        "precision": 0.5586,
+        "recall": 0.4336,
+        "f1": 0.4882,
+        "gold_count": 143,
+        "pred_count": 111,
+        "tp": 62,
+        "fp": 49,
+        "fn": 81
+      },
+      "TOTAL": {
+        "precision": 0.5719,
+        "recall": 0.6703,
+        "f1": 0.6172,
+        "gold_count": 279,
+        "pred_count": 327,
+        "tp": 187,
+        "fp": 140,
+        "fn": 92
+      }
+    }
+  },
+  {
+    "dataset": "CORD",
+    "condition": "Text-Approx (text only)",
+    "modalities_active": "text-only-approx",
+    "zero_image": true,
+    "zero_layout": true,
+    "precision": 0.5733,
+    "recall": 0.4423,
+    "macro_f1": 0.4779,
+    "micro_f1": 0.4994,
+    "n_gold_spans": 1309,
+    "n_pred_spans": 1010,
+    "description": "Both pixel_values and bbox zeroed. Approximates text-only input within the LayoutLMv3 architecture. The model is still a LayoutLMv3 transformer (not a BERT). This is the most aggressive input-zeroing condition.",
+    "per_entity": {
+      "MENU": {
+        "precision": 0.6195,
+        "recall": 0.4002,
+        "f1": 0.4863,
+        "gold_count": 887,
+        "pred_count": 573,
+        "tp": 355,
+        "fp": 218,
+        "fn": 532
+      },
+      "SUBTOTAL": {
+        "precision": 0.4167,
+        "recall": 0.3147,
+        "f1": 0.3586,
+        "gold_count": 143,
+        "pred_count": 108,
+        "tp": 45,
+        "fp": 63,
+        "fn": 98
+      },
+      "TOTAL": {
+        "precision": 0.5441,
+        "recall": 0.6416,
+        "f1": 0.5888,
+        "gold_count": 279,
+        "pred_count": 329,
+        "tp": 179,
+        "fp": 150,
+        "fn": 100
+      }
+    }
+  }
+]

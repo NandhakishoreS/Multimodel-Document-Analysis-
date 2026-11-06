@@ -1,30 +1,17 @@
 """
-LayoutLMv3 fine-tuning pipeline supporting three stages:
-  Stage A (smoke) — 15 samples, 2 epochs:  verify the entire pipeline end-to-end.
-  Stage B (small) — 30 samples, 3 epochs:  detect memory / convergence issues.
-  Stage C (full)  — full train split, 10 epochs: production fine-tuning.
+LayoutLMv3 fine-tuning pipeline.
 
-Features:
-- Gradient accumulation (effective batch = batch_size × grad_accum_steps)
-- Mixed-precision (fp16) when CUDA available; CPU falls back to fp32
-- Linear warmup + cosine decay learning-rate schedule
-- Checkpoint saving keyed on validation macro F1 (not training loss)
-- Early stopping with configurable patience
-- Experiment tracking under experiments/{experiment_id}/
-- Reproducible seeds for Python / NumPy / PyTorch
+Stages:
+  overfit — 8 samples, 30 epochs: intentional memorisation test (F1 must rise).
+  smoke   — 15 samples, 2 epochs: pipeline sanity check.
+  small   — ~5% of train, 3 epochs: convergence / memory check.
+  full    — all samples, configured epochs: production fine-tuning.
 
 Usage
 -----
-# Stage A smoke test on SROIE:
+python training/train_layoutlmv3.py --dataset sroie --stage overfit
 python training/train_layoutlmv3.py --dataset sroie --stage smoke
-
-# Stage B small experiment:
-python training/train_layoutlmv3.py --dataset sroie --stage small
-
-# Full training:
 python training/train_layoutlmv3.py --dataset sroie --stage full
-
-# All three datasets full training:
 python training/train_layoutlmv3.py --dataset sroie funsd cord --stage full
 """
 
@@ -39,16 +26,14 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 import numpy as np
 import torch
-import yaml
 from torch.optim import AdamW
 from torch.utils.data import DataLoader
 from transformers import get_cosine_schedule_with_warmup
 
-# ── Ensure project root on sys.path ──────────────────────────────────────────
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
@@ -59,13 +44,10 @@ from models.layoutlmv3.config import (
     load_dataset_config,
     load_training_config,
 )
-from models.layoutlmv3.dataset import LayoutLMv3DocumentDataset, build_dataloaders
+from models.layoutlmv3.dataset import LayoutLMv3DocumentDataset, build_dataloaders, WORD_ID_PAD
 from models.layoutlmv3.model import LayoutLMv3Classifier
 from models.layoutlmv3.tokenizer import LayoutLMv3TokenizerWrapper
-from evaluation.layoutlmv3_metrics import (
-    compute_seqeval_metrics,
-    collect_predictions,
-)
+from evaluation.layoutlmv3_metrics import compute_seqeval_metrics
 from inference.layoutlmv3_predict import token_preds_to_word_preds
 
 logging.basicConfig(
@@ -80,14 +62,13 @@ logger = logging.getLogger("train_layoutlmv3")
 # ─────────────────────────────────────────────────────────────────────────────
 
 def set_seed(seed: int) -> None:
-    """Set seeds for Python, NumPy, and PyTorch for reproducible results."""
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
     os.environ["PYTHONHASHSEED"] = str(seed)
-    logger.info("Random seed set to %d", seed)
+    logger.info("Seed set to %d", seed)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -95,7 +76,6 @@ def set_seed(seed: int) -> None:
 # ─────────────────────────────────────────────────────────────────────────────
 
 def report_hardware() -> Dict[str, Any]:
-    """Detect and log available hardware."""
     info: Dict[str, Any] = {
         "cuda_available": torch.cuda.is_available(),
         "device": "cpu",
@@ -106,17 +86,51 @@ def report_hardware() -> Dict[str, Any]:
     if torch.cuda.is_available():
         info["device"] = "cuda"
         info["gpu_name"] = torch.cuda.get_device_name(0)
-        info["vram_gb"] = round(torch.cuda.get_device_properties(0).total_memory / 1e9, 1)
-        logger.info("Using device: cuda | GPU: %s | VRAM: %.1f GB",
-                    info["gpu_name"], info["vram_gb"])
-    else:
-        logger.warning(
-            "Using device: cpu — CUDA not available.\n"
-            "  ⚠ Full training on CPU is very slow.\n"
-            "  Smoke and small-stage experiments are feasible; "
-            "full training may take hours per dataset."
+        info["vram_gb"] = round(
+            torch.cuda.get_device_properties(0).total_memory / 1e9, 1
         )
+        logger.info(
+            "Using device: cuda | GPU: %s | VRAM: %.1f GB",
+            info["gpu_name"], info["vram_gb"],
+        )
+    else:
+        logger.warning("Using device: cpu — CUDA not available.")
     return info
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# word_ids helpers (use stored tensor, no heuristics)
+# ─────────────────────────────────────────────────────────────────────────────
+
+def word_ids_tensor_to_list(word_ids_t: torch.Tensor) -> List[Optional[int]]:
+    """Convert a (seq_len,) int64 word_ids tensor back to List[Optional[int]]."""
+    return [None if wid == WORD_ID_PAD else int(wid) for wid in word_ids_t.tolist()]
+
+
+def extract_word_level_labels(
+    label_ids: List[int],
+    word_ids: List[Optional[int]],
+    id2label: Dict[int, str],
+) -> List[str]:
+    """
+    Produce word-level label strings from token-level label_ids.
+
+    Uses the REAL word_ids (stored in the dataset batch, not reconstructed).
+    First-subword rule: only positions where word_id changes assign a label;
+    continuation subwords have label_id == -100 and are skipped.
+    """
+    word_labels: Dict[int, str] = {}
+    seen: set = set()
+    for lid, wid in zip(label_ids, word_ids):
+        if wid is None or lid == -100:
+            continue
+        if wid not in seen:
+            word_labels[wid] = id2label.get(lid, "O")
+            seen.add(wid)
+    if not word_labels:
+        return []
+    max_wid = max(word_labels.keys())
+    return [word_labels.get(i, "O") for i in range(max_wid + 1)]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -129,16 +143,10 @@ def evaluate_epoch(
     dataset_config: LayoutLMv3DatasetConfig,
     split_name: str = "val",
 ) -> Dict[str, Any]:
-    """
-    Run one full evaluation pass.
-
-    Returns seqeval metrics dict (see layoutlmv3_metrics.compute_seqeval_metrics).
-    Also returns avg_loss if labels are present in the batch.
-    """
+    """Run one full evaluation pass; return seqeval metrics + avg_loss."""
     classifier.eval_mode()
     total_loss = 0.0
     num_batches = 0
-
     all_true_word_seqs: List[List[str]] = []
     all_pred_word_seqs: List[List[str]] = []
 
@@ -148,7 +156,9 @@ def evaluate_epoch(
             attention_mask = batch["attention_mask"]
             bbox           = batch["bbox"]
             pixel_values   = batch["pixel_values"]
-            labels         = batch.get("labels")
+            labels         = batch["labels"]
+            # Real word_ids stored by the Dataset — shape (B, seq_len)
+            word_ids_batch = batch["word_ids"]
 
             outputs = classifier.forward(
                 input_ids=input_ids,
@@ -157,109 +167,40 @@ def evaluate_epoch(
                 pixel_values=pixel_values,
                 labels=labels,
             )
-
             if "loss" in outputs:
                 total_loss += outputs["loss"].item()
                 num_batches += 1
 
-            # Collapse to word-level predictions for seqeval.
-            logits = outputs["logits"]  # (B, S, num_labels)
-            pred_ids_batch = torch.argmax(logits, dim=-1)  # (B, S)
-            probs_batch = torch.softmax(logits, dim=-1).max(dim=-1).values  # (B, S)
+            logits         = outputs["logits"]
+            pred_ids_batch = torch.argmax(logits, dim=-1)
+            probs_batch    = torch.softmax(logits, dim=-1).max(dim=-1).values
+            batch_size     = input_ids.shape[0]
 
-            batch_size = input_ids.shape[0]
             for i in range(batch_size):
-                # Recover word_ids: not stored in batch dict, so we reconstruct
-                # from attention_mask and labels (positions with label != -100
-                # and attention_mask==1 are first-subword tokens).
-                word_ids_approx = _reconstruct_word_ids_from_labels(
-                    labels[i].cpu().tolist() if labels is not None else None,
-                    attention_mask[i].cpu().tolist(),
-                )
+                word_ids_i = word_ids_tensor_to_list(word_ids_batch[i])
+                label_ids_i = labels[i].cpu().tolist()
 
-                true_word_labels = _extract_true_word_labels(
-                    labels[i].cpu().tolist() if labels is not None else None,
-                    word_ids_approx,
-                    dataset_config.id2label,
+                true_word_labels = extract_word_level_labels(
+                    label_ids_i, word_ids_i, dataset_config.id2label
                 )
+                if not true_word_labels:
+                    continue
+
                 pred_word_labels, _ = token_preds_to_word_preds(
                     token_label_ids=pred_ids_batch[i].cpu().tolist(),
                     token_probs=probs_batch[i].cpu().tolist(),
-                    word_ids=word_ids_approx,
+                    word_ids=word_ids_i,
                     id2label=dataset_config.id2label,
                     num_words=len(true_word_labels),
                 )
-
-                if true_word_labels:
-                    all_true_word_seqs.append(true_word_labels)
-                    all_pred_word_seqs.append(pred_word_labels)
+                all_true_word_seqs.append(true_word_labels)
+                all_pred_word_seqs.append(pred_word_labels)
 
     avg_loss = total_loss / max(1, num_batches)
-    metrics = compute_seqeval_metrics(all_true_word_seqs, all_pred_word_seqs)
+    metrics  = compute_seqeval_metrics(all_true_word_seqs, all_pred_word_seqs)
     metrics["avg_loss"] = round(avg_loss, 6)
-    metrics["split"] = split_name
+    metrics["split"]    = split_name
     return metrics
-
-
-def _reconstruct_word_ids_from_labels(
-    label_ids: Optional[List[int]],
-    attention_mask: List[int],
-) -> List[Optional[int]]:
-    """
-    Approximate word_ids from the label tensor.
-
-    Convention used during encoding:
-    - First subword of word w → label_ids[i] >= 0 (real label)
-    - Continuation subword   → label_ids[i] == -100
-    - Special token          → attention_mask[i] == 0  OR  label_ids[i] == -100
-      at padding positions
-
-    We assign a running word_id to each non-(-100), non-padding position.
-    """
-    word_ids: List[Optional[int]] = []
-    current_word = -1
-    seq_len = len(attention_mask)
-
-    for i in range(seq_len):
-        if attention_mask[i] == 0:
-            word_ids.append(None)  # Padding
-        elif label_ids is not None and label_ids[i] == -100:
-            # Could be special token OR continuation subword.
-            # Heuristic: if we've seen at least one word, treat as continuation.
-            if current_word >= 0:
-                word_ids.append(current_word)  # Same word as previous
-            else:
-                word_ids.append(None)  # Special token before any word
-        else:
-            current_word += 1
-            word_ids.append(current_word)
-
-    return word_ids
-
-
-def _extract_true_word_labels(
-    label_ids: Optional[List[int]],
-    word_ids: List[Optional[int]],
-    id2label: Dict[int, str],
-) -> List[str]:
-    """Extract ground-truth word-level labels from the label_ids tensor."""
-    if label_ids is None:
-        return []
-
-    word_labels: Dict[int, str] = {}
-    seen: set = set()
-
-    for lid, wid in zip(label_ids, word_ids):
-        if wid is None or lid == -100:
-            continue
-        if wid not in seen:
-            word_labels[wid] = id2label.get(lid, "O")
-            seen.add(wid)
-
-    if not word_labels:
-        return []
-    max_wid = max(word_labels.keys())
-    return [word_labels.get(i, "O") for i in range(max_wid + 1)]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -273,128 +214,106 @@ def train_one_dataset(
     dataset_config: LayoutLMv3DatasetConfig,
     experiment_dir: Path,
 ) -> Dict[str, Any]:
-    """
-    Full training run for one dataset at the specified stage.
-
-    Parameters
-    ----------
-    dataset_name : str — "sroie" | "funsd" | "cord"
-    stage        : str — "smoke" | "small" | "full"
-    config       : LayoutLMv3TrainingConfig
-    dataset_config : LayoutLMv3DatasetConfig
-    experiment_dir : Path — where to write experiment artefacts
-
-    Returns
-    -------
-    Dict with training summary (best_val_f1, test_f1, epochs_trained, …)
-    """
     set_seed(config.seed)
     hw_info = report_hardware()
 
-    # Resolve stage-specific parameters.
-    if stage == "smoke":
+    # Stage parameters
+    if stage == "overfit":
+        num_train_samples = 8
+        epochs            = 30
+        eval_on_train     = True   # Evaluate on the same 8 samples to confirm memorisation
+    elif stage == "smoke":
         num_train_samples = config.smoke_num_samples
-        epochs = config.smoke_epochs
+        epochs            = config.smoke_epochs
+        eval_on_train     = False
     elif stage == "small":
         num_train_samples = config.small_num_samples
-        epochs = config.small_epochs
+        epochs            = config.small_epochs
+        eval_on_train     = False
     else:  # full
-        num_train_samples = None  # All samples
-        epochs = config.epochs
+        num_train_samples = None
+        epochs            = config.epochs
+        eval_on_train     = False
 
     logger.info(
-        "=" * 60 + "\nTraining %s | stage=%s | epochs=%d | train_samples=%s\n" + "=" * 60,
+        "=" * 60 + "\nTraining %s | stage=%s | epochs=%d | samples=%s\n" + "=" * 60,
         dataset_name.upper(), stage, epochs,
         num_train_samples if num_train_samples else "all",
     )
     logger.info(
-        "Config: lr=%.2e | batch=%d | grad_accum=%d | effective_batch=%d | fp16=%s",
+        "lr=%.2e | batch=%d | grad_accum=%d | eff_batch=%d | fp16=%s",
         config.learning_rate, config.batch_size,
         config.gradient_accumulation_steps, config.effective_batch_size,
         config.fp16,
     )
 
-    # ── Load tokenizer ────────────────────────────────────────────────────────
     tokenizer_wrapper = LayoutLMv3TokenizerWrapper.from_pretrained(
         checkpoint=config.model_checkpoint,
         max_seq_length=config.max_seq_length,
     )
 
-    # ── Build dataloaders ────────────────────────────────────────────────────
     loaders = build_dataloaders(
         dataset_name=dataset_name,
         dataset_config=dataset_config,
         tokenizer_wrapper=tokenizer_wrapper,
         processed_data_dir=config.resolved_processed_dir(),
         batch_size=config.batch_size,
-        num_workers=0,  # Safe on Windows
+        num_workers=0,
         num_train_samples=num_train_samples,
         seed=config.seed,
         project_root=_PROJECT_ROOT,
     )
     train_loader = loaders.get("train")
-    val_loader   = loaders.get("val")
+    # For overfit test, evaluate on train set itself
+    eval_loader  = loaders.get("train") if eval_on_train else loaders.get("val")
 
     if train_loader is None:
-        raise RuntimeError(f"No training data found for {dataset_name}")
+        raise RuntimeError(f"No training data for {dataset_name}")
 
-    # ── Load model ────────────────────────────────────────────────────────────
     classifier = LayoutLMv3Classifier(
         dataset_config=dataset_config,
         checkpoint=config.model_checkpoint,
-        gradient_checkpointing=False,
     )
 
-    # ── Optimizer ─────────────────────────────────────────────────────────────
-    # Use weight decay on all parameters except bias and LayerNorm.
     no_decay = {"bias", "LayerNorm.weight"}
-    optimizer_grouped = [
-        {
-            "params": [
-                p for n, p in classifier.named_parameters()
-                if not any(nd in n for nd in no_decay)
-            ],
-            "weight_decay": config.weight_decay,
-        },
-        {
-            "params": [
-                p for n, p in classifier.named_parameters()
-                if any(nd in n for nd in no_decay)
-            ],
-            "weight_decay": 0.0,
-        },
-    ]
-    optimizer = AdamW(optimizer_grouped, lr=config.learning_rate)
+    optimizer = AdamW(
+        [
+            {
+                "params": [p for n, p in classifier.named_parameters()
+                           if not any(nd in n for nd in no_decay)],
+                "weight_decay": config.weight_decay,
+            },
+            {
+                "params": [p for n, p in classifier.named_parameters()
+                           if any(nd in n for nd in no_decay)],
+                "weight_decay": 0.0,
+            },
+        ],
+        lr=config.learning_rate,
+    )
 
-    # ── LR schedule: linear warmup + cosine decay ─────────────────────────────
-    total_steps = (len(train_loader) // config.gradient_accumulation_steps) * epochs
+    total_steps  = (len(train_loader) // max(1, config.gradient_accumulation_steps)) * epochs
     warmup_steps = max(1, int(total_steps * config.warmup_ratio))
-    scheduler = get_cosine_schedule_with_warmup(
+    scheduler    = get_cosine_schedule_with_warmup(
         optimizer, num_warmup_steps=warmup_steps, num_training_steps=total_steps
     )
-    logger.info(
-        "Scheduler: %d total steps, %d warmup steps", total_steps, warmup_steps
-    )
+    logger.info("Scheduler: %d total steps, %d warmup steps", total_steps, warmup_steps)
 
-    # ── Mixed precision ────────────────────────────────────────────────────────
     use_fp16 = config.fp16 and torch.cuda.is_available()
-    scaler = torch.cuda.amp.GradScaler() if use_fp16 else None
+    scaler   = torch.amp.GradScaler("cuda") if use_fp16 else None
     if use_fp16:
-        logger.info("Mixed precision (fp16) enabled.")
+        logger.info("Mixed precision fp16 enabled.")
     else:
-        logger.info("Training in fp32 (fp16 disabled or CPU).")
+        logger.info("Training in fp32.")
 
-    # ── Checkpoint directory ──────────────────────────────────────────────────
     ckpt_dir = config.resolved_checkpoint_dir() / dataset_name / stage
     ckpt_dir.mkdir(parents=True, exist_ok=True)
 
-    # ── Training state ────────────────────────────────────────────────────────
-    best_val_f1:   float = -1.0
-    no_improve:    int = 0
-    epoch_history: List[Dict[str, Any]] = []
-    train_start    = time.time()
+    best_val_f1   : float = -1.0
+    no_improve    : int   = 0
+    epoch_history : List[Dict[str, Any]] = []
+    train_start   = time.time()
 
-    # ── Epoch loop ────────────────────────────────────────────────────────────
     for epoch in range(1, epochs + 1):
         classifier.train_mode()
         epoch_loss = 0.0
@@ -409,7 +328,7 @@ def train_one_dataset(
             labels         = batch["labels"]
 
             if use_fp16:
-                with torch.cuda.amp.autocast():
+                with torch.amp.autocast("cuda"):
                     outputs = classifier.forward(
                         input_ids, attention_mask, bbox, pixel_values, labels
                     )
@@ -424,22 +343,20 @@ def train_one_dataset(
 
             epoch_loss += outputs["loss"].item()
 
-            # Gradient accumulation: update every N batches.
             if (batch_idx + 1) % config.gradient_accumulation_steps == 0:
                 if use_fp16:
                     scaler.unscale_(optimizer)
-                    torch.nn.utils.clip_grad_norm_(classifier.parameters(), max_norm=1.0)
+                    torch.nn.utils.clip_grad_norm_(classifier.parameters(), 1.0)
                     scaler.step(optimizer)
                     scaler.update()
                 else:
-                    torch.nn.utils.clip_grad_norm_(classifier.parameters(), max_norm=1.0)
+                    torch.nn.utils.clip_grad_norm_(classifier.parameters(), 1.0)
                     optimizer.step()
-
                 scheduler.step()
                 optimizer.zero_grad()
                 step += 1
 
-                if step % 10 == 0:
+                if step % max(1, total_steps // 10) == 0:
                     lr_now = scheduler.get_last_lr()[0]
                     logger.info(
                         "Epoch %d/%d | step %d | loss=%.4f | lr=%.2e",
@@ -448,54 +365,49 @@ def train_one_dataset(
                     )
 
         avg_train_loss = epoch_loss / max(1, len(train_loader))
-        logger.info("Epoch %d/%d | avg train loss=%.4f", epoch, epochs, avg_train_loss)
+        logger.info("Epoch %d/%d | avg_train_loss=%.4f", epoch, epochs, avg_train_loss)
 
-        # ── Validation ────────────────────────────────────────────────────────
         val_metrics: Dict[str, Any] = {}
-        if val_loader and epoch % config.eval_every_n_epochs == 0:
+        if eval_loader and epoch % config.eval_every_n_epochs == 0:
             val_metrics = evaluate_epoch(
-                classifier, val_loader, dataset_config, split_name="val"
+                classifier, eval_loader, dataset_config,
+                split_name="train_overfit" if eval_on_train else "val",
             )
             val_f1 = val_metrics.get("macro_f1", 0.0)
             logger.info(
-                "Epoch %d/%d | val macro_f1=%.4f | val micro_f1=%.4f | val_loss=%.4f",
+                "Epoch %d/%d | %s macro_f1=%.4f | micro_f1=%.4f | loss=%.4f",
                 epoch, epochs,
-                val_f1, val_metrics.get("micro_f1", 0.0),
+                val_metrics["split"], val_f1,
+                val_metrics.get("micro_f1", 0.0),
                 val_metrics.get("avg_loss", 0.0),
             )
 
-            # ── Checkpoint best model ──────────────────────────────────────────
             if val_f1 > best_val_f1:
                 best_val_f1 = val_f1
-                no_improve = 0
+                no_improve  = 0
                 classifier.save_checkpoint(
-                    save_dir=ckpt_dir,
-                    epoch=epoch,
-                    val_f1=val_f1,
-                    extra_metadata={
-                        "stage": stage,
-                        "train_loss": avg_train_loss,
-                        "val_metrics": val_metrics,
-                    },
+                    save_dir=ckpt_dir, epoch=epoch, val_f1=val_f1,
+                    extra_metadata={"stage": stage, "train_loss": avg_train_loss},
                 )
                 tokenizer_wrapper.save_pretrained(ckpt_dir / "processor")
-                logger.info("✓ New best checkpoint saved (val macro_f1=%.4f)", val_f1)
+                logger.info("✓ Best checkpoint saved (val macro_f1=%.4f)", val_f1)
             else:
                 no_improve += 1
                 logger.info(
-                    "No improvement for %d/%d epochs (best=%.4f)",
+                    "No improvement %d/%d (best=%.4f)",
                     no_improve, config.early_stopping_patience, best_val_f1,
                 )
 
-            # ── Early stopping ─────────────────────────────────────────────────
             if no_improve >= config.early_stopping_patience and stage == "full":
                 logger.info(
-                    "Early stopping at epoch %d (patience=%d, best_val_f1=%.4f)",
-                    epoch, config.early_stopping_patience, best_val_f1,
+                    "Early stopping at epoch %d (best_val_f1=%.4f)",
+                    epoch, best_val_f1,
                 )
                 epoch_history.append({
                     "epoch": epoch, "train_loss": avg_train_loss,
-                    "val_metrics": val_metrics, "early_stop": True,
+                    "val_metrics": {k: v for k, v in val_metrics.items()
+                                   if k != "classification_report"},
+                    "early_stop": True,
                 })
                 break
 
@@ -503,34 +415,40 @@ def train_one_dataset(
             "epoch": epoch,
             "train_loss": round(avg_train_loss, 6),
             "val_metrics": {k: v for k, v in val_metrics.items()
-                           if k not in ("classification_report",)},
+                           if k != "classification_report"},
         })
 
     training_time_s = time.time() - train_start
-    logger.info(
-        "Training completed in %.1f s (%.1f min)", training_time_s, training_time_s / 60
-    )
+    logger.info("Training done in %.1f s (%.1f min)", training_time_s, training_time_s / 60)
 
-    # ── Save experiment record ────────────────────────────────────────────────
+    # Overfit test verdict
+    if stage == "overfit":
+        if best_val_f1 > 0.5:
+            logger.info("✓ OVERFIT TEST PASSED — macro_f1=%.4f on train subset", best_val_f1)
+        elif best_val_f1 > 0.1:
+            logger.warning("⚠ OVERFIT TEST PARTIAL — macro_f1=%.4f (expected >0.5)", best_val_f1)
+        else:
+            logger.error("✗ OVERFIT TEST FAILED — macro_f1=%.4f after %d epochs", best_val_f1, epochs)
+
     summary = {
-        "experiment_id":    experiment_dir.name,
-        "dataset":          dataset_name,
-        "stage":            stage,
-        "model_checkpoint": config.model_checkpoint,
-        "best_val_macro_f1": round(best_val_f1, 4),
-        "epochs_trained":   len(epoch_history),
-        "training_time_s":  round(training_time_s, 1),
-        "hardware":         hw_info,
+        "experiment_id":      experiment_dir.name,
+        "dataset":            dataset_name,
+        "stage":              stage,
+        "model_checkpoint":   config.model_checkpoint,
+        "best_val_macro_f1":  round(best_val_f1, 4),
+        "epochs_trained":     len(epoch_history),
+        "training_time_s":    round(training_time_s, 1),
+        "hardware":           hw_info,
         "config": {
-            "learning_rate": config.learning_rate,
-            "batch_size": config.batch_size,
+            "learning_rate":               config.learning_rate,
+            "batch_size":                  config.batch_size,
             "gradient_accumulation_steps": config.gradient_accumulation_steps,
-            "effective_batch_size": config.effective_batch_size,
-            "weight_decay": config.weight_decay,
-            "warmup_ratio": config.warmup_ratio,
-            "fp16": config.fp16,
-            "seed": config.seed,
-            "max_seq_length": config.max_seq_length,
+            "effective_batch_size":        config.effective_batch_size,
+            "weight_decay":                config.weight_decay,
+            "warmup_ratio":                config.warmup_ratio,
+            "fp16":                        config.fp16,
+            "seed":                        config.seed,
+            "max_seq_length":              config.max_seq_length,
         },
         "epoch_history": epoch_history,
         "checkpoint_dir": str(ckpt_dir),
@@ -540,8 +458,7 @@ def train_one_dataset(
     summary_path = experiment_dir / "training_summary.json"
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, default=str)
-    logger.info("Training summary saved to %s", summary_path)
-
+    logger.info("Summary saved to %s", summary_path)
     return summary
 
 
@@ -554,7 +471,6 @@ def run_training(
     stage: str,
     config_path: str = "configs/layoutlmv3.yaml",
 ) -> Dict[str, Dict[str, Any]]:
-    """Train LayoutLMv3 on one or more datasets at the given stage."""
     results: Dict[str, Dict[str, Any]] = {}
 
     for ds_name in datasets:
@@ -562,18 +478,15 @@ def run_training(
         logger.info("DATASET: %s | STAGE: %s", ds_name.upper(), stage.upper())
         logger.info("=" * 60)
 
-        # Load configs.
         training_cfg = load_training_config(config_path, dataset_name=ds_name)
         dataset_cfg  = load_dataset_config(ds_name, labels_dir=training_cfg.labels_dir)
 
-        # Create experiment directory.
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        ts     = datetime.now().strftime("%Y%m%d_%H%M%S")
         exp_id = f"layoutlmv3_{ds_name}_{stage}_{ts}"
         exp_dir = training_cfg.resolved_experiments_dir() / exp_id
 
-        logger.info("Experiment ID: %s", exp_id)
-        logger.info("Dataset config: num_labels=%d, labels=%s",
-                    dataset_cfg.num_labels, dataset_cfg.labels)
+        logger.info("Experiment: %s", exp_id)
+        logger.info("Labels: num_labels=%d | %s", dataset_cfg.num_labels, dataset_cfg.labels)
 
         try:
             summary = train_one_dataset(
@@ -585,8 +498,10 @@ def run_training(
             )
             results[ds_name] = summary
             logger.info(
-                "✓ %s [%s] completed — best val macro_f1=%.4f",
-                ds_name.upper(), stage, summary.get("best_val_macro_f1", 0.0),
+                "✓ %s [%s] done — best_val_f1=%.4f | time=%.0f s",
+                ds_name.upper(), stage,
+                summary.get("best_val_macro_f1", 0.0),
+                summary.get("training_time_s", 0),
             )
         except Exception as exc:
             logger.error("Training failed for %s: %s", ds_name, exc, exc_info=True)
@@ -596,23 +511,16 @@ def run_training(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Train LayoutLMv3 on document understanding datasets"
-    )
+    parser = argparse.ArgumentParser(description="Train LayoutLMv3")
     parser.add_argument(
         "--dataset", nargs="+", default=["sroie"],
         choices=["sroie", "funsd", "cord"],
-        help="Dataset(s) to train on",
     )
     parser.add_argument(
         "--stage", default="smoke",
-        choices=["smoke", "small", "full"],
-        help="Training stage: smoke (15 samples), small (30 samples), full (all)",
+        choices=["overfit", "smoke", "small", "full"],
     )
-    parser.add_argument(
-        "--config", default="configs/layoutlmv3.yaml",
-        help="Path to layoutlmv3.yaml config",
-    )
+    parser.add_argument("--config", default="configs/layoutlmv3.yaml")
     args = parser.parse_args()
 
     results = run_training(
@@ -627,7 +535,9 @@ if __name__ == "__main__":
             logger.error("  %s: FAILED — %s", ds, res["error"])
         else:
             logger.info(
-                "  %s: best_val_macro_f1=%.4f | epochs=%d | time=%.0f s",
-                ds, res.get("best_val_macro_f1", 0.0),
-                res.get("epochs_trained", 0), res.get("training_time_s", 0),
+                "  %s: best_val_f1=%.4f | epochs=%d | time=%.0f s",
+                ds,
+                res.get("best_val_macro_f1", 0.0),
+                res.get("epochs_trained", 0),
+                res.get("training_time_s", 0),
             )

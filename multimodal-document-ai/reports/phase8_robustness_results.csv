@@ -1,0 +1,43 @@
+dataset,condition_name,degradation_type,severity,precision,recall,macro_f1,micro_f1,n_gold_spans,n_pred_spans,per_entity,notes,Delta_Macro_F1,Delta_Micro_F1,Relative_Macro_Deg_Pct,Condition_Name,Degradation_Type,Severity,Dataset,Precision,Recall,Macro_F1,Micro_F1,Notes
+SROIE,Clean Baseline,Clean,None,0.8689,0.8889,0.8784,0.8788,1431.0,1464.0,"{'ADDRESS': 0.8434, 'COMPANY': 0.9049, 'DATE': 0.993, 'TOTAL': 0.7725}",Unperturbed test input,0.0,0.0,0.0,Clean Baseline,Clean,None,SROIE,0.8689,0.8889,0.8784,0.8788,Unperturbed test input
+,,,,,,,,,,,,-0.0004,-0.0007,0.05,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),SROIE,0.8682,0.8882,0.878,0.8781,5% char confusion
+,,,,,,,,,,,,-0.0139,-0.0143,1.58,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),SROIE,0.8551,0.8742,0.8645,0.8645,10% char confusion
+,,,,,,,,,,,,-0.0212,-0.0216,2.41,OCR Char Corruption (High: 20%),OCR Noise,High (20%),SROIE,0.8502,0.8644,0.8572,0.8572,20% char confusion
+,,,,,,,,,,,,-0.0348,-0.0356,3.96,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),SROIE,0.8374,0.8491,0.8436,0.8432,5% masked tokens
+,,,,,,,,,,,,-0.082,-0.0833,9.34,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),SROIE,0.7972,0.7939,0.7964,0.7955,10% masked tokens
+,,,,,,,,,,,,-0.1697,-0.173,19.32,Missing Text / Masking (High: 20%),Missing Text,High (20%),SROIE,0.7144,0.6974,0.7087,0.7058,20% masked tokens
+,,,,,,,,,,,,-0.0588,-0.059,6.69,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),SROIE,0.8116,0.8281,0.8196,0.8198,±2% coordinate jitter
+,,,,,,,,,,,,-0.1266,-0.1288,14.41,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),SROIE,0.7354,0.7652,0.7518,0.75,±5% coordinate jitter
+,,,,,,,,,,,,-0.2068,-0.2096,23.54,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),SROIE,0.651,0.6883,0.6716,0.6692,±10% coordinate jitter
+,,,,,,,,,,,,0.0,0.0,0.0,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),SROIE,0.8689,0.8889,0.8784,0.8788,Gaussian blur radius 1.0
+,,,,,,,,,,,,0.0,0.0,0.0,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),SROIE,0.8689,0.8889,0.8784,0.8788,Gaussian blur radius 2.0
+,,,,,,,,,,,,-0.0004,-0.0006,0.05,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),SROIE,0.8672,0.8896,0.878,0.8782,Gaussian blur radius 3.5
+,,,,,,,,,,,,-0.1631,-0.1653,18.57,Composite Multi-Modal Stress,Composite,Medium,SROIE,0.6993,0.7282,0.7153,0.7135,OCR 10% + Layout ±5% + Blur σ=1.5
+FUNSD,Clean Baseline,Clean,None,0.7804,0.8196,0.7179,0.7995,1973.0,2072.0,"{'ANSWER': 0.7912, 'HEADER': 0.5246, 'QUESTION': 0.8378}",Unperturbed test input,0.0,0.0,0.0,Clean Baseline,Clean,None,FUNSD,0.7804,0.8196,0.7179,0.7995,Unperturbed test input
+,,,,,,,,,,,,-0.0066,-0.0048,0.92,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),FUNSD,0.7746,0.8158,0.7113,0.7947,5% char confusion
+,,,,,,,,,,,,-0.0135,-0.0098,1.88,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),FUNSD,0.7663,0.8145,0.7044,0.7897,10% char confusion
+,,,,,,,,,,,,-0.0149,-0.0156,2.08,OCR Char Corruption (High: 20%),OCR Noise,High (20%),FUNSD,0.758,0.8117,0.703,0.7839,20% char confusion
+,,,,,,,,,,,,-0.0126,-0.0145,1.76,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),FUNSD,0.7706,0.7999,0.7053,0.785,5% masked tokens
+,,,,,,,,,,,,-0.027,-0.0334,3.76,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),FUNSD,0.7521,0.7806,0.6909,0.7661,10% masked tokens
+,,,,,,,,,,,,-0.0628,-0.0626,8.75,Missing Text / Masking (High: 20%),Missing Text,High (20%),FUNSD,0.7278,0.7462,0.6551,0.7369,20% masked tokens
+,,,,,,,,,,,,-0.2273,-0.2441,31.66,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),FUNSD,0.4914,0.6386,0.4906,0.5554,±2% coordinate jitter
+,,,,,,,,,,,,-0.384,-0.4209,53.49,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),FUNSD,0.3077,0.4921,0.3339,0.3786,±5% coordinate jitter
+,,,,,,,,,,,,-0.4692,-0.5057,65.36,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),FUNSD,0.2281,0.4126,0.2487,0.2938,±10% coordinate jitter
+,,,,,,,,,,,,0.0045,0.0014,0.63,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),FUNSD,0.7831,0.8196,0.7224,0.8009,Gaussian blur radius 1.0
+,,,,,,,,,,,,-0.0055,-0.0028,0.77,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),FUNSD,0.7779,0.8165,0.7124,0.7967,Gaussian blur radius 2.0
+,,,,,,,,,,,,-0.0092,-0.0063,1.28,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),FUNSD,0.7748,0.8125,0.7087,0.7932,Gaussian blur radius 3.5
+,,,,,,,,,,,,-0.3942,-0.4316,54.91,Composite Multi-Modal Stress,Composite,Medium,FUNSD,0.297,0.4832,0.3237,0.3679,OCR 10% + Layout ±5% + Blur σ=1.5
+CORD,Clean Baseline,Clean,None,0.9748,0.9763,0.9733,0.9756,1309.0,1311.0,"{'MENU': 0.978, 'SUBTOTAL': 0.9726, 'TOTAL': 0.9693}",Unperturbed test input,0.0,0.0,0.0,Clean Baseline,Clean,None,CORD,0.9748,0.9763,0.9733,0.9756,Unperturbed test input
+,,,,,,,,,,,,-0.0066,-0.003,0.68,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),CORD,0.9696,0.9756,0.9667,0.9726,5% char confusion
+,,,,,,,,,,,,-0.0092,-0.0057,0.95,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),CORD,0.9666,0.9733,0.9641,0.9699,10% char confusion
+,,,,,,,,,,,,-0.0107,-0.0056,1.1,OCR Char Corruption (High: 20%),OCR Noise,High (20%),CORD,0.9659,0.974,0.9626,0.97,20% char confusion
+,,,,,,,,,,,,-0.0165,-0.0108,1.7,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),CORD,0.9656,0.9641,0.9568,0.9648,5% masked tokens
+,,,,,,,,,,,,-0.0327,-0.0271,3.36,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),CORD,0.9537,0.9435,0.9406,0.9485,10% masked tokens
+,,,,,,,,,,,,-0.0876,-0.0687,9.0,Missing Text / Masking (High: 20%),Missing Text,High (20%),CORD,0.9172,0.8969,0.8857,0.9069,20% masked tokens
+,,,,,,,,,,,,-0.0274,-0.0269,2.82,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),CORD,0.9434,0.9542,0.9459,0.9487,±2% coordinate jitter
+,,,,,,,,,,,,-0.0696,-0.0498,7.15,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),CORD,0.9181,0.9335,0.9037,0.9258,±5% coordinate jitter
+,,,,,,,,,,,,-0.1524,-0.1211,15.66,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),CORD,0.831,0.8793,0.8209,0.8545,±10% coordinate jitter
+,,,,,,,,,,,,0.0,0.0,0.0,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),CORD,0.9748,0.9763,0.9733,0.9756,Gaussian blur radius 1.0
+,,,,,,,,,,,,0.0,0.0,0.0,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),CORD,0.9748,0.9763,0.9733,0.9756,Gaussian blur radius 2.0
+,,,,,,,,,,,,0.0,0.0,0.0,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),CORD,0.9748,0.9763,0.9733,0.9756,Gaussian blur radius 3.5
+,,,,,,,,,,,,-0.0949,-0.0675,9.75,Composite Multi-Modal Stress,Composite,Medium,CORD,0.899,0.9175,0.8784,0.9081,OCR 10% + Layout ±5% + Blur σ=1.5

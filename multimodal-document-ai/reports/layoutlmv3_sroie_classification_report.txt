@@ -1,11 +1,13 @@
-LayoutLMv3 — SROIE — Test Set
+LayoutLMv3 -- SROIE -- Test Set
 ============================================================
 
               precision    recall  f1-score   support
 
-        DATE       0.00      0.00      0.00       360
-       TOTAL       0.00      0.00      0.00       785
+     ADDRESS       0.92      0.95      0.94       360
+     COMPANY       0.92      0.95      0.93       355
+        DATE       0.96      0.97      0.96       359
+       TOTAL       0.70      0.69      0.70       361
 
-   micro avg       0.00      0.00      0.00      1145
-   macro avg       0.00      0.00      0.00      1145
-weighted avg       0.00      0.00      0.00      1145
+   micro avg       0.88      0.89      0.88      1435
+   macro avg       0.88      0.89      0.88      1435
+weighted avg       0.88      0.89      0.88      1435

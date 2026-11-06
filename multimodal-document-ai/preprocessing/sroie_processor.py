@@ -1,17 +1,24 @@
 """SROIE dataset processor: parses raw SROIE records into the unified document representation."""
 
-import json
 import logging
+import re
+import unicodedata
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 from PIL import Image
-import numpy as np
 
-from preprocessing.bbox_utils import normalize_bbox, validate_bbox
+from preprocessing.bbox_utils import normalize_bbox
 from preprocessing.text_utils import clean_text
-from preprocessing.label_mapping import SROIE_LABELS
 
 logger = logging.getLogger(__name__)
+
+
+def _normalize_str(s: str) -> str:
+    """NFKC-normalise, lowercase, collapse whitespace."""
+    s = unicodedata.normalize("NFKC", s)
+    s = s.lower().strip()
+    s = re.sub(r"\s+", " ", s)
+    return s
 
 
 def align_sroie_entity_labels(
@@ -19,51 +26,76 @@ def align_sroie_entity_labels(
     entities: Dict[str, Any],
 ) -> List[str]:
     """
-    Generate token-level BIO tags by matching OCR words against SROIE key entities.
-    Entities: company, date, address, total.
+    Generate token-level BIO tags by matching SROIE entity values against OCR words.
+
+    The SROIE HuggingFace dataset presents OCR "words" that are already
+    multi-word strings (e.g. the entire company name is a single word entry).
+    The entity values in the annotations are substrings of — or equal to —
+    those OCR word strings.
+
+    Strategy (applied in priority order):
+    1. Exact match: normalised(word) == normalised(entity_value)
+    2. Contains match: normalised(entity_value) in normalised(word)
+       or normalised(word) in normalised(entity_value)  [for truncated values]
+    3. Multi-word sequence match: entity_value tokens align with consecutive words.
+
+    Each word can only be assigned one entity type (first match wins).
     """
     labels = ["O"] * len(words)
-    cleaned_words = [clean_text(w).lower() for w in words]
-    doc_text_joined = " ".join(cleaned_words)
+    norm_words = [_normalize_str(w) for w in words]
 
-    # Order of entity matching: company, address, date, total
-    for ent_type in ["company", "address", "date", "total"]:
-        ent_val = str(entities.get(ent_type, "")).strip()
-        if not ent_val:
+    # Priority order: longer / more specific entities first to prevent greedy
+    # short matches from consuming tokens needed by longer entities.
+    entity_order = ["address", "company", "date", "total"]
+
+    for ent_type in entity_order:
+        raw_val = str(entities.get(ent_type, "")).strip()
+        if not raw_val:
             continue
 
-        ent_tokens = [clean_text(t).lower() for t in ent_val.split() if clean_text(t).strip()]
-        if not ent_tokens:
+        norm_val = _normalize_str(raw_val)
+        if not norm_val:
             continue
 
-        # Substring / sub-sequence matching
-        k = len(ent_tokens)
-        tag_prefix = ent_type.upper()
+        tag_b = f"B-{ent_type.upper()}"
+        tag_i = f"I-{ent_type.upper()}"
 
-        for i in range(len(cleaned_words) - k + 1):
-            window = cleaned_words[i : i + k]
-            if window == ent_tokens:
-                # Check if unassigned
-                if all(labels[i + j] == "O" for j in range(k)):
-                    labels[i] = f"B-{tag_prefix}"
-                    for j in range(1, k):
-                        labels[i + j] = f"I-{tag_prefix}"
+        # ── Strategy 1 & 2: single-word match ─────────────────────────────
+        # Most SROIE OCR words are multi-word strings that contain the entity
+        # as a substring, or vice-versa.
+        for idx, nw in enumerate(norm_words):
+            if labels[idx] != "O":
+                continue
+            if nw == norm_val or norm_val in nw or nw in norm_val:
+                labels[idx] = tag_b
+                break
 
-    # Fallback partial matching for total & date if exact multi-word sequence missed
-    total_val = str(entities.get("total", "")).strip().lower()
-    if total_val and "B-TOTAL" not in labels:
-        for idx, w in enumerate(cleaned_words):
-            if w == total_val or (len(total_val) > 2 and total_val in w):
-                if labels[idx] == "O":
-                    labels[idx] = "B-TOTAL"
+        # ── Strategy 3: multi-word sequence fallback ──────────────────────
+        # Only attempted if no single-word match was found.
+        if tag_b not in labels:
+            val_tokens = norm_val.split()
+            k = len(val_tokens)
+            for i in range(len(norm_words) - k + 1):
+                window = norm_words[i: i + k]
+                if window == val_tokens:
+                    if all(labels[i + j] == "O" for j in range(k)):
+                        labels[i] = tag_b
+                        for j in range(1, k):
+                            labels[i + j] = tag_i
+                        break
+
+        # ── Strategy 4: partial-token overlap (last resort for total/date) ─
+        if tag_b not in labels and ent_type in ("total", "date"):
+            for idx, nw in enumerate(norm_words):
+                if labels[idx] != "O":
+                    continue
+                # entity value appears as a contiguous substring inside the word
+                if len(norm_val) >= 3 and norm_val in nw:
+                    labels[idx] = tag_b
                     break
-
-    date_val = str(entities.get("date", "")).strip().lower()
-    if date_val and "B-DATE" not in labels:
-        for idx, w in enumerate(cleaned_words):
-            if w == date_val or (len(date_val) > 3 and date_val in w):
-                if labels[idx] == "O":
-                    labels[idx] = "B-DATE"
+                # word appears as a contiguous substring inside entity value
+                if len(nw) >= 3 and nw in norm_val:
+                    labels[idx] = tag_b
                     break
 
     return labels
@@ -114,9 +146,9 @@ def process_sroie_sample(
         "labels": labels,
         "entities": {
             "company": str(entities.get("company", "")),
-            "date": str(entities.get("date", "")),
+            "date":    str(entities.get("date", "")),
             "address": str(entities.get("address", "")),
-            "total": str(entities.get("total", "")),
+            "total":   str(entities.get("total", "")),
         },
         "relations": [],
     }

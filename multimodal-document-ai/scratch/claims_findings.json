@@ -1,0 +1,92 @@
+[
+  {
+    "file": "docs/phase4.md",
+    "line_num": 26,
+    "term": "State-of-the-art",
+    "text": "4. **State-of-the-art on target benchmarks** \u2014 LayoutLMv3-base achieves ~93 F1"
+  },
+  {
+    "file": "reports/cord_analysis.md",
+    "line_num": 28,
+    "term": "state-of-the-art",
+    "text": "**Key Takeaway**: On CORD's multilingual receipts, LayoutLMv3 achieves state-of-the-art performance, surpassing the ~0.96 benchmark standard"
+  },
+  {
+    "file": "reports/cord_analysis.md",
+    "line_num": 28,
+    "term": "perfect",
+    "text": "**Key Takeaway**: On CORD's multilingual receipts, LayoutLMv3 achieves state-of-the-art performance, surpassing the ~0.96 benchmark standard"
+  },
+  {
+    "file": "reports/cord_label_schema_audit.md",
+    "line_num": 13,
+    "term": "perfect",
+    "text": "* **High Score Explanation (0.9733 F1)**: The near-perfect performance on CORD is directly explained by the dataset construction in `preproc"
+  },
+  {
+    "file": "reports/FINAL_PROJECT_REPORT.md",
+    "line_num": 37,
+    "term": "perfect",
+    "text": "- **Brittleness under spatial perturbation**: Models trained on rigid, perfect bounding boxes collapse when applied to real-world scans wher"
+  },
+  {
+    "file": "reports/FINAL_PROJECT_REPORT.md",
+    "line_num": 296,
+    "term": "statistically significant",
+    "text": "- **Statistical Significance**: Under extreme layout jitter (\u00b110%), a paired Wilcoxon signed-rank test across test documents confirmed that "
+  },
+  {
+    "file": "reports/funsd_label_schema_audit.md",
+    "line_num": 13,
+    "term": "perfect",
+    "text": "* **Finding**: The FUNSD dataset demonstrates perfect alignment between raw HuggingFace annotations and processed JSONL datasets."
+  },
+  {
+    "file": "reports/phase10_final_model_selection.md",
+    "line_num": 53,
+    "term": "statistically significant",
+    "text": "4. Statistical validation (paired Wilcoxon test, $p = 3.24 \\times 10^{-37}$, Cohen's $d = 0.919$) confirms this improvement is statistically"
+  },
+  {
+    "file": "reports/phase10_final_model_selection.md",
+    "line_num": 75,
+    "term": "perfect",
+    "text": "- Delivers near-perfect extraction across commercial line items: `MENU` ($F_1 = 0.9782$), `SUBTOTAL` ($F_1 = 0.9577$), and `TOTAL` ($F_1 = 0"
+  },
+  {
+    "file": "reports/phase11_statistical_audit.md",
+    "line_num": 57,
+    "term": "statistically significant",
+    "text": "- Under **extreme spatial coordinate perturbation** (`Layout BBox Jitter \u00b110%`), the Joint-Augmented model's recovery (+18.92 pp at the data"
+  },
+  {
+    "file": "reports/phase6_final_report.md",
+    "line_num": 95,
+    "term": "state-of-the-art",
+    "text": "> - Do not use the `0.9733` Macro F1 figure to claim state-of-the-art performance."
+  },
+  {
+    "file": "reports/phase7_error_analysis_report.md",
+    "line_num": 148,
+    "term": "Perfect",
+    "text": "| `sroie_success_all_001.png` | SROIE | Perfect Extraction | 100% exact match across all four entities |"
+  },
+  {
+    "file": "reports/phase7_error_analysis_report.md",
+    "line_num": 161,
+    "term": "solved",
+    "text": "- **Observed Fact**: DATE extraction is virtually solved by LayoutLMv3 (99.3% F1) due to strong orthographic character signatures."
+  },
+  {
+    "file": "reports/sroie_analysis.md",
+    "line_num": 89,
+    "term": "perfect",
+    "text": "> **Explicit Caveat**: The matched-span confusion matrix reflects **only spans that were successfully detected by both the model and the gro"
+  },
+  {
+    "file": "reports/sroie_fn_fp_analysis.md",
+    "line_num": 131,
+    "term": "state-of-the-art",
+    "text": "1. **SROIE Performance Profile**: The model performs with state-of-the-art precision on `COMPANY` (F1=0.933), `ADDRESS` (F1=0.938), and `DAT"
+  }
+]

@@ -1,0 +1,46 @@
+# Virtual Environments
+.venv/
+.venv*/
+venv/
+env/
+ENV/
+multimodal-document-ai/.venv/
+multimodal-document-ai/.venv*/
+
+# Python cache & compiler
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+multimodal-document-ai/.pytest_cache/
+
+# System & IDE
+.vscode/
+.idea/
+.DS_Store
+*.log
+
+# Heavy Data & Model Weights (>50MB / GitHub limits)
+*.safetensors
+*.pt
+*.bin
+*.onnx
+*.pth
+*.parquet
+*.tar.gz
+*.zip
+
+# Checkpoint weights and raw data
+multimodal-document-ai/models/checkpoints/**/*.safetensors
+multimodal-document-ai/models/checkpoints/**/*.bin
+multimodal-document-ai/models/checkpoints/**/*.pt
+multimodal-document-ai/processed_data/sroie/images/
+multimodal-document-ai/processed_data/funsd/images/
+multimodal-document-ai/processed_data/cord/images/
+multimodal-document-ai/data/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

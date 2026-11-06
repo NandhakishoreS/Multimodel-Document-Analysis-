@@ -1,0 +1,4 @@
+Dataset,Train,Validation,Test,Train_Test_ID_Overlap,Val_Test_ID_Overlap,Train_Val_ID_Overlap,Train_Test_Image_Overlap,Val_Test_Image_Overlap,Train_Val_Image_Overlap,Train_Test_Text_Overlap,Val_Test_Text_Overlap,Total_Test_Leakage_Count
+SROIE,533,93,361,0,0,0,7,1,2,0,0,8
+FUNSD,127,22,50,45,5,0,0,0,0,0,0,50
+CORD,800,100,100,0,0,0,0,0,0,8,1,0

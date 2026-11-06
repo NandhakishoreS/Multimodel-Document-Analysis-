@@ -102,5 +102,40 @@
     "cer": 0.0,
     "wer": 0.0,
     "total_tokens_or_samples": 19378
+  },
+  {
+    "dataset": "SROIE",
+    "model_type": "LayoutLMv3-base (full)",
+    "split": "test",
+    "macro_f1": 0.8828,
+    "micro_f1": 0.8835,
+    "weighted_f1": 0.8825,
+    "precision": 0.8792,
+    "recall": 0.8878,
+    "cer": 0.0,
+    "wer": 0.0,
+    "total_tokens_or_samples": 19378
+  },
+  {
+    "dataset": "FUNSD",
+    "model_type": "LayoutLMv3-base (full)",
+    "split": "test",
+    "macro_f1": 0.7179,
+    "micro_f1": 0.7995,
+    "precision": 0.7804,
+    "recall": 0.8196,
+    "weighted_f1": 0.8298,
+    "total_tokens_or_samples": 8356
+  },
+  {
+    "dataset": "CORD",
+    "model_type": "LayoutLMv3-base (full)",
+    "split": "test",
+    "macro_f1": 0.9733,
+    "micro_f1": 0.9756,
+    "precision": 0.9748,
+    "recall": 0.9763,
+    "weighted_f1": 0.9856,
+    "total_tokens_or_samples": 2356
   }
 ]

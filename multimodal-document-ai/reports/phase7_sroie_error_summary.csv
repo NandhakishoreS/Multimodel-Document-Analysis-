@@ -1,0 +1,5 @@
+entity,gold,pred,tp,fp,fn,boundary,partial,type_error,ocr_related,other_errors,precision,recall,f1
+COMPANY,357,379,333,46,24,17,17,1,0,35,0.8786,0.9328,0.9049
+DATE,357,362,357,5,0,0,0,0,0,5,0.9862,1.0,0.993
+ADDRESS,356,372,307,65,49,47,47,1,0,19,0.8253,0.8624,0.8434
+TOTAL,361,351,275,76,86,0,0,0,0,162,0.7835,0.7618,0.7725

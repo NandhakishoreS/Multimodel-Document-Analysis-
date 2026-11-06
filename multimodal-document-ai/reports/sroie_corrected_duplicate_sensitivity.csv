@@ -1,0 +1,3 @@
+Evaluation Set,Test Size,Precision,Recall,Macro F1,Micro F1,COMPANY F1,ADDRESS F1,DATE F1,TOTAL F1
+Corrected Full Test (All 361),361,0.8689,0.8889,0.8785,0.8788,0.9049,0.8434,0.993,0.7725
+Corrected Deduplicated (Excl. 8 Dups),353,0.8693,0.8892,0.8789,0.8792,0.9028,0.8455,0.9943,0.773

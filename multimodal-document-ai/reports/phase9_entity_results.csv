@@ -1,0 +1,225 @@
+Model,Entity,Condition_Name,F1,Delta_F1
+Baseline,ADDRESS,Clean Baseline,0.8434,0.0
+Baseline,COMPANY,Clean Baseline,0.9049,0.0
+Baseline,DATE,Clean Baseline,0.993,0.0
+Baseline,TOTAL,Clean Baseline,0.7725,0.0
+Baseline,ADDRESS,OCR Char Corruption (Low: 5%),0.8297,-0.0137
+Baseline,COMPANY,OCR Char Corruption (Low: 5%),0.9088,0.0039
+Baseline,DATE,OCR Char Corruption (Low: 5%),0.9902,-0.0028
+Baseline,TOTAL,OCR Char Corruption (Low: 5%),0.7832,0.0107
+Baseline,ADDRESS,OCR Char Corruption (Medium: 10%),0.8235,-0.0199
+Baseline,COMPANY,OCR Char Corruption (Medium: 10%),0.9074,0.0025
+Baseline,DATE,OCR Char Corruption (Medium: 10%),0.9832,-0.0098
+Baseline,TOTAL,OCR Char Corruption (Medium: 10%),0.7441,-0.0284
+Baseline,ADDRESS,OCR Char Corruption (High: 20%),0.7956,-0.0478
+Baseline,COMPANY,OCR Char Corruption (High: 20%),0.9059,0.001
+Baseline,DATE,OCR Char Corruption (High: 20%),0.9818,-0.0112
+Baseline,TOTAL,OCR Char Corruption (High: 20%),0.7454,-0.0271
+Baseline,ADDRESS,Missing Text / Masking (Low: 5%),0.8127,-0.0307
+Baseline,COMPANY,Missing Text / Masking (Low: 5%),0.8618,-0.0431
+Baseline,DATE,Missing Text / Masking (Low: 5%),0.9659,-0.0271
+Baseline,TOTAL,Missing Text / Masking (Low: 5%),0.7339,-0.0386
+Baseline,ADDRESS,Missing Text / Masking (Medium: 10%),0.7639,-0.0795
+Baseline,COMPANY,Missing Text / Masking (Medium: 10%),0.807,-0.0979
+Baseline,DATE,Missing Text / Masking (Medium: 10%),0.936,-0.057
+Baseline,TOTAL,Missing Text / Masking (Medium: 10%),0.6789,-0.0936
+Baseline,ADDRESS,Missing Text / Masking (High: 20%),0.6087,-0.2347
+Baseline,COMPANY,Missing Text / Masking (High: 20%),0.7463,-0.1586
+Baseline,DATE,Missing Text / Masking (High: 20%),0.8744,-0.1186
+Baseline,TOTAL,Missing Text / Masking (High: 20%),0.6052,-0.1673
+Baseline,ADDRESS,Layout BBox Jitter (Low: ±2%),0.749,-0.0944
+Baseline,COMPANY,Layout BBox Jitter (Low: ±2%),0.8365,-0.0684
+Baseline,DATE,Layout BBox Jitter (Low: ±2%),0.9847,-0.0083
+Baseline,TOTAL,Layout BBox Jitter (Low: ±2%),0.7084,-0.0641
+Baseline,ADDRESS,Layout BBox Jitter (Medium: ±5%),0.7015,-0.1419
+Baseline,COMPANY,Layout BBox Jitter (Medium: ±5%),0.6247,-0.2802
+Baseline,DATE,Layout BBox Jitter (Medium: ±5%),0.986,-0.007
+Baseline,TOTAL,Layout BBox Jitter (Medium: ±5%),0.6948,-0.0777
+Baseline,ADDRESS,Layout BBox Jitter (High: ±10%),0.6235,-0.2199
+Baseline,COMPANY,Layout BBox Jitter (High: ±10%),0.5,-0.4049
+Baseline,DATE,Layout BBox Jitter (High: ±10%),0.9667,-0.0263
+Baseline,TOTAL,Layout BBox Jitter (High: ±10%),0.5962,-0.1763
+Baseline,ADDRESS,Image Blur (Low: σ=1.0),0.8434,0.0
+Baseline,COMPANY,Image Blur (Low: σ=1.0),0.9049,0.0
+Baseline,DATE,Image Blur (Low: σ=1.0),0.993,0.0
+Baseline,TOTAL,Image Blur (Low: σ=1.0),0.7725,0.0
+Baseline,ADDRESS,Image Blur (Medium: σ=2.0),0.8434,0.0
+Baseline,COMPANY,Image Blur (Medium: σ=2.0),0.9049,0.0
+Baseline,DATE,Image Blur (Medium: σ=2.0),0.993,0.0
+Baseline,TOTAL,Image Blur (Medium: σ=2.0),0.7725,0.0
+Baseline,ADDRESS,Image Blur (High: σ=3.5),0.8372,-0.0062
+Baseline,COMPANY,Image Blur (High: σ=3.5),0.9076,0.0027
+Baseline,DATE,Image Blur (High: σ=3.5),0.993,0.0
+Baseline,TOTAL,Image Blur (High: σ=3.5),0.7742,0.0017
+Baseline,ADDRESS,Composite Multi-Modal Stress,0.6437,-0.1997
+Baseline,COMPANY,Composite Multi-Modal Stress,0.6096,-0.2953
+Baseline,DATE,Composite Multi-Modal Stress,0.9622,-0.0308
+Baseline,TOTAL,Composite Multi-Modal Stress,0.6458,-0.1267
+Layout-Augmented,ADDRESS,Clean Baseline,0.8567,0.0
+Layout-Augmented,COMPANY,Clean Baseline,0.9069,0.0
+Layout-Augmented,DATE,Clean Baseline,0.9944,0.0
+Layout-Augmented,TOTAL,Clean Baseline,0.7844,0.0
+Layout-Augmented,ADDRESS,OCR Char Corruption (Low: 5%),0.8489,-0.0078
+Layout-Augmented,COMPANY,OCR Char Corruption (Low: 5%),0.9081,0.0012
+Layout-Augmented,DATE,OCR Char Corruption (Low: 5%),0.9902,-0.0042
+Layout-Augmented,TOTAL,OCR Char Corruption (Low: 5%),0.7736,-0.0108
+Layout-Augmented,ADDRESS,OCR Char Corruption (Medium: 10%),0.8258,-0.0309
+Layout-Augmented,COMPANY,OCR Char Corruption (Medium: 10%),0.9039,-0.003
+Layout-Augmented,DATE,OCR Char Corruption (Medium: 10%),0.9888,-0.0056
+Layout-Augmented,TOTAL,OCR Char Corruption (Medium: 10%),0.7532,-0.0312
+Layout-Augmented,ADDRESS,OCR Char Corruption (High: 20%),0.8193,-0.0374
+Layout-Augmented,COMPANY,OCR Char Corruption (High: 20%),0.9,-0.0069
+Layout-Augmented,DATE,OCR Char Corruption (High: 20%),0.9775,-0.0169
+Layout-Augmented,TOTAL,OCR Char Corruption (High: 20%),0.7546,-0.0298
+Layout-Augmented,ADDRESS,Missing Text / Masking (Low: 5%),0.7983,-0.0584
+Layout-Augmented,COMPANY,Missing Text / Masking (Low: 5%),0.8625,-0.0444
+Layout-Augmented,DATE,Missing Text / Masking (Low: 5%),0.9659,-0.0285
+Layout-Augmented,TOTAL,Missing Text / Masking (Low: 5%),0.7216,-0.0628
+Layout-Augmented,ADDRESS,Missing Text / Masking (Medium: 10%),0.7476,-0.1091
+Layout-Augmented,COMPANY,Missing Text / Masking (Medium: 10%),0.8065,-0.1004
+Layout-Augmented,DATE,Missing Text / Masking (Medium: 10%),0.9362,-0.0582
+Layout-Augmented,TOTAL,Missing Text / Masking (Medium: 10%),0.6762,-0.1082
+Layout-Augmented,ADDRESS,Missing Text / Masking (High: 20%),0.6145,-0.2422
+Layout-Augmented,COMPANY,Missing Text / Masking (High: 20%),0.7212,-0.1857
+Layout-Augmented,DATE,Missing Text / Masking (High: 20%),0.8701,-0.1243
+Layout-Augmented,TOTAL,Missing Text / Masking (High: 20%),0.5859,-0.1985
+Layout-Augmented,ADDRESS,Layout BBox Jitter (Low: ±2%),0.8422,-0.0145
+Layout-Augmented,COMPANY,Layout BBox Jitter (Low: ±2%),0.8954,-0.0115
+Layout-Augmented,DATE,Layout BBox Jitter (Low: ±2%),0.993,-0.0014
+Layout-Augmented,TOTAL,Layout BBox Jitter (Low: ±2%),0.7737,-0.0107
+Layout-Augmented,ADDRESS,Layout BBox Jitter (Medium: ±5%),0.8384,-0.0183
+Layout-Augmented,COMPANY,Layout BBox Jitter (Medium: ±5%),0.8892,-0.0177
+Layout-Augmented,DATE,Layout BBox Jitter (Medium: ±5%),0.9903,-0.0041
+Layout-Augmented,TOTAL,Layout BBox Jitter (Medium: ±5%),0.7618,-0.0226
+Layout-Augmented,ADDRESS,Layout BBox Jitter (High: ±10%),0.8197,-0.037
+Layout-Augmented,COMPANY,Layout BBox Jitter (High: ±10%),0.8824,-0.0245
+Layout-Augmented,DATE,Layout BBox Jitter (High: ±10%),0.9889,-0.0055
+Layout-Augmented,TOTAL,Layout BBox Jitter (High: ±10%),0.75,-0.0344
+Layout-Augmented,ADDRESS,Image Blur (Low: σ=1.0),0.8567,0.0
+Layout-Augmented,COMPANY,Image Blur (Low: σ=1.0),0.9069,0.0
+Layout-Augmented,DATE,Image Blur (Low: σ=1.0),0.9944,0.0
+Layout-Augmented,TOTAL,Image Blur (Low: σ=1.0),0.7827,-0.0017
+Layout-Augmented,ADDRESS,Image Blur (Medium: σ=2.0),0.8567,0.0
+Layout-Augmented,COMPANY,Image Blur (Medium: σ=2.0),0.9042,-0.0027
+Layout-Augmented,DATE,Image Blur (Medium: σ=2.0),0.9944,0.0
+Layout-Augmented,TOTAL,Image Blur (Medium: σ=2.0),0.7816,-0.0028
+Layout-Augmented,ADDRESS,Image Blur (High: σ=3.5),0.8567,0.0
+Layout-Augmented,COMPANY,Image Blur (High: σ=3.5),0.903,-0.0039
+Layout-Augmented,DATE,Image Blur (High: σ=3.5),0.9944,0.0
+Layout-Augmented,TOTAL,Image Blur (High: σ=3.5),0.775,-0.0094
+Layout-Augmented,ADDRESS,Composite Multi-Modal Stress,0.8158,-0.0409
+Layout-Augmented,COMPANY,Composite Multi-Modal Stress,0.8815,-0.0254
+Layout-Augmented,DATE,Composite Multi-Modal Stress,0.9916,-0.0028
+Layout-Augmented,TOTAL,Composite Multi-Modal Stress,0.7354,-0.049
+OCR-Augmented,ADDRESS,Clean Baseline,0.8379,0.0
+OCR-Augmented,COMPANY,Clean Baseline,0.9046,0.0
+OCR-Augmented,DATE,Clean Baseline,0.9902,0.0
+OCR-Augmented,TOTAL,Clean Baseline,0.7848,0.0
+OCR-Augmented,ADDRESS,OCR Char Corruption (Low: 5%),0.8368,-0.0011
+OCR-Augmented,COMPANY,OCR Char Corruption (Low: 5%),0.9019,-0.0027
+OCR-Augmented,DATE,OCR Char Corruption (Low: 5%),0.9902,0.0
+OCR-Augmented,TOTAL,OCR Char Corruption (Low: 5%),0.7877,0.0029
+OCR-Augmented,ADDRESS,OCR Char Corruption (Medium: 10%),0.8301,-0.0078
+OCR-Augmented,COMPANY,OCR Char Corruption (Medium: 10%),0.8995,-0.0051
+OCR-Augmented,DATE,OCR Char Corruption (Medium: 10%),0.9902,0.0
+OCR-Augmented,TOTAL,OCR Char Corruption (Medium: 10%),0.7816,-0.0032
+OCR-Augmented,ADDRESS,OCR Char Corruption (High: 20%),0.8202,-0.0177
+OCR-Augmented,COMPANY,OCR Char Corruption (High: 20%),0.8865,-0.0181
+OCR-Augmented,DATE,OCR Char Corruption (High: 20%),0.9902,0.0
+OCR-Augmented,TOTAL,OCR Char Corruption (High: 20%),0.769,-0.0158
+OCR-Augmented,ADDRESS,Missing Text / Masking (Low: 5%),0.8274,-0.0105
+OCR-Augmented,COMPANY,Missing Text / Masking (Low: 5%),0.9009,-0.0037
+OCR-Augmented,DATE,Missing Text / Masking (Low: 5%),0.9874,-0.0028
+OCR-Augmented,TOTAL,Missing Text / Masking (Low: 5%),0.7615,-0.0233
+OCR-Augmented,ADDRESS,Missing Text / Masking (Medium: 10%),0.8132,-0.0247
+OCR-Augmented,COMPANY,Missing Text / Masking (Medium: 10%),0.8907,-0.0139
+OCR-Augmented,DATE,Missing Text / Masking (Medium: 10%),0.9804,-0.0098
+OCR-Augmented,TOTAL,Missing Text / Masking (Medium: 10%),0.7626,-0.0222
+OCR-Augmented,ADDRESS,Missing Text / Masking (High: 20%),0.7615,-0.0764
+OCR-Augmented,COMPANY,Missing Text / Masking (High: 20%),0.8645,-0.0401
+OCR-Augmented,DATE,Missing Text / Masking (High: 20%),0.9494,-0.0408
+OCR-Augmented,TOTAL,Missing Text / Masking (High: 20%),0.6895,-0.0953
+OCR-Augmented,ADDRESS,Layout BBox Jitter (Low: ±2%),0.788,-0.0499
+OCR-Augmented,COMPANY,Layout BBox Jitter (Low: ±2%),0.8482,-0.0564
+OCR-Augmented,DATE,Layout BBox Jitter (Low: ±2%),0.9875,-0.0027
+OCR-Augmented,TOTAL,Layout BBox Jitter (Low: ±2%),0.7255,-0.0593
+OCR-Augmented,ADDRESS,Layout BBox Jitter (Medium: ±5%),0.7304,-0.1075
+OCR-Augmented,COMPANY,Layout BBox Jitter (Medium: ±5%),0.704,-0.2006
+OCR-Augmented,DATE,Layout BBox Jitter (Medium: ±5%),0.9889,-0.0013
+OCR-Augmented,TOTAL,Layout BBox Jitter (Medium: ±5%),0.6347,-0.1501
+OCR-Augmented,ADDRESS,Layout BBox Jitter (High: ±10%),0.6384,-0.1995
+OCR-Augmented,COMPANY,Layout BBox Jitter (High: ±10%),0.6446,-0.26
+OCR-Augmented,DATE,Layout BBox Jitter (High: ±10%),0.9737,-0.0165
+OCR-Augmented,TOTAL,Layout BBox Jitter (High: ±10%),0.5882,-0.1966
+OCR-Augmented,ADDRESS,Image Blur (Low: σ=1.0),0.8379,0.0
+OCR-Augmented,COMPANY,Image Blur (Low: σ=1.0),0.9046,0.0
+OCR-Augmented,DATE,Image Blur (Low: σ=1.0),0.9902,0.0
+OCR-Augmented,TOTAL,Image Blur (Low: σ=1.0),0.7865,0.0017
+OCR-Augmented,ADDRESS,Image Blur (Medium: σ=2.0),0.8379,0.0
+OCR-Augmented,COMPANY,Image Blur (Medium: σ=2.0),0.9046,0.0
+OCR-Augmented,DATE,Image Blur (Medium: σ=2.0),0.9902,0.0
+OCR-Augmented,TOTAL,Image Blur (Medium: σ=2.0),0.7848,0.0
+OCR-Augmented,ADDRESS,Image Blur (High: σ=3.5),0.8379,0.0
+OCR-Augmented,COMPANY,Image Blur (High: σ=3.5),0.9034,-0.0012
+OCR-Augmented,DATE,Image Blur (High: σ=3.5),0.9902,0.0
+OCR-Augmented,TOTAL,Image Blur (High: σ=3.5),0.7803,-0.0045
+OCR-Augmented,ADDRESS,Composite Multi-Modal Stress,0.6948,-0.1431
+OCR-Augmented,COMPANY,Composite Multi-Modal Stress,0.6728,-0.2318
+OCR-Augmented,DATE,Composite Multi-Modal Stress,0.9833,-0.0069
+OCR-Augmented,TOTAL,Composite Multi-Modal Stress,0.6391,-0.1457
+Joint-Augmented,ADDRESS,Clean Baseline,0.854,0.0
+Joint-Augmented,COMPANY,Clean Baseline,0.9027,0.0
+Joint-Augmented,DATE,Clean Baseline,0.993,0.0
+Joint-Augmented,TOTAL,Clean Baseline,0.7851,0.0
+Joint-Augmented,ADDRESS,OCR Char Corruption (Low: 5%),0.8567,0.0027
+Joint-Augmented,COMPANY,OCR Char Corruption (Low: 5%),0.9039,0.0012
+Joint-Augmented,DATE,OCR Char Corruption (Low: 5%),0.9916,-0.0014
+Joint-Augmented,TOTAL,OCR Char Corruption (Low: 5%),0.7867,0.0016
+Joint-Augmented,ADDRESS,OCR Char Corruption (Medium: 10%),0.8477,-0.0063
+Joint-Augmented,COMPANY,OCR Char Corruption (Medium: 10%),0.9081,0.0054
+Joint-Augmented,DATE,OCR Char Corruption (Medium: 10%),0.9916,-0.0014
+Joint-Augmented,TOTAL,OCR Char Corruption (Medium: 10%),0.7808,-0.0043
+Joint-Augmented,ADDRESS,OCR Char Corruption (High: 20%),0.854,0.0
+Joint-Augmented,COMPANY,OCR Char Corruption (High: 20%),0.9027,0.0
+Joint-Augmented,DATE,OCR Char Corruption (High: 20%),0.9916,-0.0014
+Joint-Augmented,TOTAL,OCR Char Corruption (High: 20%),0.7697,-0.0154
+Joint-Augmented,ADDRESS,Missing Text / Masking (Low: 5%),0.8422,-0.0118
+Joint-Augmented,COMPANY,Missing Text / Masking (Low: 5%),0.8988,-0.0039
+Joint-Augmented,DATE,Missing Text / Masking (Low: 5%),0.9874,-0.0056
+Joint-Augmented,TOTAL,Missing Text / Masking (Low: 5%),0.75,-0.0351
+Joint-Augmented,ADDRESS,Missing Text / Masking (Medium: 10%),0.8329,-0.0211
+Joint-Augmented,COMPANY,Missing Text / Masking (Medium: 10%),0.8961,-0.0066
+Joint-Augmented,DATE,Missing Text / Masking (Medium: 10%),0.9819,-0.0111
+Joint-Augmented,TOTAL,Missing Text / Masking (Medium: 10%),0.7308,-0.0543
+Joint-Augmented,ADDRESS,Missing Text / Masking (High: 20%),0.7853,-0.0687
+Joint-Augmented,COMPANY,Missing Text / Masking (High: 20%),0.8587,-0.044
+Joint-Augmented,DATE,Missing Text / Masking (High: 20%),0.9465,-0.0465
+Joint-Augmented,TOTAL,Missing Text / Masking (High: 20%),0.6494,-0.1357
+Joint-Augmented,ADDRESS,Layout BBox Jitter (Low: ±2%),0.8438,-0.0102
+Joint-Augmented,COMPANY,Layout BBox Jitter (Low: ±2%),0.8988,-0.0039
+Joint-Augmented,DATE,Layout BBox Jitter (Low: ±2%),0.993,0.0
+Joint-Augmented,TOTAL,Layout BBox Jitter (Low: ±2%),0.7654,-0.0197
+Joint-Augmented,ADDRESS,Layout BBox Jitter (Medium: ±5%),0.8427,-0.0113
+Joint-Augmented,COMPANY,Layout BBox Jitter (Medium: ±5%),0.8871,-0.0156
+Joint-Augmented,DATE,Layout BBox Jitter (Medium: ±5%),0.9916,-0.0014
+Joint-Augmented,TOTAL,Layout BBox Jitter (Medium: ±5%),0.7848,-0.0003
+Joint-Augmented,ADDRESS,Layout BBox Jitter (High: ±10%),0.8251,-0.0289
+Joint-Augmented,COMPANY,Layout BBox Jitter (High: ±10%),0.8862,-0.0165
+Joint-Augmented,DATE,Layout BBox Jitter (High: ±10%),0.9916,-0.0014
+Joint-Augmented,TOTAL,Layout BBox Jitter (High: ±10%),0.7542,-0.0309
+Joint-Augmented,ADDRESS,Image Blur (Low: σ=1.0),0.854,0.0
+Joint-Augmented,COMPANY,Image Blur (Low: σ=1.0),0.9027,0.0
+Joint-Augmented,DATE,Image Blur (Low: σ=1.0),0.993,0.0
+Joint-Augmented,TOTAL,Image Blur (Low: σ=1.0),0.7807,-0.0044
+Joint-Augmented,ADDRESS,Image Blur (Medium: σ=2.0),0.854,0.0
+Joint-Augmented,COMPANY,Image Blur (Medium: σ=2.0),0.9027,0.0
+Joint-Augmented,DATE,Image Blur (Medium: σ=2.0),0.993,0.0
+Joint-Augmented,TOTAL,Image Blur (Medium: σ=2.0),0.7819,-0.0032
+Joint-Augmented,ADDRESS,Image Blur (High: σ=3.5),0.854,0.0
+Joint-Augmented,COMPANY,Image Blur (High: σ=3.5),0.9027,0.0
+Joint-Augmented,DATE,Image Blur (High: σ=3.5),0.993,0.0
+Joint-Augmented,TOTAL,Image Blur (High: σ=3.5),0.7814,-0.0037
+Joint-Augmented,ADDRESS,Composite Multi-Modal Stress,0.8311,-0.0229
+Joint-Augmented,COMPANY,Composite Multi-Modal Stress,0.8969,-0.0058
+Joint-Augmented,DATE,Composite Multi-Modal Stress,0.9916,-0.0014
+Joint-Augmented,TOTAL,Composite Multi-Modal Stress,0.768,-0.0171

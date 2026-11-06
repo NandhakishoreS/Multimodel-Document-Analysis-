@@ -1,0 +1,4 @@
+entity,gold,pred,tp,fp,fn,boundary,partial,type_error,ocr_related,other_errors,precision,recall,f1
+MENU,887,888,868,20,19,13,13,0,0,13,0.9775,0.9786,0.978
+SUBTOTAL,143,149,142,7,1,0,0,8,0,0,0.953,0.993,0.9726
+TOTAL,279,274,268,6,11,3,3,8,0,3,0.9781,0.9606,0.9693

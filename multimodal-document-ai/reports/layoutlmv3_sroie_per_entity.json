@@ -1,44 +1,55 @@
 {
   "dataset": "sroie",
-  "stage": "small",
+  "stage": "full",
   "seqeval": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1": 0.0,
-    "micro_f1": 0.0,
-    "macro_f1": 0.0,
+    "precision": 0.8792,
+    "recall": 0.8878,
+    "f1": 0.8835,
+    "micro_f1": 0.8835,
+    "macro_f1": 0.8828,
     "per_entity": {
-      "DATE": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
+      "ADDRESS": {
+        "precision": 0.9245,
+        "recall": 0.9528,
+        "f1": 0.9384,
         "support": 360
       },
+      "COMPANY": {
+        "precision": 0.9205,
+        "recall": 0.9465,
+        "f1": 0.9333,
+        "support": 355
+      },
+      "DATE": {
+        "precision": 0.9612,
+        "recall": 0.9666,
+        "f1": 0.9639,
+        "support": 359
+      },
       "TOTAL": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 785
+        "precision": 0.7045,
+        "recall": 0.687,
+        "f1": 0.6957,
+        "support": 361
       }
     },
-    "classification_report": "              precision    recall  f1-score   support\n\n        DATE       0.00      0.00      0.00       360\n       TOTAL       0.00      0.00      0.00       785\n\n   micro avg       0.00      0.00      0.00      1145\n   macro avg       0.00      0.00      0.00      1145\nweighted avg       0.00      0.00      0.00      1145\n",
     "num_sequences": 361,
     "num_tokens_true": 19378
   },
   "token_level": {
-    "micro_precision": 0.0,
-    "micro_recall": 0.0,
-    "micro_f1": 0.0,
-    "macro_precision": 0.0,
-    "macro_recall": 0.0,
-    "macro_f1": 0.0,
-    "weighted_f1": 0.0,
+    "micro_precision": 0.8792,
+    "micro_recall": 0.8878,
+    "micro_f1": 0.8835,
+    "macro_precision": 0.4389,
+    "macro_recall": 0.4441,
+    "macro_f1": 0.4414,
+    "weighted_f1": 0.8825,
     "per_class": {
       "B-COMPANY": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 0
+        "precision": 0.9205,
+        "recall": 0.9465,
+        "f1": 0.9333,
+        "support": 355
       },
       "I-COMPANY": {
         "precision": 0.0,
@@ -47,10 +58,10 @@
         "support": 0
       },
       "B-DATE": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 360
+        "precision": 0.9612,
+        "recall": 0.9666,
+        "f1": 0.9639,
+        "support": 359
       },
       "I-DATE": {
         "precision": 0.0,
@@ -59,10 +70,10 @@
         "support": 0
       },
       "B-ADDRESS": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 0
+        "precision": 0.9245,
+        "recall": 0.9528,
+        "f1": 0.9384,
+        "support": 360
       },
       "I-ADDRESS": {
         "precision": 0.0,
@@ -71,45 +82,16 @@
         "support": 0
       },
       "B-TOTAL": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1": 0.0,
-        "support": 785
+        "precision": 0.7045,
+        "recall": 0.687,
+        "f1": 0.6957,
+        "support": 361
       },
       "I-TOTAL": {
         "precision": 0.0,
         "recall": 0.0,
         "f1": 0.0,
-        "support": 1
-      }
-    }
-  },
-  "sroie_entity_accuracy": {
-    "overall_exact_match": 0.0,
-    "per_entity": {
-      "company": {
-        "exact_match": 0.0,
-        "partial_match": 0.0,
-        "coverage": 1.0,
-        "total_gt": 50
-      },
-      "date": {
-        "exact_match": 0.0,
-        "partial_match": 0.0,
-        "coverage": 1.0,
-        "total_gt": 50
-      },
-      "address": {
-        "exact_match": 0.0,
-        "partial_match": 0.0,
-        "coverage": 1.0,
-        "total_gt": 50
-      },
-      "total": {
-        "exact_match": 0.0,
-        "partial_match": 0.0,
-        "coverage": 1.0,
-        "total_gt": 50
+        "support": 0
       }
     }
   }

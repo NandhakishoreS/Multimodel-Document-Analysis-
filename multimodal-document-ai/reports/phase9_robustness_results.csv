@@ -1,0 +1,57 @@
+Model,Dataset,Condition_Name,Degradation_Type,Severity,Precision,Recall,Macro_F1,Micro_F1,Delta_Macro_F1,Relative_Deg_Pct
+Baseline,SROIE,Clean Baseline,Clean,None,0.8689,0.8889,0.8784,0.8788,0.0,0.0
+Baseline,SROIE,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8682,0.8882,0.878,0.8781,-0.0004,0.05
+Baseline,SROIE,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8551,0.8742,0.8645,0.8645,-0.0139,1.58
+Baseline,SROIE,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8502,0.8644,0.8572,0.8572,-0.0212,2.41
+Baseline,SROIE,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8374,0.8491,0.8436,0.8432,-0.0348,3.96
+Baseline,SROIE,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7972,0.7939,0.7964,0.7955,-0.082,9.34
+Baseline,SROIE,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7144,0.6974,0.7087,0.7058,-0.1697,19.32
+Baseline,SROIE,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8116,0.8281,0.8196,0.8198,-0.0588,6.69
+Baseline,SROIE,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7354,0.7652,0.7518,0.75,-0.1266,14.41
+Baseline,SROIE,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.651,0.6883,0.6716,0.6692,-0.2068,23.54
+Baseline,SROIE,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8689,0.8889,0.8784,0.8788,0.0,0.0
+Baseline,SROIE,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8689,0.8889,0.8784,0.8788,0.0,0.0
+Baseline,SROIE,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8672,0.8896,0.878,0.8782,-0.0004,0.05
+Baseline,SROIE,Composite Multi-Modal Stress,Composite,Medium,0.6993,0.7282,0.7153,0.7135,-0.1631,18.57
+Layout-Augmented,SROIE,Clean Baseline,Clean,None,0.873,0.8987,0.8856,0.8857,0.0,0.0
+Layout-Augmented,SROIE,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8708,0.8903,0.8802,0.8804,-0.0054,0.61
+Layout-Augmented,SROIE,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8591,0.8777,0.8679,0.8683,-0.0177,2.0
+Layout-Augmented,SROIE,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8547,0.8714,0.8629,0.863,-0.0227,2.56
+Layout-Augmented,SROIE,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8337,0.8407,0.8371,0.8372,-0.0485,5.48
+Layout-Augmented,SROIE,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.7928,0.789,0.7916,0.7909,-0.094,10.61
+Layout-Augmented,SROIE,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7034,0.6876,0.6979,0.6954,-0.1877,21.19
+Layout-Augmented,SROIE,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8621,0.891,0.8761,0.8763,-0.0095,1.07
+Layout-Augmented,SROIE,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.8524,0.8882,0.8699,0.87,-0.0157,1.77
+Layout-Augmented,SROIE,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.8435,0.8777,0.8602,0.8603,-0.0254,2.87
+Layout-Augmented,SROIE,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.873,0.898,0.8852,0.8853,-0.0004,0.05
+Layout-Augmented,SROIE,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8717,0.8973,0.8842,0.8843,-0.0014,0.16
+Layout-Augmented,SROIE,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8692,0.8959,0.8823,0.8823,-0.0033,0.37
+Layout-Augmented,SROIE,Composite Multi-Modal Stress,Composite,Medium,0.8395,0.8735,0.8561,0.8562,-0.0295,3.33
+OCR-Augmented,SROIE,Clean Baseline,Clean,None,0.8711,0.8882,0.8794,0.8796,0.0,0.0
+OCR-Augmented,SROIE,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8689,0.8896,0.8791,0.8791,-0.0003,0.03
+OCR-Augmented,SROIE,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8634,0.8875,0.8753,0.8753,-0.0041,0.47
+OCR-Augmented,SROIE,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.851,0.8819,0.8665,0.8662,-0.0129,1.47
+OCR-Augmented,SROIE,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8578,0.8812,0.8693,0.8694,-0.0101,1.15
+OCR-Augmented,SROIE,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.8508,0.8728,0.8617,0.8617,-0.0177,2.01
+OCR-Augmented,SROIE,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.8088,0.8246,0.8162,0.8166,-0.0632,7.19
+OCR-Augmented,SROIE,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8245,0.8505,0.8373,0.8373,-0.0421,4.79
+OCR-Augmented,SROIE,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.7465,0.782,0.7645,0.7638,-0.1149,13.07
+OCR-Augmented,SROIE,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.6978,0.7261,0.7112,0.7116,-0.1682,19.13
+OCR-Augmented,SROIE,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8712,0.8889,0.8798,0.88,0.0004,0.05
+OCR-Augmented,SROIE,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8711,0.8882,0.8794,0.8796,0.0,0.0
+OCR-Augmented,SROIE,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8698,0.8868,0.878,0.8782,-0.0014,0.16
+OCR-Augmented,SROIE,Composite Multi-Modal Stress,Composite,Medium,0.7293,0.7645,0.7475,0.7465,-0.1319,15.0
+Joint-Augmented,SROIE,Clean Baseline,Clean,None,0.8694,0.898,0.8837,0.8835,0.0,0.0
+Joint-Augmented,SROIE,OCR Char Corruption (Low: 5%),OCR Noise,Low (5%),0.8723,0.8973,0.8847,0.8846,0.001,0.11
+Joint-Augmented,SROIE,OCR Char Corruption (Medium: 10%),OCR Noise,Medium (10%),0.8659,0.898,0.8821,0.8816,-0.0016,0.18
+Joint-Augmented,SROIE,OCR Char Corruption (High: 20%),OCR Noise,High (20%),0.8659,0.8931,0.8795,0.8793,-0.0042,0.48
+Joint-Augmented,SROIE,Missing Text / Masking (Low: 5%),Missing Text,Low (5%),0.8538,0.8854,0.8696,0.8693,-0.0141,1.6
+Joint-Augmented,SROIE,Missing Text / Masking (Medium: 10%),Missing Text,Medium (10%),0.8444,0.8763,0.8604,0.8601,-0.0233,2.64
+Joint-Augmented,SROIE,Missing Text / Masking (High: 20%),Missing Text,High (20%),0.7945,0.8239,0.81,0.8089,-0.0737,8.34
+Joint-Augmented,SROIE,Layout BBox Jitter (Low: ±2%),Layout Noise,Low (±2%),0.8629,0.8882,0.8752,0.8753,-0.0085,0.96
+Joint-Augmented,SROIE,Layout BBox Jitter (Medium: ±5%),Layout Noise,Medium (±5%),0.8647,0.8889,0.8766,0.8766,-0.0071,0.8
+Joint-Augmented,SROIE,Layout BBox Jitter (High: ±10%),Layout Noise,High (±10%),0.85,0.8791,0.8643,0.8643,-0.0194,2.2
+Joint-Augmented,SROIE,Image Blur (Low: σ=1.0),Image Blur,Low (σ=1.0),0.8687,0.8966,0.8826,0.8824,-0.0011,0.12
+Joint-Augmented,SROIE,Image Blur (Medium: σ=2.0),Image Blur,Medium (σ=2.0),0.8677,0.898,0.8829,0.8826,-0.0008,0.09
+Joint-Augmented,SROIE,Image Blur (High: σ=3.5),Image Blur,High (σ=3.5),0.8666,0.8987,0.8828,0.8823,-0.0009,0.1
+Joint-Augmented,SROIE,Composite Multi-Modal Stress,Composite,Medium,0.8544,0.8896,0.8719,0.8716,-0.0118,1.34
